@@ -1,0 +1,12 @@
+User-Agent: *
+Allow: /
+
+# 禁止访问管理页面
+Disallow: /admin/
+Disallow: /api/admin/
+
+# 允许所有公开页面
+Allow: /
+
+# Sitemap
+Sitemap: https://rvtowingcalc.com/sitemap.xml

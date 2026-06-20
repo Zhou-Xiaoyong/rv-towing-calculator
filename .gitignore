@@ -1,0 +1,72 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# VSCode
+.vscode/
+
+# OS
+Thumbs.db
+
+# ==================== 安全：排除敏感目录 ====================
+
+# WorkBuddy 内部记忆（包含商业策略、竞品分析等）
+.workbuddy/
+
+# 交付物和内部战略文档
+deliverables/
+
+# 内部部署文档
+DEPLOYMENT_GUIDE.md
+DEPLOYMENT_CHECKLIST.md
+
+# 项目概览
+overview.md
+
+# 内部部署脚本
+deploy-to-vercel.bat
+deploy-to-vercel.sh
+
+# 临时脚本（可能包含敏感信息）
+create-repo.py
+create-repo.ps1
+
+# 重建指南（仅本地参考）
+REBUILD_GUIDE.md
+
+# Git 备份目录（不应提交）
+.git.backup/
+.gitignore.backup
