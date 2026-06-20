@@ -35,7 +35,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-gray-600 transition-colors hover:text-brand-600"
+              className="flex items-center px-2 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-brand-600"
             >
               {link.label}
             </Link>
@@ -48,7 +48,7 @@ export default function Header() {
             onMouseLeave={() => setGuidesOpen(false)}
           >
             <button
-              className="flex items-center gap-1 text-sm font-medium text-gray-600 transition-colors hover:text-brand-600"
+              className="flex items-center gap-1 px-2 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-brand-600"
               type="button"
             >
               Guides
