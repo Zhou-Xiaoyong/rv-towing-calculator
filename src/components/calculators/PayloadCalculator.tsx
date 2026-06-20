@@ -71,58 +71,62 @@ export default function PayloadCalculator() {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div className="rounded-lg border-2 border-brand-200 bg-brand-50 p-4">
-            <label className="mb-1 block text-sm font-semibold text-brand-700">
+            <label className="mb-2 block text-sm font-semibold text-brand-700">
               Payload Capacity (lbs)
             </label>
             <input
               type="number"
+              inputMode="numeric"
               value={payloadCapacity || ""}
               onChange={(e) => setPayloadCapacity(Number(e.target.value) || 0)}
               placeholder="e.g., 1976"
-              className="w-full rounded-lg border border-gray-300 px-3 py-2 text-lg font-bold focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-lg font-bold focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2"
             />
-            <p className="mt-1 text-xs text-gray-500">
+            <p className="mt-2 text-xs text-gray-500">
               From your truck&apos;s door jamb sticker
             </p>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-4">
             <div>
-              <label className="mb-1 block text-sm font-medium text-gray-700">
+              <label className="mb-2 block text-sm font-medium text-gray-700">
                 Passenger Weight (lbs)
               </label>
               <input
                 type="number"
+                inputMode="numeric"
                 value={passengerWeight || ""}
                 onChange={(e) => setPassengerWeight(Number(e.target.value) || 0)}
                 placeholder="e.g., 700 (4 people)"
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2"
               />
             </div>
             <div>
-              <label className="mb-1 block text-sm font-medium text-gray-700">
+              <label className="mb-2 block text-sm font-medium text-gray-700">
                 Cargo in Truck (lbs)
               </label>
               <input
                 type="number"
+                inputMode="numeric"
                 value={truckCargo || ""}
                 onChange={(e) => setTruckCargo(Number(e.target.value) || 0)}
                 placeholder="e.g., 300"
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2"
               />
             </div>
             <div>
-              <label className="mb-1 block text-sm font-medium text-gray-700">
+              <label className="mb-2 block text-sm font-medium text-gray-700">
                 Tongue / Pin Weight (lbs)
               </label>
               <input
                 type="number"
+                inputMode="numeric"
                 value={tongueWeight || ""}
                 onChange={(e) => setTongueWeight(Number(e.target.value) || 0)}
                 placeholder="e.g., 800"
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2"
               />
-              <p className="mt-1 text-xs text-gray-500">
+              <p className="mt-2 text-xs text-gray-500">
                 ~13% of loaded trailer weight (travel trailer) or ~22% (fifth wheel)
               </p>
             </div>
@@ -133,7 +137,7 @@ export default function PayloadCalculator() {
           type="button"
           onClick={handleCalculate}
           disabled={payloadCapacity === 0}
-          className="mt-6 w-full rounded-xl bg-brand-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-brand-600/25 transition-all hover:bg-brand-700 hover:shadow-brand-600/40 active:scale-[0.99] disabled:cursor-not-allowed disabled:bg-gray-300 disabled:shadow-none"
+          className="mt-6 w-full rounded-xl bg-brand-600 px-6 py-4 text-lg font-bold text-white shadow-lg shadow-brand-600/25 transition-all hover:bg-brand-700 hover:shadow-brand-600/40 active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-gray-300 disabled:shadow-none md:py-3 md:text-base"
         >
           Check Payload Safety
         </button>

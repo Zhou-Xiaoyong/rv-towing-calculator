@@ -83,35 +83,35 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-brand-600 via-brand-700 to-brand-800 text-white">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAzNGgtMnYtNGgydjR6bTAtNmgtMnYtNGgydjR6bS04IDZoLTJ2LTRoMnY0em0wLTZoLTJ2LTRoMnY0eiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIuMDUiLz48L2c+PC9zdmc+')] opacity-10" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur">
-              <span className="flex h-2 w-2 rounded-full bg-safe-400" />
+            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium backdrop-blur md:px-5 md:py-2.5">
+              <span className="flex h-2.5 w-2.5 rounded-full bg-safe-400" />
               SAE J2807 Compliant
             </div>
-            <h1 className="text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+            <h1 className="text-3xl font-bold leading-tight md:text-5xl lg:text-6xl">
               Can My Truck Tow This?
             </h1>
-            <p className="mt-4 text-lg text-brand-100 md:text-xl">
+            <p className="mt-4 text-base text-brand-100 md:mt-6 md:text-lg lg:text-xl">
               The only RV towing calculator that combines real vehicle data
               with deep safety analysis. Independent. Accurate. Built for
               safety, not for selling you an RV.
             </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Link
                 href="/towing-capacity-calculator"
-                className="w-full rounded-xl bg-white px-8 py-4 text-center text-base font-bold text-brand-700 shadow-lg transition-all hover:bg-brand-50 active:scale-[0.99] sm:w-auto"
+                className="w-full rounded-xl bg-white px-8 py-4 text-center text-base font-bold text-brand-700 shadow-lg transition-all hover:bg-brand-50 active:scale-[0.98] sm:w-auto md:px-10 md:py-5 md:text-lg"
               >
                 Start Towing Check
               </Link>
               <Link
                 href="/payload-calculator"
-                className="w-full rounded-xl border-2 border-white/30 bg-white/5 px-8 py-4 text-center text-base font-bold text-white backdrop-blur transition-all hover:bg-white/10 sm:w-auto"
+                className="w-full rounded-xl border-2 border-white/30 bg-white/5 px-8 py-4 text-center text-base font-bold text-white backdrop-blur transition-all hover:bg-white/10 sm:w-auto md:px-10 md:py-5 md:text-lg"
               >
                 Check Payload First
               </Link>
             </div>
-            <p className="mt-6 text-sm text-brand-200">
+            <p className="mt-6 text-sm text-brand-200 md:mt-8">
               Free. No sign-up. 86 vehicles across 10 brands in database.
             </p>
           </div>
@@ -119,22 +119,22 @@ export default function HomePage() {
       </section>
 
       {/* Calculators Grid */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mb-10 text-center">
-          <h2 className="text-3xl font-bold text-gray-900">
+      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 md:py-16">
+        <div className="mb-8 text-center">
+          <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
             Six Safety Checks, One Tool
           </h2>
-          <p className="mt-3 text-lg text-gray-600">
+          <p className="mt-3 text-base text-gray-600 md:text-lg">
             Most calculators check one number. We check all six that matter.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 md:gap-6">
           {CALCULATORS.map((calc) => (
             <Link
               key={calc.href}
               href={calc.href}
-              className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-brand-300 hover:shadow-lg"
+              className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition-all hover:border-brand-300 hover:shadow-lg md:p-6"
             >
               {calc.badge && (
                 <span
@@ -158,7 +158,7 @@ export default function HomePage() {
                   />
                 </svg>
               </div>
-              <h3 className="mb-2 text-lg font-bold text-gray-900 group-hover:text-brand-600">
+              <h3 className="mb-2 text-base font-bold text-gray-900 group-hover:text-brand-600 md:text-lg">
                 {calc.title}
               </h3>
               <p className="text-sm leading-relaxed text-gray-600">
@@ -185,7 +185,7 @@ export default function HomePage() {
 
           {/* Info card */}
           <div className="flex flex-col justify-center rounded-2xl border-2 border-dashed border-gray-300 bg-gray-50 p-6 text-center">
-            <h3 className="mb-2 font-bold text-gray-900">
+            <h3 className="mb-2 text-lg font-bold text-gray-900">
               Not sure where to start?
             </h3>
             <p className="mb-4 text-sm text-gray-600">

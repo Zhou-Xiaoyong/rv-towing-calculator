@@ -197,13 +197,13 @@ export default function TowingCalculator() {
           {inputMode === "database" ? (
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
+                <label className="mb-2 block text-sm font-medium text-gray-700">
                   Make
                 </label>
                 <select
                   value={selectedMake}
                   onChange={(e) => handleMakeChange(e.target.value)}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm"
                 >
                   <option value="">Select make</option>
                   {makes.map((make) => (
@@ -214,14 +214,14 @@ export default function TowingCalculator() {
                 </select>
               </div>
               <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
+                <label className="mb-2 block text-sm font-medium text-gray-700">
                   Model
                 </label>
                 <select
                   value={selectedModel}
                   onChange={(e) => handleModelChange(e.target.value)}
                   disabled={!selectedMake}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 disabled:bg-gray-50"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 disabled:bg-gray-50 md:py-2 md:text-sm"
                 >
                   <option value="">Select model</option>
                   {models.map((model) => (
@@ -232,14 +232,14 @@ export default function TowingCalculator() {
                 </select>
               </div>
               <div>
-                <label className="mb-1 block text-sm font-medium text-gray-700">
+                <label className="mb-2 block text-sm font-medium text-gray-700">
                   Trim / Configuration
                 </label>
                 <select
                   value={selectedTrim}
                   onChange={(e) => handleTrimChange(e.target.value)}
                   disabled={!selectedModel}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 disabled:bg-gray-50"
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 disabled:bg-gray-50 md:py-2 md:text-sm"
                 >
                   <option value="">Select trim</option>
                   {trims.map((trim) => (
@@ -372,13 +372,13 @@ export default function TowingCalculator() {
               onChange={setPropaneTanks}
             />
             <div>
-              <label className="mb-1 block text-sm font-medium text-gray-700">
+              <label className="mb-2 block text-sm font-medium text-gray-700">
                 Propane Tank Size
               </label>
               <select
                 value={propaneTankSize}
                 onChange={(e) => setPropaneTankSize(Number(e.target.value))}
-                className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm"
               >
                 <option value={20}>20 lb (standard)</option>
                 <option value={30}>30 lb</option>
@@ -425,7 +425,7 @@ export default function TowingCalculator() {
         <button
           type="button"
           onClick={handleCalculate}
-          className="mt-8 w-full rounded-xl bg-brand-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-brand-600/25 transition-all hover:bg-brand-700 hover:shadow-brand-600/40 active:scale-[0.99]"
+          className="mt-8 w-full rounded-xl bg-brand-600 px-6 py-4 text-lg font-bold text-white shadow-lg shadow-brand-600/25 transition-all hover:bg-brand-700 hover:shadow-brand-600/40 active:scale-[0.98] md:py-3 md:text-base"
         >
           Calculate Towing Safety
         </button>
@@ -556,17 +556,18 @@ function NumberInput({
 }) {
   return (
     <div>
-      <label className="mb-1 block text-sm font-medium text-gray-700">
+      <label className="mb-2 block text-sm font-medium text-gray-700">
         {label}
       </label>
       <input
         type="number"
+        inputMode="numeric"
         value={value || ""}
         onChange={(e) => onChange(Number(e.target.value) || 0)}
         placeholder="0"
-        className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+        className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm"
       />
-      {hint && <p className="mt-1 text-xs text-gray-400">{hint}</p>}
+      {hint && <p className="mt-2 text-xs text-gray-500">{hint}</p>}
     </div>
   );
 }

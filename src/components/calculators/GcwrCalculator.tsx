@@ -69,35 +69,35 @@ export default function GcwrCalculator() {
         <h2 className="mb-4 text-xl font-bold text-gray-900">Enter Your Numbers</h2>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">Truck Curb Weight (lbs)</label>
-            <input type="number" value={curbWeight || ""} onChange={(e) => setCurbWeight(Number(e.target.value) || 0)}
-              placeholder="e.g., 5074" className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500" />
+            <label className="mb-2 block text-sm font-medium text-gray-700">Truck Curb Weight (lbs)</label>
+            <input type="number" inputMode="numeric" value={curbWeight || ""} onChange={(e) => setCurbWeight(Number(e.target.value) || 0)}
+              placeholder="e.g., 5074" className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm" />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">GCWR (lbs)</label>
-            <input type="number" value={gcwr || ""} onChange={(e) => setGcwr(Number(e.target.value) || 0)}
-              placeholder="e.g., 17100" className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500" />
-            <p className="mt-1 text-xs text-gray-500">From owner&apos;s manual or towing guide</p>
+            <label className="mb-2 block text-sm font-medium text-gray-700">GCWR (lbs)</label>
+            <input type="number" inputMode="numeric" value={gcwr || ""} onChange={(e) => setGcwr(Number(e.target.value) || 0)}
+              placeholder="e.g., 17100" className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm" />
+            <p className="mt-2 text-xs text-gray-500">From owner&apos;s manual or towing guide</p>
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">Passenger Weight (lbs)</label>
-            <input type="number" value={passengerWeight || ""} onChange={(e) => setPassengerWeight(Number(e.target.value) || 0)}
-              placeholder="e.g., 700" className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500" />
+            <label className="mb-2 block text-sm font-medium text-gray-700">Passenger Weight (lbs)</label>
+            <input type="number" inputMode="numeric" value={passengerWeight || ""} onChange={(e) => setPassengerWeight(Number(e.target.value) || 0)}
+              placeholder="e.g., 700" className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm" />
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">Cargo in Truck (lbs)</label>
-            <input type="number" value={truckCargo || ""} onChange={(e) => setTruckCargo(Number(e.target.value) || 0)}
-              placeholder="e.g., 300" className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500" />
+            <label className="mb-2 block text-sm font-medium text-gray-700">Cargo in Truck (lbs)</label>
+            <input type="number" inputMode="numeric" value={truckCargo || ""} onChange={(e) => setTruckCargo(Number(e.target.value) || 0)}
+              placeholder="e.g., 300" className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm" />
           </div>
           <div className="md:col-span-2">
-            <label className="mb-1 block text-sm font-medium text-gray-700">Loaded Trailer Weight (lbs)</label>
-            <input type="number" value={loadedTrailerWeight || ""} onChange={(e) => setLoadedTrailerWeight(Number(e.target.value) || 0)}
-              placeholder="e.g., 7000 (dry + cargo + water + propane)" className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500" />
-            <p className="mt-1 text-xs text-gray-500">Dry weight + cargo + water (8.34 lbs/gal) + propane</p>
+            <label className="mb-2 block text-sm font-medium text-gray-700">Loaded Trailer Weight (lbs)</label>
+            <input type="number" inputMode="numeric" value={loadedTrailerWeight || ""} onChange={(e) => setLoadedTrailerWeight(Number(e.target.value) || 0)}
+              placeholder="e.g., 7000 (dry + cargo + water + propane)" className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm" />
+            <p className="mt-2 text-xs text-gray-500">Dry weight + cargo + water (8.34 lbs/gal) + propane</p>
           </div>
         </div>
         <button type="button" onClick={handleCalculate} disabled={gcwr === 0}
-          className="mt-6 w-full rounded-xl bg-brand-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-brand-600/25 transition-all hover:bg-brand-700 active:scale-[0.99] disabled:cursor-not-allowed disabled:bg-gray-300 disabled:shadow-none">
+          className="mt-6 w-full rounded-xl bg-brand-600 px-6 py-4 text-lg font-bold text-white shadow-lg shadow-brand-600/25 transition-all hover:bg-brand-700 hover:shadow-brand-600/40 active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-gray-300 disabled:shadow-none md:py-3 md:text-base">
           Check GCWR Safety
         </button>
       </div>

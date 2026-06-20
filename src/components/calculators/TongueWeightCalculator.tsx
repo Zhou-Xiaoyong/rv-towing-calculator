@@ -99,11 +99,11 @@ export default function TongueWeightCalculator() {
           <label className="mb-2 block text-sm font-medium text-gray-700">Trailer Type</label>
           <div className="flex gap-3">
             <button type="button" onClick={() => setTrailerType("travel-trailer")}
-              className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors ${trailerType === "travel-trailer" ? "border-brand-600 bg-brand-50 text-brand-700" : "border-gray-200 text-gray-600"}`}>
+              className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors ${trailerType === "travel-trailer" ? "border-brand-600 bg-brand-50 text-brand-700" : "border-gray-200 text-gray-600 hover:border-gray-300"}`}>
               Travel Trailer (10-15%)
             </button>
             <button type="button" onClick={() => setTrailerType("fifth-wheel")}
-              className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors ${trailerType === "fifth-wheel" ? "border-brand-600 bg-brand-50 text-brand-700" : "border-gray-200 text-gray-600"}`}>
+              className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors ${trailerType === "fifth-wheel" ? "border-brand-600 bg-brand-50 text-brand-700" : "border-gray-200 text-gray-600 hover:border-gray-300"}`}>
               Fifth Wheel (20-25%)
             </button>
           </div>
@@ -111,21 +111,21 @@ export default function TongueWeightCalculator() {
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">Loaded Trailer Weight (lbs)</label>
-            <input type="number" value={loadedTrailerWeight || ""} onChange={(e) => setLoadedTrailerWeight(Number(e.target.value) || 0)}
-              placeholder="e.g., 7000" className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500" />
-            <p className="mt-1 text-xs text-gray-500">Dry weight + cargo + water + propane</p>
+            <label className="mb-2 block text-sm font-medium text-gray-700">Loaded Trailer Weight (lbs)</label>
+            <input type="number" inputMode="numeric" value={loadedTrailerWeight || ""} onChange={(e) => setLoadedTrailerWeight(Number(e.target.value) || 0)}
+              placeholder="e.g., 7000" className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm" />
+            <p className="mt-2 text-xs text-gray-500">Dry weight + cargo + water + propane</p>
           </div>
           <div>
-            <label className="mb-1 block text-sm font-medium text-gray-700">Hitch Receiver Rating (lbs)</label>
-            <input type="number" value={hitchRating || ""} onChange={(e) => setHitchRating(Number(e.target.value) || 0)}
-              placeholder="e.g., 1300" className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500" />
-            <p className="mt-1 text-xs text-gray-500">Max tongue weight your hitch can handle</p>
+            <label className="mb-2 block text-sm font-medium text-gray-700">Hitch Receiver Rating (lbs)</label>
+            <input type="number" inputMode="numeric" value={hitchRating || ""} onChange={(e) => setHitchRating(Number(e.target.value) || 0)}
+              placeholder="e.g., 1300" className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm" />
+            <p className="mt-2 text-xs text-gray-500">Max tongue weight your hitch can handle</p>
           </div>
         </div>
 
         <button type="button" onClick={handleCalculate} disabled={loadedTrailerWeight === 0}
-          className="mt-6 w-full rounded-xl bg-brand-600 px-6 py-4 text-base font-bold text-white shadow-lg shadow-brand-600/25 transition-all hover:bg-brand-700 active:scale-[0.99] disabled:cursor-not-allowed disabled:bg-gray-300 disabled:shadow-none">
+          className="mt-6 w-full rounded-xl bg-brand-600 px-6 py-4 text-lg font-bold text-white shadow-lg shadow-brand-600/25 transition-all hover:bg-brand-700 hover:shadow-brand-600/40 active:scale-[0.98] disabled:cursor-not-allowed disabled:bg-gray-300 disabled:shadow-none md:py-3 md:text-base">
           Calculate Tongue Weight
         </button>
       </div>

@@ -85,43 +85,51 @@ export default function Header() {
         </nav>
 
         <button
-          className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-700 md:hidden"
+          className="rounded-lg p-2 text-gray-600 transition-colors hover:bg-gray-100 hover:text-brand-600 md:hidden"
           type="button"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
           aria-expanded={mobileMenuOpen}
         >
-          {mobileMenuOpen ? "Close" : "Menu"}
+          {mobileMenuOpen ? (
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
       </div>
 
       {/* Mobile nav */}
       {mobileMenuOpen && (
-        <nav className="border-t border-gray-100 px-4 py-3 md:hidden">
-          <div className="mb-2 text-xs font-semibold uppercase text-gray-400">
+        <nav className="border-t border-gray-200 bg-white px-4 py-4 md:hidden">
+          <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
             Calculators
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-1 gap-1">
             {CALCULATOR_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-brand-600"
+                className="block rounded-lg px-4 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-brand-50 hover:text-brand-600 active:bg-brand-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
           </div>
-          <div className="mb-2 mt-4 text-xs font-semibold uppercase text-gray-400">
+          <div className="mb-3 mt-6 text-xs font-semibold uppercase tracking-wider text-gray-400">
             Guides
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div className="grid grid-cols-1 gap-1">
             {GUIDE_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-brand-600"
+                className="block rounded-lg px-4 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-brand-50 hover:text-brand-600 active:bg-brand-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
