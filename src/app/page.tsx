@@ -112,7 +112,7 @@ export default function HomePage() {
               </Link>
             </div>
             <p className="mt-6 text-sm text-brand-200 md:mt-8">
-              Free. No sign-up. 86 vehicles across 10 brands in database.
+              Free. No sign-up. 100+ vehicles across 12 brands in database.
             </p>
           </div>
         </div>
