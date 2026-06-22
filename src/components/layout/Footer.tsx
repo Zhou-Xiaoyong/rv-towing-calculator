@@ -102,6 +102,22 @@ export default function Footer() {
                   Tongue Weight Guide
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/guides/cat-scale-weighing"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  CAT Scale Weighing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/weight-distribution-hitch-setup"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  WDH Setup Guide
+                </Link>
+              </li>
             </ul>
           </div>
 

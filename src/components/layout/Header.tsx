@@ -16,6 +16,8 @@ const GUIDE_LINKS = [
   { href: "/guides/gvwr-vs-gcwr", label: "GVWR vs GCWR" },
   { href: "/guides/payload-capacity", label: "Payload Explained" },
   { href: "/guides/tongue-weight", label: "Tongue Weight Guide" },
+  { href: "/guides/cat-scale-weighing", label: "CAT Scale Weighing" },
+  { href: "/guides/weight-distribution-hitch-setup", label: "WDH Setup Guide" },
 ];
 
 export default function Header() {
