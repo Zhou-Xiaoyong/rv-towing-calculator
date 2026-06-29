@@ -61,6 +61,20 @@ const GUIDES = [
       "Complete step-by-step WDH installation and adjustment guide. Includes measurement worksheet, common mistakes, and model comparisons.",
     category: "Equipment",
   },
+  {
+    slug: "/guides/exceed-gvwr-dangers",
+    title: "What Happens If You Exceed GVWR",
+    description:
+      "Mechanical failures, legal liability, insurance risks, and real-world consequences of overloading your tow vehicle. Includes warning signs and how to fix an overweight setup.",
+    category: "Safety",
+  },
+  {
+    slug: "/guides/best-half-ton-trucks-8000-lbs",
+    title: "Best Half-Ton Trucks for Towing 8,000 lbs",
+    description:
+      "Head-to-head comparison of Ford F-150, RAM 1500, Silverado 1500, Sierra 1500, Tundra, and Titan for safely towing an 8,000 lb travel trailer.",
+    category: "Buying Guides",
+  },
 ];
 
 export default function GuidesPage() {
