@@ -532,8 +532,8 @@ function generateRecommendations(
   }
 
   // Altitude derating notice for gas engines
-  const isDiesel = input.vehicle.make && /diesel|duramax|cummins|power stroke/i.test(
-    input.vehicle.trim,
+  const isDiesel = /diesel|duramax|cummins|power stroke/i.test(
+    input.vehicle.engine ?? "",
   );
   if (!isDiesel && loadedTrailerWeight > input.vehicle.towRating * 0.7) {
     recs.push({

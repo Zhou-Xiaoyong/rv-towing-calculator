@@ -29,6 +29,8 @@ export interface VehicleSpec {
   model: string;
   /** Trim/configuration (e.g., "XLT 3.5L EcoBoost SuperCrew 4x4") */
   trim: string;
+  /** Engine description (e.g., "6.7L Power Stroke V8 Diesel") — used for diesel detection */
+  engine?: string;
   /** Curb weight - weight of vehicle as it sits empty (lbs) */
   curbWeight: number;
   /** GVWR - Gross Vehicle Weight Rating (lbs), from door jamb sticker */

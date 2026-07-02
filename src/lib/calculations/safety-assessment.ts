@@ -104,14 +104,18 @@ export const DEFAULT_TONGUE_PERCENT = {
 export const WATER_WEIGHT_PER_GALLON = 8.34;
 
 /**
- * Propane weight per gallon (lbs)
- * A 20lb tank holds ~4.7 gallons of propane, total weight ~38lbs filled
- * We use the propane content weight for calculation
+ * Propane content weight per tank size (lbs) — propane ONLY, not including tank shell.
+ * Trailer dry weight (UVW) already includes the weight of empty propane tanks,
+ * so we add only the propane content to avoid double-counting the tank shell.
+ * - 20 lb tank: 20 lbs of propane content
+ * - 30 lb tank: 30 lbs of propane content
+ * - 40 lb tank: 40 lbs of propane content
+ * Note: Total filled tank weight is ~37/55/72 lbs respectively (shell ~17 lbs).
  */
 export const PROPANE_WEIGHT_PER_TANK = {
-  20: 37, // 20lb tank filled = ~37 lbs total
-  30: 55, // 30lb tank filled = ~55 lbs total
-  40: 72, // 40lb tank filled = ~72 lbs total
+  20: 20, // 20 lbs propane content (tank shell ~17 lbs already in UVW)
+  30: 30, // 30 lbs propane content
+  40: 40, // 40 lbs propane content
 } as const;
 
 /**

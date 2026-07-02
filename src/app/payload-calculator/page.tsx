@@ -131,12 +131,25 @@ export default function PayloadCalculatorPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: FAQS.map((faq) => ({
-              "@type": "Question",
-              name: faq.q,
-              acceptedAnswer: { "@type": "Answer", text: faq.a },
-            })),
+            "@graph": [
+              {
+                "@type": "FAQPage",
+                mainEntity: FAQS.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.q,
+                  acceptedAnswer: { "@type": "Answer", text: faq.a },
+                })),
+              },
+              {
+                "@type": "WebApplication",
+                name: "Payload Capacity Calculator",
+                applicationCategory: "UtilityApplication",
+                operatingSystem: "Any",
+                offers: { "@type": "Offer", "price": "0", priceCurrency: "USD" },
+                url: "https://rvtowingcalc.com/payload-calculator",
+                description: "Calculate your truck's remaining payload capacity for RV towing. Enter passengers, cargo, and tongue weight to check if you're within safe limits.",
+              },
+            ],
           }),
         }}
       />

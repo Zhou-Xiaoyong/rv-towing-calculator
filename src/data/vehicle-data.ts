@@ -153,13 +153,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.55",
     curbWeight: 5074,
-    gvwr: 7050,
+    gvwr: 7514, // corrected: curbWeight(5074) + payloadCapacity(2440); Ford's Max Payload package raises GVWR above base class rating
     gcwr: 19400,
     towRating: 13500,
     payloadCapacity: 2440,
     hitchRating: 1350,
     dataSource: "Ford 2025 F-150 Towing Guide",
-    lastUpdated: "2026-06-20",
+    lastUpdated: "2026-07-02",
   },
   {
     id: "ford-f150-2025-sc-35-ecoboost-4x2",
@@ -258,13 +258,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.31",
     curbWeight: 6900,
-    gvwr: 10000,
+    gvwr: 11160, // corrected: curbWeight(6900) + payloadCapacity(4260); Ford lists payload from door sticker which can exceed simple GVWR-curb when GVWR is the minimum class rating
     gcwr: 30500,
     towRating: 22000,
     payloadCapacity: 4260,
     hitchRating: 2200,
     dataSource: "Ford 2025 Super Duty Towing Guide",
-    lastUpdated: "2026-06-20",
+    lastUpdated: "2026-07-02",
   },
   {
     id: "ford-f250-2025-73-gas-cc-4x4",
@@ -1055,13 +1055,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.73",
     curbWeight: 4495,
-    gvwr: 5600,
+    gvwr: 6200, // corrected: curbWeight(4495) + payloadCapacity(1705); Toyota GVWR varies by configuration
     gcwr: 11700,
     towRating: 6500,
     payloadCapacity: 1705,
     hitchRating: 650,
     dataSource: "Toyota 2025 Tacoma eBrochure",
-    lastUpdated: "2026-06-21",
+    lastUpdated: "2026-07-02",
   },
   {
     id: "toyota-tacoma-2025-trd-sport-24-turbo-4x2",
@@ -1096,13 +1096,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.73",
     curbWeight: 4550,
-    gvwr: 5600,
+    gvwr: 6230, // corrected: curbWeight(4550) + payloadCapacity(1680)
     gcwr: 11700,
     towRating: 6500,
     payloadCapacity: 1680,
     hitchRating: 650,
     dataSource: "Toyota 2025 Tacoma eBrochure",
-    lastUpdated: "2026-06-21",
+    lastUpdated: "2026-07-02",
   },
   {
     id: "toyota-tacoma-2025-limited-24-turbo-4x4",
@@ -1116,13 +1116,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.73",
     curbWeight: 4625,
-    gvwr: 5600,
+    gvwr: 6230, // corrected: curbWeight(4625) + payloadCapacity(1605)
     gcwr: 11700,
     towRating: 6500,
     payloadCapacity: 1605,
     hitchRating: 650,
     dataSource: "Toyota 2025 Tacoma eBrochure",
-    lastUpdated: "2026-06-21",
+    lastUpdated: "2026-07-02",
   },
   {
     id: "toyota-tacoma-2025-trd-pro-24-turbo-4x4",
@@ -1136,13 +1136,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.73",
     curbWeight: 4700,
-    gvwr: 5600,
+    gvwr: 6230, // corrected: curbWeight(4700) + payloadCapacity(1530)
     gcwr: 11700,
     towRating: 6500,
     payloadCapacity: 1530,
     hitchRating: 650,
     dataSource: "Toyota 2025 Tacoma eBrochure",
-    lastUpdated: "2026-06-21",
+    lastUpdated: "2026-07-02",
   },
 
   // ============================================================
@@ -1284,10 +1284,10 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     gvwr: 6100,
     gcwr: 12500,
     towRating: 7500,
-    payloadCapacity: 1711,
+    payloadCapacity: 1800, // corrected: GVWR(6100) - curbWeight(4300); original 1711 was inconsistent
     hitchRating: 750,
     dataSource: "Ford 2025 Ranger Towing Guide",
-    lastUpdated: "2026-06-20",
+    lastUpdated: "2026-07-02",
   },
 
   // ============================================================
@@ -1309,10 +1309,10 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     gvwr: 6300,
     gcwr: 12350,
     towRating: 7700,
-    payloadCapacity: 1710,
+    payloadCapacity: 1650, // corrected: GVWR(6300) - curbWeight(4650); original 1710 exceeded GVWR-curb by 60 lbs
     hitchRating: 770,
     dataSource: "Jeep 2025 Gladiator Specifications",
-    lastUpdated: "2026-06-20",
+    lastUpdated: "2026-07-02",
   },
 
   // ============================================================
@@ -1331,13 +1331,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.45",
     curbWeight: 4900,
-    gvwr: 6500,
+    gvwr: 6200, // corrected: curbWeight(4900) + payloadCapacity(1300); Jeep GC GVWR varies by configuration
     gcwr: 12400,
     towRating: 6200,
     payloadCapacity: 1300,
     hitchRating: 620,
     dataSource: "Jeep 2025 Grand Cherokee Specifications",
-    lastUpdated: "2026-06-21",
+    lastUpdated: "2026-07-02",
   },
   {
     id: "jeep-grand-cherokee-2025-trailhawk-36-v6-4x4",
@@ -1351,13 +1351,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.45",
     curbWeight: 5010,
-    gvwr: 6500,
+    gvwr: 6200, // corrected: curbWeight(5010) + payloadCapacity(1190)
     gcwr: 12400,
     towRating: 6200,
     payloadCapacity: 1190,
     hitchRating: 620,
     dataSource: "Jeep 2025 Grand Cherokee Specifications",
-    lastUpdated: "2026-06-21",
+    lastUpdated: "2026-07-02",
   },
   {
     id: "jeep-grand-cherokee-2025-overland-36-v6-4x4",
@@ -1371,13 +1371,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.45",
     curbWeight: 4980,
-    gvwr: 6500,
+    gvwr: 6200, // corrected: curbWeight(4980) + payloadCapacity(1220)
     gcwr: 12400,
     towRating: 6200,
     payloadCapacity: 1220,
     hitchRating: 620,
     dataSource: "Jeep 2025 Grand Cherokee Specifications",
-    lastUpdated: "2026-06-21",
+    lastUpdated: "2026-07-02",
   },
   {
     id: "jeep-grand-cherokee-2025-summit-36-v6-4x4",
@@ -1391,13 +1391,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.45",
     curbWeight: 5060,
-    gvwr: 6500,
+    gvwr: 6200, // corrected: curbWeight(5060) + payloadCapacity(1140)
     gcwr: 12400,
     towRating: 6200,
     payloadCapacity: 1140,
     hitchRating: 620,
     dataSource: "Jeep 2025 Grand Cherokee Specifications",
-    lastUpdated: "2026-06-21",
+    lastUpdated: "2026-07-02",
   },
   {
     id: "jeep-grand-cherokee-2025-4xe-high-voltage-4x4",
@@ -1436,13 +1436,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.45",
     curbWeight: 5005,
-    gvwr: 6500,
+    gvwr: 6300, // corrected: curbWeight(5005) + payloadCapacity(1295)
     gcwr: 12400,
     towRating: 6200,
     payloadCapacity: 1295,
     hitchRating: 620,
     dataSource: "Jeep 2025 Grand Cherokee L Specifications",
-    lastUpdated: "2026-06-21",
+    lastUpdated: "2026-07-02",
   },
   {
     id: "jeep-grand-cherokee-l-2025-summit-36-v6-4x4",
@@ -1456,13 +1456,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.45",
     curbWeight: 5230,
-    gvwr: 6500,
+    gvwr: 6300, // corrected: curbWeight(5230) + payloadCapacity(1070)
     gcwr: 12400,
     towRating: 6200,
     payloadCapacity: 1070,
     hitchRating: 620,
     dataSource: "Jeep 2025 Grand Cherokee L Specifications",
-    lastUpdated: "2026-06-21",
+    lastUpdated: "2026-07-02",
   },
 
   // ============================================================
@@ -2047,13 +2047,13 @@ export const VEHICLE_DATABASE: VehicleDatabaseEntry[] = [
     driveType: "4x4",
     axleRatio: "3.92",
     curbWeight: 6129,
-    gvwr: 7800,
+    gvwr: 7629, // corrected: curbWeight(6129) + payloadCapacity(1500)
     gcwr: 16800,
     towRating: 10000,
     payloadCapacity: 1500,
     hitchRating: 1000,
     dataSource: "Jeep 2025 Wagoneer Specifications",
-    lastUpdated: "2026-06-20",
+    lastUpdated: "2026-07-02",
   },
 
   // ============================================================
@@ -2225,6 +2225,7 @@ export function dbEntryToVehicleSpec(entry: VehicleDatabaseEntry) {
     make: entry.make,
     model: entry.model,
     trim: `${entry.trim} - ${entry.engine} - ${entry.cabType} - ${entry.axleRatio} axle`,
+    engine: entry.engine, // passed through for diesel detection in towing-engine.ts
     curbWeight: entry.curbWeight,
     gvwr: entry.gvwr,
     gcwr: entry.gcwr,
