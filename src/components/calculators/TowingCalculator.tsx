@@ -15,17 +15,23 @@ import {
   getVehicleTrims,
   dbEntryToVehicleSpec,
 } from "@/data/vehicle-data";
+import type { TrailerDatabaseEntry } from "@/data/trailer-data";
+import { allTrailers } from "@/data/trailer-data";
 import SafetyGauge from "./SafetyGauge";
 import SafetyCheckCard from "./SafetyCheckCard";
 import WeightBreakdown from "./WeightBreakdown";
+import TrailerSelector from "./TrailerSelector";
 
 type InputMode = "database" | "manual";
+type TrailerInputMode = "database" | "manual";
 
 export default function TowingCalculator() {
   const [inputMode, setInputMode] = useState<InputMode>("database");
+  const [trailerInputMode, setTrailerInputMode] = useState<TrailerInputMode>("manual");
   const [selectedMake, setSelectedMake] = useState("");
   const [selectedModel, setSelectedModel] = useState("");
   const [selectedTrim, setSelectedTrim] = useState("");
+  const [selectedTrailer, setSelectedTrailer] = useState<TrailerDatabaseEntry | null>(null);
   const [result, setResult] = useState<TowingResult | null>(null);
   const [hasCalculated, setHasCalculated] = useState(false);
 
@@ -86,6 +92,22 @@ export default function TowingCalculator() {
     if (entry) {
       const spec = dbEntryToVehicleSpec(entry);
       setVehicle(spec);
+    }
+  };
+
+  const handleTrailerSelect = (trailer: TrailerDatabaseEntry) => {
+    setSelectedTrailer(trailer);
+    setTrailerInputMode("database");
+    // Auto-fill trailer specs from database
+    setDryWeight(trailer.dryWeight);
+    setTrailerGvwr(trailer.gvwr);
+    setFreshWaterGallons(trailer.freshWater);
+    // Set trailer type
+    setTrailerType(trailer.type === "fifth-wheel" ? "fifth-wheel" : "travel-trailer");
+    // Auto-set propane tanks based on trailer data
+    if (trailer.propaneLbs) {
+      setPropaneTanks(Math.round(trailer.propaneLbs / 20)); // Assume 20lb tanks
+      setPropaneTankSize(20);
     }
   };
 
@@ -303,95 +325,205 @@ export default function TowingCalculator() {
 
         {/* Trailer Input Section */}
         <div>
-          <h2 className="mb-4 flex items-center gap-2 text-lg font-bold text-gray-900">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-sm font-bold text-white">
-              2
-            </span>
-            Your Trailer
-          </h2>
-
-          {/* Trailer type selector */}
-          <div className="mb-4">
-            <label className="mb-2 block text-sm font-medium text-gray-700">
-              Trailer Type
-            </label>
-            <div className="flex gap-3">
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="flex items-center gap-2 text-lg font-bold text-gray-900">
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-600 text-sm font-bold text-white">
+                2
+              </span>
+              Your Trailer
+            </h2>
+            <div className="flex gap-1 rounded-lg bg-gray-100 p-1">
               <button
                 type="button"
-                onClick={() => setTrailerType("travel-trailer")}
-                className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors ${
-                  trailerType === "travel-trailer"
-                    ? "border-brand-600 bg-brand-50 text-brand-700"
-                    : "border-gray-200 text-gray-600 hover:border-gray-300"
+                onClick={() => setTrailerInputMode("database")}
+                className={`rounded-md px-3 py-1 text-xs font-medium transition-colors ${
+                  trailerInputMode === "database"
+                    ? "bg-white text-brand-600 shadow-sm"
+                    : "text-gray-500"
                 }`}
               >
-                Travel Trailer
-                <span className="mt-1 block text-xs font-normal text-gray-500">
-                  Bumper pull, 10-15% tongue weight
-                </span>
+                Select Trailer
               </button>
               <button
                 type="button"
-                onClick={() => setTrailerType("fifth-wheel")}
-                className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors ${
-                  trailerType === "fifth-wheel"
-                    ? "border-brand-600 bg-brand-50 text-brand-700"
-                    : "border-gray-200 text-gray-600 hover:border-gray-300"
+                onClick={() => {
+                  setTrailerInputMode("manual");
+                  setSelectedTrailer(null);
+                }}
+                className={`rounded-md px-3 py-1 text-xs font-medium transition-colors ${
+                  trailerInputMode === "manual"
+                    ? "bg-white text-brand-600 shadow-sm"
+                    : "text-gray-500"
                 }`}
               >
-                Fifth Wheel
-                <span className="mt-1 block text-xs font-normal text-gray-500">
-                  Gooseneck, 20-25% pin weight
-                </span>
+                Manual Input
               </button>
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-            <NumberInput
-              label="Dry Weight / UVW (lbs)"
-              value={dryWeight}
-              onChange={setDryWeight}
-              hint="From trailer sticker"
-            />
-            <NumberInput
-              label="Cargo in Trailer (lbs)"
-              value={cargoWeight}
-              onChange={setCargoWeight}
-              hint="Gear, food, clothing"
-            />
-            <NumberInput
-              label="Fresh Water (gallons)"
-              value={freshWaterGallons}
-              onChange={setFreshWaterGallons}
-              hint="8.34 lbs/gallon"
-            />
-            <NumberInput
-              label="Propane Tanks"
-              value={propaneTanks}
-              onChange={setPropaneTanks}
-            />
-            <div>
-              <label className="mb-2 block text-sm font-medium text-gray-700">
-                Propane Tank Size
-              </label>
-              <select
-                value={propaneTankSize}
-                onChange={(e) => setPropaneTankSize(Number(e.target.value))}
-                className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm"
-              >
-                <option value={20}>20 lb (standard)</option>
-                <option value={30}>30 lb</option>
-                <option value={40}>40 lb</option>
-              </select>
+          {trailerInputMode === "database" ? (
+            <div className="space-y-4">
+              <p className="text-sm text-gray-600">
+                Select your trailer from our database of {allTrailers.length}+ RVs with verified specifications.
+              </p>
+              <TrailerSelector
+                onTrailerSelect={handleTrailerSelect}
+                onCustomSpecs={(specs) => {
+                  setDryWeight(specs.dryWeight);
+                  setTrailerGvwr(specs.gvwr);
+                  setTrailerType(specs.type);
+                  setTrailerInputMode("manual");
+                }}
+                selectedTrailerId={selectedTrailer?.id}
+              />
+              
+              {/* Selected trailer info */}
+              {selectedTrailer && (
+                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <div className="flex items-start justify-between mb-2">
+                    <h4 className="font-semibold text-green-900">
+                      {selectedTrailer.brand} {selectedTrailer.model} {selectedTrailer.trim}
+                    </h4>
+                    <span className="text-xs bg-green-200 text-green-800 px-2 py-1 rounded">
+                      {selectedTrailer.type}
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
+                    <div>
+                      <span className="text-green-700">Dry Weight:</span>
+                      <p className="font-medium">{selectedTrailer.dryWeight} lbs</p>
+                    </div>
+                    <div>
+                      <span className="text-green-700">GVWR:</span>
+                      <p className="font-medium">{selectedTrailer.gvwr} lbs</p>
+                    </div>
+                    <div>
+                      <span className="text-green-700">
+                        {selectedTrailer.type === "fifth-wheel" ? "Pin Weight:" : "Hitch Weight:"}
+                      </span>
+                      <p className="font-medium">
+                        {selectedTrailer.pinWeight || selectedTrailer.hitchWeight} lbs
+                      </p>
+                    </div>
+                    <div>
+                      <span className="text-green-700">Length:</span>
+                      <p className="font-medium">{selectedTrailer.length} ft</p>
+                    </div>
+                  </div>
+                  <p className="mt-2 text-xs text-green-700">
+                    ✓ Specs auto-filled from database. You can adjust cargo and water below.
+                  </p>
+                </div>
+              )}
+              
+              {/* Still allow adjusting cargo, water, etc. */}
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+                <NumberInput
+                  label="Cargo in Trailer (lbs)"
+                  value={cargoWeight}
+                  onChange={setCargoWeight}
+                  hint="Gear, food, clothing"
+                />
+                <NumberInput
+                  label="Fresh Water (gallons)"
+                  value={freshWaterGallons}
+                  onChange={setFreshWaterGallons}
+                  hint="8.34 lbs/gallon"
+                />
+                <NumberInput
+                  label="Propane Tanks"
+                  value={propaneTanks}
+                  onChange={setPropaneTanks}
+                />
+              </div>
             </div>
-            <NumberInput
-              label="Trailer GVWR (lbs)"
-              value={trailerGvwr}
-              onChange={setTrailerGvwr}
-              hint="From trailer sticker"
-            />
-          </div>
+          ) : (
+            /* Manual trailer input - original UI */
+            <div className="space-y-4">
+              {/* Trailer type selector */}
+              <div>
+                <label className="mb-2 block text-sm font-medium text-gray-700">
+                  Trailer Type
+                </label>
+                <div className="flex gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setTrailerType("travel-trailer")}
+                    className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors ${
+                      trailerType === "travel-trailer"
+                        ? "border-brand-600 bg-brand-50 text-brand-700"
+                        : "border-gray-200 text-gray-600 hover:border-gray-300"
+                    }`}
+                  >
+                    Travel Trailer
+                    <span className="mt-1 block text-xs font-normal text-gray-500">
+                      Bumper pull, 10-15% tongue weight
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setTrailerType("fifth-wheel")}
+                    className={`flex-1 rounded-lg border-2 px-4 py-3 text-sm font-medium transition-colors ${
+                      trailerType === "fifth-wheel"
+                        ? "border-brand-600 bg-brand-50 text-brand-700"
+                        : "border-gray-200 text-gray-600 hover:border-gray-300"
+                    }`}
+                  >
+                    Fifth Wheel
+                    <span className="mt-1 block text-xs font-normal text-gray-500">
+                      Gooseneck, 20-25% pin weight
+                    </span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+                <NumberInput
+                  label="Dry Weight / UVW (lbs)"
+                  value={dryWeight}
+                  onChange={setDryWeight}
+                  hint="From trailer sticker"
+                />
+                <NumberInput
+                  label="Cargo in Trailer (lbs)"
+                  value={cargoWeight}
+                  onChange={setCargoWeight}
+                  hint="Gear, food, clothing"
+                />
+                <NumberInput
+                  label="Fresh Water (gallons)"
+                  value={freshWaterGallons}
+                  onChange={setFreshWaterGallons}
+                  hint="8.34 lbs/gallon"
+                />
+                <NumberInput
+                  label="Propane Tanks"
+                  value={propaneTanks}
+                  onChange={setPropaneTanks}
+                />
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-gray-700">
+                    Propane Tank Size
+                  </label>
+                  <select
+                    value={propaneTankSize}
+                    onChange={(e) => setPropaneTankSize(Number(e.target.value))}
+                    className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500 md:py-2 md:text-sm"
+                  >
+                    <option value={20}>20 lb (standard)</option>
+                    <option value={30}>30 lb</option>
+                    <option value={40}>40 lb</option>
+                  </select>
+                </div>
+                <NumberInput
+                  label="Trailer GVWR (lbs)"
+                  value={trailerGvwr}
+                  onChange={setTrailerGvwr}
+                  hint="From trailer sticker"
+                />
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Divider */}
