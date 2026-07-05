@@ -1095,6 +1095,96 @@ export const forestRiverWildwood: TrailerDatabaseEntry[] = [
 ];
 
 // ═══════════════════════════════════════════════════════════════
+// FOREST RIVER — SALEM TRAVEL TRAILERS
+// Source: Forest River Salem brochure (estimated)
+// Verification status: needs-verification
+// ═══════════════════════════════════════════════════════════════
+
+export const forestRiverSalem: TrailerDatabaseEntry[] = [
+  {
+    id: "fr-salem-22flx-2025",
+    year: 2025,
+    brand: "Forest River",
+    model: "Salem",
+    trim: "22FLX",
+    type: "travel-trailer",
+    dryWeight: 5890,
+    gvwr: 7885,
+    hitchWeight: 790,
+    length: 26.7,
+    height: 10.5,
+    freshWater: 40,
+    grayWater: 30,
+    blackWater: 30,
+    propaneLbs: 40,
+    sleepCapacity: 4,
+    numAxles: 2,
+    numSlides: 1,
+    tireSize: "ST205/75R14'D'",
+    dataSource: "Forest River Salem brochure (estimated)",
+    lastVerified: "2025-07-05",
+    verificationStatus: "needs-verification",
+  },
+  {
+    id: "fr-salem-27dbk-2025",
+    year: 2025,
+    brand: "Forest River",
+    model: "Salem",
+    trim: "27DBK",
+    type: "travel-trailer",
+    dryWeight: 6630,
+    gvwr: 9620,
+    hitchWeight: 830,
+    length: 33.7,
+    height: 10.5,
+    freshWater: 40,
+    grayWater: 30,
+    blackWater: 30,
+    propaneLbs: 40,
+    sleepCapacity: 10,
+    numAxles: 2,
+    numSlides: 1,
+    tireSize: "ST225/75R15",
+    dataSource: "Forest River Salem brochure (estimated)",
+    lastVerified: "2025-07-05",
+    verificationStatus: "needs-verification",
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
+// FOREST RIVER — SURVEYOR TRAVEL TRAILERS
+// Source: Forest River Surveyor brochure (estimated)
+// Verification status: needs-verification
+// ═══════════════════════════════════════════════════════════════
+
+export const forestRiverSurveyor: TrailerDatabaseEntry[] = [
+  {
+    id: "fr-surveyor-240mks-2025",
+    year: 2025,
+    brand: "Forest River",
+    model: "Surveyor",
+    trim: "240MKS",
+    type: "travel-trailer",
+    dryWeight: 5430,
+    gvwr: 7640,
+    hitchWeight: 540,
+    length: 27.8,
+    height: 10.5,
+    freshWater: 40,
+    grayWater: 30,
+    blackWater: 30,
+    propaneLbs: 40,
+    sleepCapacity: 4,
+    numAxles: 2,
+    numSlides: 1,
+    tireSize: "ST205/75R14'D'",
+    dataSource: "Forest River Surveyor brochure (estimated)",
+    lastVerified: "2025-07-05",
+    verificationStatus: "needs-verification",
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════
 // JAYCO — JAY FLIGHT TRAVEL TRAILERS
 // Source: https://www.jayco.com/rvs/travel-trailers/2025-jay-flight/
 // Verified: 2025-07-05
@@ -1386,6 +1476,8 @@ export const allTrailers: TrailerDatabaseEntry[] = [
   ...grandDesignSolitude,
   ...grandDesignReflection,
   ...forestRiverWildwood,
+  ...forestRiverSalem,
+  ...forestRiverSurveyor,
   ...jaycoJayFlight,
   ...keystonePassport,
   ...coachmenApex,
