@@ -118,6 +118,38 @@ export default function Footer() {
                   WDH Setup Guide
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/guides/exceed-gvwr-dangers"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Exceed GVWR Dangers
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/best-half-ton-trucks-8000-lbs"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Best Half-Ton Trucks
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/fifth-wheel-vs-travel-trailer"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  5th Wheel vs Travel Trailer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/electric-trucks-rv-towing"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  EV Trucks for Towing
+                </Link>
+              </li>
             </ul>
           </div>
 

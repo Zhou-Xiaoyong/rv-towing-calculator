@@ -75,6 +75,20 @@ const GUIDES = [
       "Head-to-head comparison of Ford F-150, RAM 1500, Silverado 1500, Sierra 1500, Tundra, and Titan for safely towing an 8,000 lb travel trailer.",
     category: "Buying Guides",
   },
+  {
+    slug: "/guides/fifth-wheel-vs-travel-trailer",
+    title: "5th Wheel vs Travel Trailer: Towing Compared",
+    description:
+      "Side-by-side comparison of 5th wheel and travel trailer towing: hitch types, stability, payload math, fuel economy, and which truck you actually need.",
+    category: "Buying Guides",
+  },
+  {
+    slug: "/guides/electric-trucks-rv-towing",
+    title: "Electric Trucks for Towing RVs",
+    description:
+      "Real-world range, payload, and charging logistics for Rivian, Tesla Cybertruck, F-150 Lightning, and Silverado EV when towing travel trailers.",
+    category: "Buying Guides",
+  },
 ];
 
 export default function GuidesPage() {

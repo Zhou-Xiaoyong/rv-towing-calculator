@@ -18,6 +18,10 @@ const GUIDE_LINKS = [
   { href: "/guides/tongue-weight", label: "Tongue Weight Guide" },
   { href: "/guides/cat-scale-weighing", label: "CAT Scale Weighing" },
   { href: "/guides/weight-distribution-hitch-setup", label: "WDH Setup Guide" },
+  { href: "/guides/exceed-gvwr-dangers", label: "Exceed GVWR Dangers" },
+  { href: "/guides/best-half-ton-trucks-8000-lbs", label: "Best Half-Ton Trucks" },
+  { href: "/guides/fifth-wheel-vs-travel-trailer", label: "5th Wheel vs TT" },
+  { href: "/guides/electric-trucks-rv-towing", label: "EV Trucks for Towing" },
 ];
 
 export default function Header() {
