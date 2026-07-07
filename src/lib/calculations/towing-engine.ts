@@ -223,9 +223,9 @@ function checkTrailerGvwr(
     explanation: `Your loaded trailer weighs ${formatLbs(loadedTrailerWeight)}. The trailer's GVWR (max loaded weight from the trailer's sticker) is ${formatLbs(trailerGvwr)}.`,
     recommendation:
       status === "danger"
-        ? `Your trailer exceeds its GVWR by ${formatLbs(Math.abs(marginLbs))}. This overloads the trailer's axles, frame, and tires — risking tire blowout and structural failure. Remove ${formatLbs(Math.abs(marginLbs) + 100)} of cargo immediately.`
+        ? `Your trailer exceeds its GVWR by ${formatLbs(Math.abs(marginLbs))}. This overloads the trailer's axles, frame, and tires — risking tire blowout and structural failure. Remove ${formatLbs(Math.abs(marginLbs))} of cargo from the trailer immediately (this includes gear, water, and propane inside the trailer).`
         : status === "warning"
-          ? `Close to trailer GVWR. ${formatLbs(marginLbs)} remaining. Consider reducing cargo to stay within the safe zone.`
+          ? `Close to trailer GVWR. ${formatLbs(marginLbs)} remaining. Consider reducing cargo inside the trailer to stay within the safe zone.`
           : `Trailer is within its GVWR with ${formatLbs(marginLbs)} to spare.`,
   };
 }
