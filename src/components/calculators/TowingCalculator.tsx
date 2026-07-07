@@ -21,6 +21,7 @@ import SafetyGauge from "./SafetyGauge";
 import SafetyCheckCard from "./SafetyCheckCard";
 import WeightBreakdown from "./WeightBreakdown";
 import TrailerSelector from "./TrailerSelector";
+import AmazonAffiliate from "../AmazonAffiliate";
 
 type InputMode = "database" | "manual";
 type TrailerInputMode = "database" | "manual";
@@ -652,6 +653,8 @@ export default function TowingCalculator() {
               </div>
             </div>
           )}
+
+          <AmazonAffiliate />
 
           {/* Disclaimer */}
           <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">

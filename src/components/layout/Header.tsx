@@ -22,6 +22,10 @@ const GUIDE_LINKS = [
   { href: "/guides/best-half-ton-trucks-8000-lbs", label: "Best Half-Ton Trucks" },
   { href: "/guides/fifth-wheel-vs-travel-trailer", label: "5th Wheel vs TT" },
   { href: "/guides/electric-trucks-rv-towing", label: "EV Trucks for Towing" },
+  { href: "/guides/can-ford-f150-tow-jayco-jay-flight-28bhs", label: "Case: F-150 & Jay Flight" },
+  { href: "/guides/spring-checklist", label: "Spring Pre-Departure" },
+  { href: "/guides/winter-storage", label: "Winter Storage Guide" },
+  { href: "/checklist", label: "Safety Checklist PDF" },
 ];
 
 export default function Header() {
