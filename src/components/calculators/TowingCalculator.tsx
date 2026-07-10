@@ -16,7 +16,7 @@ import {
   dbEntryToVehicleSpec,
 } from "@/data/vehicle-data";
 import type { TrailerDatabaseEntry } from "@/data/trailer-data";
-import { allTrailers } from "@/data/trailer-data";
+import { allTrailers, inferPropaneConfig } from "@/data/trailer-data";
 import SafetyGauge from "./SafetyGauge";
 import SafetyCheckCard from "./SafetyCheckCard";
 import WeightBreakdown from "./WeightBreakdown";
@@ -98,6 +98,7 @@ export default function TowingCalculator() {
   const [propaneTanks, setPropaneTanks] = useState(2);
   const [propaneTankSize, setPropaneTankSize] = useState(20);
   const [trailerGvwr, setTrailerGvwr] = useState(0);
+  const [tongueWeightPercent, setTongueWeightPercent] = useState<number | undefined>(undefined);
 
   // Vehicle load
   const [passengerWeight, setPassengerWeight] = useState(0);
@@ -145,11 +146,30 @@ export default function TowingCalculator() {
     setFreshWaterGallons(trailer.freshWater);
     // Set trailer type
     setTrailerType(trailer.type === "fifth-wheel" ? "fifth-wheel" : "travel-trailer");
-    // Auto-set propane tanks based on trailer data
-    if (trailer.propaneLbs) {
-      setPropaneTanks(Math.round(trailer.propaneLbs / 20));
-      setPropaneTankSize(20);
+    // Auto-set propane tanks based on trailer data (using smart config inference)
+    const propaneConfig = inferPropaneConfig(trailer.propaneLbs);
+    setPropaneTanks(propaneConfig.tankCount);
+    setPropaneTankSize(propaneConfig.tankSize);
+
+    // Derive tongue weight % from manufacturer's dry hitch/pin weight data
+    // This is more accurate than the blanket 13%/22% defaults
+    const isFifthWheel = trailer.type === "fifth-wheel";
+    const dryHitchOrPin = isFifthWheel ? trailer.pinWeight : trailer.hitchWeight;
+    if (dryHitchOrPin && trailer.dryWeight > 0) {
+      // Dry tongue weight % = manufacturer weight / dry weight
+      // Add 1.5% safety margin for loaded condition (cargo shifts weight forward)
+      const dryPercent = (dryHitchOrPin / trailer.dryWeight) * 100;
+      const loadedPercent = dryPercent + 1.5;
+      // Clamp to industry-accepted safe ranges
+      const minPercent = isFifthWheel ? 18 : 10;
+      const maxPercent = isFifthWheel ? 27 : 17;
+      const clampedPercent = Math.min(maxPercent, Math.max(minPercent, loadedPercent));
+      setTongueWeightPercent(Math.round(clampedPercent * 10) / 10);
+    } else {
+      // Fallback to default percentages if no manufacturer data available
+      setTongueWeightPercent(undefined);
     }
+
     // Smart default: cargo weight = 12% of dry weight (typical RV loading)
     const estimatedCargo = Math.round(trailer.dryWeight * 0.12);
     setCargoWeight(estimatedCargo);
@@ -180,6 +200,7 @@ export default function TowingCalculator() {
           passengerWeight,
           cargoWeight: truckCargoWeight,
         },
+        tongueWeightPercent,
       };
     } else {
       input = {
@@ -197,6 +218,7 @@ export default function TowingCalculator() {
           passengerWeight,
           cargoWeight: truckCargoWeight,
         },
+        tongueWeightPercent,
       };
     }
 
@@ -223,6 +245,7 @@ export default function TowingCalculator() {
     trailerGvwr,
     passengerWeight,
     truckCargoWeight,
+    tongueWeightPercent,
   ]);
 
   return (
@@ -435,23 +458,23 @@ export default function TowingCalculator() {
                     <div className="flex items-center justify-between">
                       <span className="text-green-600">Dry Weight</span>
                       <span className="font-medium text-green-900">
-                        {selectedTrailer.dryWeight} lbs
+                        {selectedTrailer.dryWeight.toLocaleString()} lbs
                       </span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-green-600">GVWR</span>
                       <span className="font-medium text-green-900">
-                        {selectedTrailer.gvwr} lbs
+                        {selectedTrailer.gvwr.toLocaleString()} lbs
                       </span>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-green-600">
                         {selectedTrailer.type === "fifth-wheel"
-                          ? "Pin Weight"
-                          : "Hitch Weight"}
+                          ? "Pin Weight (dry)"
+                          : "Hitch Weight (dry)"}
                       </span>
                       <span className="font-medium text-green-900">
-                        {selectedTrailer.pinWeight || selectedTrailer.hitchWeight} lbs
+                        {(selectedTrailer.pinWeight || selectedTrailer.hitchWeight || 0).toLocaleString()} lbs
                       </span>
                     </div>
                     <div className="flex items-center justify-between">
@@ -461,6 +484,13 @@ export default function TowingCalculator() {
                       </span>
                     </div>
                   </div>
+                  {tongueWeightPercent && (
+                    <p className="mt-2 text-xs text-green-700">
+                      Tongue weight {tongueWeightPercent}% estimated from manufacturer data
+                      ({selectedTrailer.type === "fifth-wheel" ? "pin" : "hitch"} weight /
+                      dry weight + 1.5% loaded margin)
+                    </p>
+                  )}
                 </div>
               )}
 

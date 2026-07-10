@@ -2543,3 +2543,48 @@ export function estimatePinWeight(
   // Estimate as 20% of GVWR (typical for fifth wheels)
   return Math.round(weight * 0.20);
 }
+
+/**
+ * Infer propane tank count and size from total propane capacity.
+ *
+ * Common RV propane configurations:
+ * - 20 lbs → 1 × 20lb tank (small trailers)
+ * - 40 lbs → 2 × 20lb tanks (standard)
+ * - 60 lbs → 2 × 30lb tanks (mid-size to large trailers)
+ * - 80 lbs → 2 × 40lb tanks (large trailers)
+ * - 120 lbs → 3 × 40lb tanks (fifth wheels)
+ *
+ * Returns { tankCount, tankSize } for use in towing calculations.
+ */
+export function inferPropaneConfig(
+  propaneLbs: number | undefined
+): { tankCount: number; tankSize: number } {
+  if (!propaneLbs || propaneLbs <= 0) {
+    return { tankCount: 0, tankSize: 20 };
+  }
+
+  // Map total propane lbs to the most common RV tank configuration
+  switch (propaneLbs) {
+    case 20:
+      return { tankCount: 1, tankSize: 20 };
+    case 40:
+      return { tankCount: 2, tankSize: 20 };
+    case 60:
+      return { tankCount: 2, tankSize: 30 };
+    case 80:
+      return { tankCount: 2, tankSize: 40 };
+    case 120:
+      return { tankCount: 3, tankSize: 40 };
+    default: {
+      // Fallback: try to find the best-fit configuration
+      // Prefer 2-tank setups for ≤60 lbs, 40lb tanks for >60 lbs
+      if (propaneLbs <= 40) {
+        return { tankCount: Math.round(propaneLbs / 20), tankSize: 20 };
+      } else if (propaneLbs <= 80) {
+        return { tankCount: 2, tankSize: Math.round(propaneLbs / 2) };
+      } else {
+        return { tankCount: Math.round(propaneLbs / 40), tankSize: 40 };
+      }
+    }
+  }
+}
