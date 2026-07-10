@@ -147,9 +147,16 @@ export default function TowingCalculator() {
     setTrailerType(trailer.type === "fifth-wheel" ? "fifth-wheel" : "travel-trailer");
     // Auto-set propane tanks based on trailer data
     if (trailer.propaneLbs) {
-      setPropaneTanks(Math.round(trailer.propaneLbs / 20)); // Assume 20lb tanks
+      setPropaneTanks(Math.round(trailer.propaneLbs / 20));
       setPropaneTankSize(20);
     }
+    // Smart default: cargo weight = 12% of dry weight (typical RV loading)
+    const estimatedCargo = Math.round(trailer.dryWeight * 0.12);
+    setCargoWeight(estimatedCargo);
+    // Smart default: passengers = 4 people × 175 lbs = 700 lbs
+    setPassengerWeight(700);
+    // Smart default: truck cargo = 200 lbs (coolers, tools, basic gear)
+    setTruckCargoWeight(200);
   };
 
   const handleCalculate = useCallback(() => {
@@ -418,64 +425,70 @@ export default function TowingCalculator() {
                 selectedTrailerId={selectedTrailer?.id}
               />
               
-              {/* Selected trailer info */}
+              {/* Auto-filled specs summary */}
               {selectedTrailer && (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                  <div className="flex items-start justify-between mb-2">
-                    <h4 className="font-semibold text-green-900">
-                      {selectedTrailer.brand} {selectedTrailer.model} {selectedTrailer.trim}
-                    </h4>
-                    <span className="text-xs bg-green-200 text-green-800 px-2 py-1 rounded">
-                      {selectedTrailer.type}
-                    </span>
-                  </div>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-sm">
-                    <div>
-                      <span className="text-green-700">Dry Weight:</span>
-                      <p className="font-medium">{selectedTrailer.dryWeight} lbs</p>
-                    </div>
-                    <div>
-                      <span className="text-green-700">GVWR:</span>
-                      <p className="font-medium">{selectedTrailer.gvwr} lbs</p>
-                    </div>
-                    <div>
-                      <span className="text-green-700">
-                        {selectedTrailer.type === "fifth-wheel" ? "Pin Weight:" : "Hitch Weight:"}
-                      </span>
-                      <p className="font-medium">
-                        {selectedTrailer.pinWeight || selectedTrailer.hitchWeight} lbs
-                      </p>
-                    </div>
-                    <div>
-                      <span className="text-green-700">Length:</span>
-                      <p className="font-medium">{selectedTrailer.length} ft</p>
-                    </div>
-                  </div>
-                  <p className="mt-2 text-xs text-green-700">
-                    ✓ Specs auto-filled from database. You can adjust cargo and water below.
+                <div className="rounded-lg border border-green-200 bg-green-50 p-4">
+                  <p className="mb-3 text-sm font-medium text-green-800">
+                    ✓ Specs auto-filled from database
                   </p>
+                  <div className="grid grid-cols-2 gap-2 text-sm">
+                    <div className="flex items-center justify-between">
+                      <span className="text-green-600">Dry Weight</span>
+                      <span className="font-medium text-green-900">
+                        {selectedTrailer.dryWeight} lbs
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-green-600">GVWR</span>
+                      <span className="font-medium text-green-900">
+                        {selectedTrailer.gvwr} lbs
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-green-600">
+                        {selectedTrailer.type === "fifth-wheel"
+                          ? "Pin Weight"
+                          : "Hitch Weight"}
+                      </span>
+                      <span className="font-medium text-green-900">
+                        {selectedTrailer.pinWeight || selectedTrailer.hitchWeight} lbs
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between">
+                      <span className="text-green-600">Length</span>
+                      <span className="font-medium text-green-900">
+                        {selectedTrailer.length} ft
+                      </span>
+                    </div>
+                  </div>
                 </div>
               )}
-              
-              {/* Still allow adjusting cargo, water, etc. */}
-              <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-                <NumberInput
-                  label="Cargo in Trailer (lbs)"
-                  value={cargoWeight}
-                  onChange={setCargoWeight}
-                  hint="Gear, food, clothing"
-                />
-                <NumberInput
-                  label="Fresh Water (gallons)"
-                  value={freshWaterGallons}
-                  onChange={setFreshWaterGallons}
-                  hint="8.34 lbs/gallon"
-                />
-                <NumberInput
-                  label="Propane Tanks"
-                  value={propaneTanks}
-                  onChange={setPropaneTanks}
-                />
+
+              {/* Adjust these values if needed */}
+              <div className="mt-4 rounded-lg border border-gray-200 bg-gray-50 p-4">
+                <p className="mb-3 text-sm font-medium text-gray-700">
+                  Adjust Loaded Weight (optional)
+                </p>
+                <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+                  <NumberInput
+                    label="Cargo in Trailer (lbs)"
+                    value={cargoWeight}
+                    onChange={setCargoWeight}
+                    hint={`${Math.round((cargoWeight / dryWeight) * 100)}% of dry weight`}
+                  />
+                  <NumberInput
+                    label="Fresh Water (gallons)"
+                    value={freshWaterGallons}
+                    onChange={setFreshWaterGallons}
+                    hint="8.34 lbs/gallon"
+                  />
+                  <NumberInput
+                    label="Propane Tanks"
+                    value={propaneTanks}
+                    onChange={setPropaneTanks}
+                    hint={`${propaneTanks} × ${propaneTankSize} lbs`}
+                  />
+                </div>
               </div>
             </div>
           ) : (
@@ -579,18 +592,70 @@ export default function TowingCalculator() {
             Passengers &amp; Cargo in Truck
           </h2>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-            <NumberInput
-              label="Passenger Weight (lbs)"
-              value={passengerWeight}
-              onChange={setPassengerWeight}
-              hint="~150-200 lbs per person"
-            />
-            <NumberInput
-              label="Cargo in Truck (lbs)"
-              value={truckCargoWeight}
-              onChange={setTruckCargoWeight}
-              hint="Tools, firewood, coolers"
-            />
+            <div>
+              <label className="mb-2 block text-sm font-medium text-gray-700">
+                Passenger Weight (lbs)
+              </label>
+              <div className="flex flex-wrap gap-2 mb-2">
+                {[
+                  { label: "1 Person", value: 175 },
+                  { label: "2 People", value: 350 },
+                  { label: "4 People", value: 700 },
+                  { label: "6 People", value: 1050 },
+                ].map((option) => (
+                  <button
+                    key={option.value}
+                    type="button"
+                    onClick={() => setPassengerWeight(option.value)}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                      passengerWeight === option.value
+                        ? "bg-brand-600 text-white"
+                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    }`}
+                  >
+                    {option.label} ({option.value} lbs)
+                  </button>
+                ))}
+              </div>
+              <NumberInput
+                label="Custom Weight"
+                value={passengerWeight}
+                onChange={setPassengerWeight}
+                hint="~175 lbs per person"
+              />
+            </div>
+            <div>
+              <label className="mb-2 block text-sm font-medium text-gray-700">
+                Cargo in Truck (lbs)
+              </label>
+              <div className="flex flex-wrap gap-2 mb-2">
+                {[
+                  { label: "Minimal", value: 100 },
+                  { label: "Basic", value: 200 },
+                  { label: "Full", value: 500 },
+                  { label: "Heavy", value: 1000 },
+                ].map((option) => (
+                  <button
+                    key={option.value}
+                    type="button"
+                    onClick={() => setTruckCargoWeight(option.value)}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-colors ${
+                      truckCargoWeight === option.value
+                        ? "bg-brand-600 text-white"
+                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    }`}
+                  >
+                    {option.label} ({option.value} lbs)
+                  </button>
+                ))}
+              </div>
+              <NumberInput
+                label="Custom Weight"
+                value={truckCargoWeight}
+                onChange={setTruckCargoWeight}
+                hint="Tools, coolers, gear"
+              />
+            </div>
           </div>
         </div>
 
