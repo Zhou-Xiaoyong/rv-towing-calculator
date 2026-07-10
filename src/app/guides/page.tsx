@@ -89,6 +89,34 @@ const GUIDES = [
       "Real-world range, payload, and charging logistics for Rivian, Tesla Cybertruck, F-150 Lightning, and Silverado EV when towing travel trailers.",
     category: "Buying Guides",
   },
+  {
+    slug: "/guides/how-to-read-tire-and-loading-label",
+    title: "How to Read Your Truck's Tire and Loading Label",
+    description:
+      "Decode the yellow door jamb sticker on your truck. Learn what GVWR, GAWR, payload capacity, and tire pressure mean and how to use them for safe towing.",
+    category: "Fundamentals",
+  },
+  {
+    slug: "/guides/can-ford-f150-tow-jayco-jay-flight-28bhs",
+    title: "Can a Ford F-150 Tow a Jayco Jay Flight 28BHS?",
+    description:
+      "Full analysis of F-150 towing capacity vs Jayco Jay Flight 28BHS specifications. Includes dry weight, tongue weight, payload calculations, and trim comparison.",
+    category: "Matchups",
+  },
+  {
+    slug: "/guides/can-ram-2500-tow-keystone-montana",
+    title: "Can a RAM 2500 Tow a Keystone Montana?",
+    description:
+      "Payload reality check: why the RAM 2500's tow rating is plenty but pin weight makes this fifth wheel matchup unsafe. Includes trim comparison and solutions.",
+    category: "Matchups",
+  },
+  {
+    slug: "/guides/can-chevy-silverado-1500-tow-grand-design-imagine-2800bh",
+    title: "Can a Chevy Silverado 1500 Tow a Grand Design Imagine 2800BH?",
+    description:
+      "Trim-by-trim analysis of Silverado 1500 vs Grand Design Imagine 2800BH. Which engines work, which to avoid, and why hitch rating is the hidden constraint.",
+    category: "Matchups",
+  },
 ];
 
 export default function GuidesPage() {

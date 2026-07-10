@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
+import { FaqJsonLd, ArticleJsonLd, HowToJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
 export const metadata: Metadata = {
@@ -52,6 +52,34 @@ export default function CatScaleWeighingGuidePage() {
       <FaqJsonLd
         faqs={FAQS}
         baseUrl="https://rvtowingcalc.com/guides/cat-scale-weighing"
+      />
+      <HowToJsonLd
+        name="How to Weigh Your RV at a CAT Scale"
+        description="Step-by-step guide to weighing your RV at a CAT Scale to get accurate per-axle weights, calculate tongue weight, and verify GVWR and GCWR compliance."
+        totalTime="PT30M"
+        url="https://rvtowingcalc.com/guides/cat-scale-weighing"
+        steps={[
+          {
+            name: "Prepare your rig",
+            text: "Load your RV exactly as you would for a trip: full fuel tank, passengers on board, cargo in place, and fresh water at your typical level. The goal is to weigh in your heaviest realistic configuration.",
+          },
+          {
+            name: "First pass - truck plus trailer connected",
+            text: "Pull onto the scale with your trailer connected. Position your steer axle on Platform 1, drive axle on Platform 2, and trailer axle(s) on Platform 3. Press the call button, tell the weighmaster it is a private weigh, and wait for the horn or green light.",
+          },
+          {
+            name: "Get your first ticket",
+            text: "Go inside and pay at the counter, or use the Weigh My Truck app for a digital ticket. Tell the cashier you will be back for a re-weigh. Your ticket will show steer axle, drive axle, and trailer axle weights plus a gross combined weight.",
+          },
+          {
+            name: "Second pass - truck only",
+            text: "Find a safe place nearby to unhitch your trailer. Drop the trailer in a parking spot, then return to the scale with just your truck. Position your steer axle on Platform 1 and drive axle on Platform 2. Tell the weighmaster this is your re-weigh.",
+          },
+          {
+            name: "Calculate your numbers",
+            text: "With both tickets, calculate tongue weight by subtracting Pass 2 drive axle from Pass 1 drive axle. Calculate loaded trailer weight by subtracting Pass 2 gross from Pass 1 gross. Compare every value against the ratings on your door jamb sticker and towing guide.",
+          },
+        ]}
       />
       <ArticleJsonLd
         title="How to Weigh Your RV at a CAT Scale: Step-by-Step Guide"

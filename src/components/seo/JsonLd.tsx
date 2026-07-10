@@ -101,6 +101,51 @@ export function BreadcrumbJsonLd({
 }
 
 /**
+ * Reusable HowTo JSON-LD schema component for SEO.
+ * Targets Featured Snippets for step-by-step instructional content.
+ */
+export function HowToJsonLd({
+  name,
+  description,
+  steps,
+  totalTime,
+  url,
+}: {
+  name: string;
+  description: string;
+  steps: { name: string; text: string }[];
+  totalTime?: string;
+  url?: string;
+}) {
+  const schema: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.name,
+      text: step.text,
+    })),
+  };
+
+  if (totalTime) {
+    schema.totalTime = totalTime;
+  }
+  if (url) {
+    schema.url = url;
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}
+
+/**
  * WebApplication JSON-LD schema for the homepage.
  * Signals to search engines that this is a tool/web app.
  */

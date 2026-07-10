@@ -36,6 +36,46 @@ export default function TowingCalculator() {
   const [result, setResult] = useState<TowingResult | null>(null);
   const [hasCalculated, setHasCalculated] = useState(false);
 
+  // Derive context-aware accessory categories from the safety result so the
+  // affiliate recommendations directly address the specific safety issues found.
+  const recommendedCategories = useMemo<string[]>(() => {
+    if (!result) return [];
+    const categories: string[] = [];
+    const recIds = new Set(result.recommendations.map((r) => r.id));
+
+    // WDH / sway control / brake controller map directly from recommendations
+    if (recIds.has("wdh")) categories.push("weight-distribution");
+    if (recIds.has("sway-control")) categories.push("sway-control");
+    if (recIds.has("brake-controller")) categories.push("brake-controller");
+
+    // Payload or tongue-weight issues -> recommend a tongue scale to measure it
+    const payloadCheck = result.checks.find((c) => c.id === "payload");
+    const tongueCheck = result.checks.find((c) => c.id === "tongue-weight");
+    if (
+      (payloadCheck && payloadCheck.status !== "safe") ||
+      (tongueCheck && tongueCheck.status !== "safe")
+    ) {
+      categories.push("tongue-scale");
+    }
+
+    // Overweight / overloaded setup -> recommend a TPMS for tire safety
+    const gvwrCheck = result.checks.find((c) => c.id === "gvwr");
+    const trailerGvwrCheck = result.checks.find((c) => c.id === "trailer-gvwr");
+    if (
+      result.overallStatus === "danger" ||
+      (gvwrCheck && gvwrCheck.status === "danger") ||
+      (trailerGvwrCheck && trailerGvwrCheck.status === "danger")
+    ) {
+      categories.push("tpms");
+    }
+
+    // Fallback: if nothing specific triggered, show the core towing essentials
+    if (categories.length === 0) {
+      categories.push("weight-distribution", "brake-controller", "tongue-scale");
+    }
+    return categories;
+  }, [result]);
+
   // Manual vehicle specs
   const [vehicle, setVehicle] = useState<VehicleSpec>({
     year: 2024,
@@ -654,7 +694,7 @@ export default function TowingCalculator() {
             </div>
           )}
 
-          <AmazonAffiliate />
+          <AmazonAffiliate categories={recommendedCategories} showAll />
 
           {/* Disclaimer */}
           <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
