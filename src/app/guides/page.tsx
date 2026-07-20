@@ -90,7 +90,6 @@ const GUIDES = [
     category: "Buying Guides",
   },
   {
-  {
     slug: "/guides/how-to-read-tire-and-loading-label",
     title: "How to Read Your Truck's Tire and Loading Label",
     description:
@@ -131,7 +130,6 @@ const GUIDES = [
     description:
       "How to protect your transmission and select the right gears when towing an RV through mountain grades. Temperature limits, tow/haul mode, and downhill braking strategy.",
     category: "Safety",
-  },
   },
 ];
 
