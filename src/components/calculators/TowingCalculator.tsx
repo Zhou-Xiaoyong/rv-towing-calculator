@@ -621,6 +621,24 @@ export default function TowingCalculator() {
             </span>
             Passengers &amp; Cargo in Truck
           </h2>
+          
+          {/* Loading Position Tip */}
+          <div className="mb-6 rounded-xl border-l-4 border-amber-500 bg-amber-50 p-4">
+            <h4 className="mb-2 flex items-center gap-2 text-sm font-bold text-amber-800">
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Loading Position Matters
+            </h4>
+            <ul className="text-xs leading-relaxed text-amber-700 space-y-1">
+              <li>• Place heavy items in the <strong>truck bed forward</strong> (near the cab), not at the tailgate</li>
+              <li>• Distribute weight <strong>evenly side-to-side</strong> to maintain balance</li>
+              <li>• In trailers: Load <strong>60% of cargo forward</strong> of the axle for proper tongue weight</li>
+              <li>• Avoid loading heavy items high up — keep center of gravity <strong>low</strong></li>
+              <li>• Learn more in our <a href="/guides/trailer-loading-position" className="font-semibold underline">Trailer Loading Guide</a></li>
+            </ul>
+          </div>
+
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <div>
               <label className="mb-2 block text-sm font-medium text-gray-700">

@@ -41,13 +41,20 @@ const GUIDES = [
     category: "Fundamentals",
   },
   {
-    slug: "/guides/tongue-weight",
-    title: "Tongue Weight Guide",
-    description:
-      "Optimal tongue weight percentages for travel trailers and fifth wheels. How to measure, adjust, and prevent trailer sway.",
-    category: "Safety",
-  },
-  {
+      slug: "/guides/tongue-weight",
+      title: "Tongue Weight Guide",
+      description:
+        "Optimal tongue weight percentages for travel trailers and fifth wheels. How to measure, adjust, and prevent trailer sway.",
+      category: "Safety",
+    },
+    {
+      slug: "/guides/trailer-loading-position",
+      title: "Trailer Loading Position Guide",
+      description:
+        "Learn the correct way to load your trailer for safe towing. The 60/40 rule, tongue weight optimization, and cargo distribution techniques.",
+      category: "Safety",
+    },
+    {
     slug: "/guides/cat-scale-weighing",
     title: "How to Weigh Your RV at a CAT Scale",
     description:
