@@ -26,6 +26,9 @@ const GUIDE_LINKS = [
   { href: "/guides/spring-checklist", label: "Spring Pre-Departure" },
   { href: "/guides/winter-storage", label: "Winter Storage Guide" },
   { href: "/checklist", label: "Safety Checklist PDF" },
+  { href: "/guides/ram-1500-vs-f150-towing", label: "RAM vs F-150 Towing" },
+  { href: "/guides/mountain-towing-transmission-gears", label: "Mountain Towing" },
+];
 ];
 
 export default function Header() {

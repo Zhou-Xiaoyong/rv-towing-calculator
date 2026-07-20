@@ -748,6 +748,7 @@ export default function TowingCalculator() {
             items={result.weightBreakdown}
             loadedTruckWeight={result.loadedTruckWeight}
             loadedTrailerWeight={result.loadedTrailerWeight}
+            trailerAxleWeight={result.trailerAxleWeight}
             combinedWeight={result.combinedWeight}
           />
 

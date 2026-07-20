@@ -90,6 +90,7 @@ const GUIDES = [
     category: "Buying Guides",
   },
   {
+  {
     slug: "/guides/how-to-read-tire-and-loading-label",
     title: "How to Read Your Truck's Tire and Loading Label",
     description:
@@ -116,6 +117,21 @@ const GUIDES = [
     description:
       "Trim-by-trim analysis of Silverado 1500 vs Grand Design Imagine 2800BH. Which engines work, which to avoid, and why hitch rating is the hidden constraint.",
     category: "Matchups",
+  },
+  {
+    slug: "/guides/ram-1500-vs-f150-towing",
+    title: "RAM 1500 vs Ford F-150 Towing Comparison",
+    description:
+      "Head-to-head towing comparison: max tow rating, payload, engine torque, suspension, and which truck is safer for your RV. Independent, data-driven.",
+    category: "Buying Guides",
+  },
+  {
+    slug: "/guides/mountain-towing-transmission-gears",
+    title: "Mountain Towing: Transmission Temp & Gear Selection",
+    description:
+      "How to protect your transmission and select the right gears when towing an RV through mountain grades. Temperature limits, tow/haul mode, and downhill braking strategy.",
+    category: "Safety",
+  },
   },
 ];
 

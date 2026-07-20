@@ -150,6 +150,22 @@ export default function Footer() {
                   EV Trucks for Towing
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/guides/ram-1500-vs-f150-towing"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  RAM vs F-150 Towing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/mountain-towing-transmission-gears"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Mountain Towing Safety
+                </Link>
+              </li>
             </ul>
           </div>
 

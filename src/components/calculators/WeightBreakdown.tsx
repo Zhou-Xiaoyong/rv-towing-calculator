@@ -6,6 +6,8 @@ interface WeightBreakdownProps {
   items: WeightItem[];
   loadedTruckWeight: number;
   loadedTrailerWeight: number;
+  /** Trailer weight on its own axles = loadedTrailerWeight − tongue/pin weight */
+  trailerAxleWeight: number;
   combinedWeight: number;
 }
 
@@ -13,12 +15,21 @@ export default function WeightBreakdown({
   items,
   loadedTruckWeight,
   loadedTrailerWeight,
+  trailerAxleWeight,
   combinedWeight,
 }: WeightBreakdownProps) {
+  // Truck side: curb + passengers + truck cargo + tongue/pin weight.
+  // Trailer side: the trailer's axle weight (excludes the tongue/pin weight,
+  //   which has already been transferred to the truck side).
+  // truckTotal + trailerAxleWeight == combinedWeight (no double counting).
   const truckItems = items.filter((i) => i.category === "truck" || i.category === "load");
   const trailerItems = items.filter((i) => i.category === "trailer");
   const truckTotal = truckItems.reduce((sum, i) => sum + i.value, 0);
-  const trailerTotal = trailerItems.reduce((sum, i) => sum + i.value, 0);
+  // The four trailer items sum to the FULL loaded trailer weight (incl. tongue).
+  // The portion physically riding on the trailer axles is the full trailer minus
+  // the tongue weight that shifted onto the truck.
+  const fullTrailerTotal = trailerItems.reduce((sum, i) => sum + i.value, 0);
+  const trailerTotal = trailerAxleWeight > 0 ? trailerAxleWeight : fullTrailerTotal;
 
   return (
     <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
@@ -50,16 +61,27 @@ export default function WeightBreakdown({
           ))}
         </div>
         {/* Trailer portion */}
+        {/* The bar width is sized by axle weight (trailerTotal), but the inner
+            segments are scaled relative to the full trailer weight so their
+            proportions stay true to the actual item values (they just sit on a
+            bar that's been shortened by the tongue weight). */}
         <div
           className="flex h-full"
-          style={{ width: `${(trailerTotal / combinedWeight) * 100}%` }}
+          style={{
+            width: `${(trailerTotal / combinedWeight) * 100}%`,
+            // Scale inner segment widths so they fill this shortened bar
+            // proportionally. transform-origin left keeps the left edge aligned
+            // with the end of the truck segment.
+            transform: `scaleX(${fullTrailerTotal > 0 ? trailerTotal / fullTrailerTotal : 1})`,
+            transformOrigin: "left",
+          }}
         >
           {trailerItems.map((item, idx) => (
             <div
               key={`trailer-${idx}`}
               className="h-full"
               style={{
-                width: `${(item.value / trailerTotal) * 100}%`,
+                width: `${(item.value / fullTrailerTotal) * 100}%`,
                 backgroundColor: item.color,
               }}
               title={`${item.label}: ${Math.round(item.value).toLocaleString("en-US")} lbs`}
@@ -72,7 +94,10 @@ export default function WeightBreakdown({
       <div className="mt-2 flex justify-between text-xs font-medium text-gray-600">
         <span>Truck: {Math.round(truckTotal).toLocaleString("en-US")} lbs</span>
         <span>
-          Trailer: {Math.round(trailerTotal).toLocaleString("en-US")} lbs
+          {/* Trailer label shows the axle weight (the part on the ground
+              that isn't already counted on the truck). Loaded trailer total is
+              shown in the summary stats below. */}
+          Trailer (axle): {Math.round(trailerTotal).toLocaleString("en-US")} lbs
         </span>
       </div>
 
