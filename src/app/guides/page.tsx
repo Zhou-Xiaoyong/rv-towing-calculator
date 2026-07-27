@@ -48,6 +48,13 @@ const GUIDES = [
     category: "Safety",
   },
   {
+    slug: "/guides/calculate-tongue-weight-travel-trailer",
+    title: "How to Calculate Tongue Weight for a Travel Trailer",
+    description:
+      "4 proven methods to calculate tongue weight: bathroom scale, CAT scale, tongue weight scale, and quick estimation. Includes safe ranges and common mistakes.",
+    category: "Safety",
+  },
+  {
     slug: "/guides/cat-scale-weighing",
     title: "How to Weigh Your RV at a CAT Scale",
     description:
@@ -122,6 +129,13 @@ const GUIDES = [
     title: "RAM 1500 vs Ford F-150 Towing Comparison",
     description:
       "Head-to-head towing comparison: max tow rating, payload, engine torque, suspension, and which truck is safer for your RV. Independent, data-driven.",
+    category: "Buying Guides",
+  },
+  {
+    slug: "/guides/can-suv-tow-small-travel-trailer",
+    title: "Can My SUV Tow a Small Travel Trailer?",
+    description:
+      "Find out if your SUV can safely tow a small travel trailer. Includes SUV tow ratings by class, payload reality checks, and top recommendations.",
     category: "Buying Guides",
   },
   {

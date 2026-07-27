@@ -28,6 +28,8 @@ const GUIDE_LINKS = [
   { href: "/checklist", label: "Safety Checklist PDF" },
   { href: "/guides/ram-1500-vs-f150-towing", label: "RAM vs F-150 Towing" },
   { href: "/guides/mountain-towing-transmission-gears", label: "Mountain Towing" },
+  { href: "/guides/calculate-tongue-weight-travel-trailer", label: "Calculate Tongue Weight" },
+  { href: "/guides/can-suv-tow-small-travel-trailer", label: "Can My SUV Tow a Trailer?" },
 ];
 
 export default function Header() {

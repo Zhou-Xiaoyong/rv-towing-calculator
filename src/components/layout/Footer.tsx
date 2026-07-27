@@ -166,6 +166,22 @@ export default function Footer() {
                   Mountain Towing Safety
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/guides/calculate-tongue-weight-travel-trailer"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Calculate Tongue Weight
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/can-suv-tow-small-travel-trailer"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Can My SUV Tow a Trailer?
+                </Link>
+              </li>
             </ul>
           </div>
 
