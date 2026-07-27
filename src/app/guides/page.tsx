@@ -48,6 +48,13 @@ const GUIDES = [
     category: "Safety",
   },
   {
+    slug: "/guides/trailer-loading-position",
+    title: "Trailer Loading Position Guide",
+    description:
+      "Learn the correct way to load your trailer for safe towing. The 60/40 rule, tongue weight optimization, and cargo distribution techniques.",
+    category: "Safety",
+  },
+  {
     slug: "/guides/calculate-tongue-weight-travel-trailer",
     title: "How to Calculate Tongue Weight for a Travel Trailer",
     description:

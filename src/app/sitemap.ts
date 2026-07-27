@@ -79,7 +79,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/guides/trailer-loading-position`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/guides/how-to-read-tire-and-loading-label`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/calculate-tongue-weight-travel-trailer`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
@@ -130,6 +142,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/guides/electric-trucks-rv-towing`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/ram-1500-vs-f150-towing`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/mountain-towing-transmission-gears`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/can-suv-tow-small-travel-trailer`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.7,

@@ -104,6 +104,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/guides/trailer-loading-position"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Trailer Loading Guide
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/guides/cat-scale-weighing"
                   className="text-sm text-gray-600 hover:text-brand-600"
                 >
