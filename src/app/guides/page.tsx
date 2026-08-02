@@ -76,6 +76,20 @@ const GUIDES = [
     category: "Equipment",
   },
   {
+    slug: "/guides/diesel-vs-gas-truck-rv-towing",
+    title: "Diesel vs Gas Truck for Towing RV: Which Is Better?",
+    description:
+      "Head-to-head comparison of diesel and gas trucks for RV towing. Torque curves, fuel economy, maintenance costs, payload trade-offs, and which engine wins for your trailer weight.",
+    category: "Equipment",
+  },
+  {
+    slug: "/guides/trailer-brake-controller-setup",
+    title: "Trailer Brake Controller Setup: Installation & Adjustment",
+    description:
+      "Complete guide to installing, wiring, and adjusting a trailer brake controller. Proportional vs time-delayed, gain setting procedure, pre-trip testing, and troubleshooting common issues.",
+    category: "Safety",
+  },
+  {
     slug: "/guides/exceed-gvwr-dangers",
     title: "What Happens If You Exceed GVWR",
     description:
