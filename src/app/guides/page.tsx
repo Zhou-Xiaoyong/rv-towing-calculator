@@ -166,6 +166,20 @@ const GUIDES = [
       "How to protect your transmission and select the right gears when towing an RV through mountain grades. Temperature limits, tow/haul mode, and downhill braking strategy.",
     category: "Safety",
   },
+  {
+    slug: "/guides/rv-trailer-sway-control",
+    title: "RV Trailer Sway Control: Causes, Prevention & Anti-Sway Devices",
+    description:
+      "What causes trailer sway, how to prevent it with proper loading and tongue weight, and which anti-sway devices actually work. Includes emergency sway response and device comparison.",
+    category: "Safety",
+  },
+  {
+    slug: "/guides/axle-ratio-for-towing",
+    title: "Pickup Truck Axle Ratio Explained: Which Is Best for Towing",
+    description:
+      "Axle ratio can change your towing capacity by 4,000+ lbs. Learn what 3.31 vs 3.73 vs 4.10 means, how to find your ratio, and which gear ratio matches your trailer weight.",
+    category: "Fundamentals",
+  },
 ];
 
 export default function GuidesPage() {

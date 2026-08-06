@@ -31,6 +31,8 @@ const GUIDE_LINKS = [
   { href: "/guides/mountain-towing-transmission-gears", label: "Mountain Towing" },
   { href: "/guides/calculate-tongue-weight-travel-trailer", label: "Calculate Tongue Weight" },
   { href: "/guides/can-suv-tow-small-travel-trailer", label: "Can My SUV Tow a Trailer?" },
+  { href: "/guides/rv-trailer-sway-control", label: "Trailer Sway Control" },
+  { href: "/guides/axle-ratio-for-towing", label: "Axle Ratio for Towing" },
 ];
 
 export default function Header() {
