@@ -33,6 +33,8 @@ const GUIDE_LINKS = [
   { href: "/guides/can-suv-tow-small-travel-trailer", label: "Can My SUV Tow a Trailer?" },
   { href: "/guides/rv-trailer-sway-control", label: "Trailer Sway Control" },
   { href: "/guides/axle-ratio-for-towing", label: "Axle Ratio for Towing" },
+  { href: "/guides/how-to-back-up-travel-trailer", label: "How to Back Up a Trailer" },
+  { href: "/guides/rv-towing-mirrors-guide", label: "Towing Mirrors Guide" },
 ];
 
 export default function Header() {

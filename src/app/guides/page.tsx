@@ -180,6 +180,20 @@ const GUIDES = [
       "Axle ratio can change your towing capacity by 4,000+ lbs. Learn what 3.31 vs 3.73 vs 4.10 means, how to find your ratio, and which gear ratio matches your trailer weight.",
     category: "Fundamentals",
   },
+  {
+    slug: "/guides/how-to-back-up-travel-trailer",
+    title: "How to Back Up a Travel Trailer: Step-by-Step Guide for Beginners",
+    description:
+      "Master trailer backing with our complete beginner's guide. Steering technique, spotter hand signals, jackknifing prevention, and practice drills for RV owners.",
+    category: "Safety",
+  },
+  {
+    slug: "/guides/rv-towing-mirrors-guide",
+    title: "RV Towing Mirrors: Legal Requirements, Types & Best Options",
+    description:
+      "Towing mirrors are required by law in most states. Learn which mirror types work best, state-by-state legal requirements, installation, adjustment, and top product picks.",
+    category: "Equipment",
+  },
 ];
 
 export default function GuidesPage() {
