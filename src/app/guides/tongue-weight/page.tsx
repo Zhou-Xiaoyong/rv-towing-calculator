@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Complete guide to tongue weight and pin weight. Learn optimal percentages for travel trailers and fifth wheels, how to measure tongue weight, and how improper tongue weight causes trailer sway.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/tongue-weight",
+    canonical: "https://www.rvtowingcalc.com/guides/tongue-weight",
   },
   openGraph: {
     title: "Tongue Weight Guide: Optimal Ranges & Sway Prevention",
     description:
       "Learn optimal tongue weight percentages, how to measure tongue weight, and how it affects trailer sway and payload.",
-    url: "https://rvtowingcalc.com/guides/tongue-weight",
+    url: "https://www.rvtowingcalc.com/guides/tongue-weight",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -51,12 +51,12 @@ export default function TongueWeightGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/tongue-weight"
+        baseUrl="https://www.rvtowingcalc.com/guides/tongue-weight"
       />
       <ArticleJsonLd
         title="Tongue Weight Guide: Optimal Ranges & Sway Prevention"
         description="Learn optimal tongue weight percentages, how to measure tongue weight, and how it affects trailer sway and payload."
-        url="https://rvtowingcalc.com/guides/tongue-weight"
+        url="https://www.rvtowingcalc.com/guides/tongue-weight"
         datePublished="2026-06-20"
       />
 

@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Learn how to calculate tongue weight for a travel trailer with 4 proven methods. Includes formulas, safe 10-15% ranges, common mistakes, and free calculator links.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/calculate-tongue-weight-travel-trailer",
+    canonical: "https://www.rvtowingcalc.com/guides/calculate-tongue-weight-travel-trailer",
   },
   openGraph: {
     title: "How to Calculate Tongue Weight for a Travel Trailer: 4 Methods",
     description:
       "Master tongue weight calculation for travel trailers. Bathroom scale, CAT scale, tongue scale, and quick-estimate methods explained with safety ranges.",
-    url: "https://rvtowingcalc.com/guides/calculate-tongue-weight-travel-trailer",
+    url: "https://www.rvtowingcalc.com/guides/calculate-tongue-weight-travel-trailer",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -82,13 +82,13 @@ export default function CalculateTongueWeightGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/calculate-tongue-weight-travel-trailer"
+        baseUrl="https://www.rvtowingcalc.com/guides/calculate-tongue-weight-travel-trailer"
       />
       <HowToJsonLd
         name="How to Calculate Tongue Weight for a Travel Trailer"
         description="Step-by-step methods for calculating travel trailer tongue weight using a bathroom scale, tongue weight scale, CAT scale, or estimation formula."
         totalTime="PT45M"
-        url="https://rvtowingcalc.com/guides/calculate-tongue-weight-travel-trailer"
+        url="https://www.rvtowingcalc.com/guides/calculate-tongue-weight-travel-trailer"
         steps={[
           {
             name: "Load the trailer realistically",
@@ -115,7 +115,7 @@ export default function CalculateTongueWeightGuidePage() {
       <ArticleJsonLd
         title="How to Calculate Tongue Weight for a Travel Trailer: 4 Methods"
         description="Master tongue weight calculation for travel trailers. Bathroom scale, CAT scale, tongue scale, and quick-estimate methods explained with safety ranges."
-        url="https://rvtowingcalc.com/guides/calculate-tongue-weight-travel-trailer"
+        url="https://www.rvtowingcalc.com/guides/calculate-tongue-weight-travel-trailer"
         datePublished="2026-07-27"
       />
 

@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Learn the correct way to load your travel trailer or fifth wheel for safe towing. Discover the 60/40 rule, tongue weight optimization, and how cargo placement affects stability and sway prevention.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/trailer-loading-position",
+    canonical: "https://www.rvtowingcalc.com/guides/trailer-loading-position",
   },
   openGraph: {
     title: "Trailer Loading Position Guide: Safe Cargo Placement",
     description:
       "Master trailer loading for safe towing. Learn the 60/40 rule, tongue weight optimization, and cargo distribution techniques.",
-    url: "https://rvtowingcalc.com/guides/trailer-loading-position",
+    url: "https://www.rvtowingcalc.com/guides/trailer-loading-position",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -48,7 +48,7 @@ export default function TrailerLoadingPositionGuidePage() {
       <ArticleJsonLd
         title="Trailer Loading Position: Where to Place Cargo for Safe Towing"
         description="Learn the correct way to load your travel trailer or fifth wheel for safe towing."
-        url="https://rvtowingcalc.com/guides/trailer-loading-position"
+        url="https://www.rvtowingcalc.com/guides/trailer-loading-position"
         datePublished="2026-07-20"
       />
 

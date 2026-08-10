@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Can your SUV tow a small travel trailer? Learn real tow limits, payload math, the best SUV models, and how to verify your setup before you buy.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/can-suv-tow-small-travel-trailer",
+    canonical: "https://www.rvtowingcalc.com/guides/can-suv-tow-small-travel-trailer",
   },
   openGraph: {
     title: "Can My SUV Tow a Small Travel Trailer? Safety Check & SUV Guide",
     description:
       "Find out if your SUV can safely tow a small travel trailer. Includes tow ratings by class, payload reality checks, and top SUV recommendations.",
-    url: "https://rvtowingcalc.com/guides/can-suv-tow-small-travel-trailer",
+    url: "https://www.rvtowingcalc.com/guides/can-suv-tow-small-travel-trailer",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -151,12 +151,12 @@ export default function CanSuvTowSmallTravelTrailerPage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/can-suv-tow-small-travel-trailer"
+        baseUrl="https://www.rvtowingcalc.com/guides/can-suv-tow-small-travel-trailer"
       />
       <ArticleJsonLd
         title="Can My SUV Tow a Small Travel Trailer? Safety Check & SUV Guide"
         description="Find out if your SUV can safely tow a small travel trailer. Includes tow ratings by class, payload reality checks, and top SUV recommendations."
-        url="https://rvtowingcalc.com/guides/can-suv-tow-small-travel-trailer"
+        url="https://www.rvtowingcalc.com/guides/can-suv-tow-small-travel-trailer"
         datePublished="2026-07-27"
       />
 

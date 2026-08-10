@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "What really happens when you exceed your truck's GVWR? We break down the mechanical risks, legal liability, insurance implications, and real-world consequences of overloading. Includes data tables, warning signs, and how to stay within limits.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/exceed-gvwr-dangers",
+    canonical: "https://www.rvtowingcalc.com/guides/exceed-gvwr-dangers",
   },
   openGraph: {
     title: "What Happens If You Exceed GVWR: Safety Risks & Real Consequences",
     description:
       "Exceeding GVWR is dangerous and potentially illegal. Learn the mechanical failures, legal risks, and insurance consequences of overloading your tow vehicle.",
-    url: "https://rvtowingcalc.com/guides/exceed-gvwr-dangers",
+    url: "https://www.rvtowingcalc.com/guides/exceed-gvwr-dangers",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -51,12 +51,12 @@ export default function ExceedGvwrDangersGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/exceed-gvwr-dangers"
+        baseUrl="https://www.rvtowingcalc.com/guides/exceed-gvwr-dangers"
       />
       <ArticleJsonLd
         title="What Happens If You Exceed GVWR: Safety Risks & Real Consequences"
         description="What really happens when you exceed your truck's GVWR? Mechanical risks, legal liability, insurance implications, and real-world consequences of overloading."
-        url="https://rvtowingcalc.com/guides/exceed-gvwr-dangers"
+        url="https://www.rvtowingcalc.com/guides/exceed-gvwr-dangers"
         datePublished="2026-06-29"
       />
 

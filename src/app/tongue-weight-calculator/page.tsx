@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "Tongue Weight Calculator - Find Your Optimal Tongue Weight",
   description:
     "Free tongue weight calculator for RV trailers. Calculate the correct tongue weight (travel trailer) or pin weight (fifth wheel) for safe towing. Too low causes sway, too high overloads your truck.",
-  alternates: { canonical: "https://rvtowingcalc.com/tongue-weight-calculator" },
+  alternates: { canonical: "https://www.rvtowingcalc.com/tongue-weight-calculator" },
   openGraph: {
     title: "Tongue Weight Calculator - Prevent Trailer Sway",
     description: "Calculate your optimal tongue weight or pin weight. SAE J2807 compliant. Free, no sign-up.",
-    url: "https://rvtowingcalc.com/tongue-weight-calculator",
+    url: "https://www.rvtowingcalc.com/tongue-weight-calculator",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -113,7 +113,7 @@ export default function TongueWeightCalculatorPage() {
               applicationCategory: "UtilityApplication",
               operatingSystem: "Any",
               offers: { "@type": "Offer", "price": "0", priceCurrency: "USD" },
-              url: "https://rvtowingcalc.com/tongue-weight-calculator",
+              url: "https://www.rvtowingcalc.com/tongue-weight-calculator",
               description: "Calculate the correct tongue weight (travel trailer) or pin weight (fifth wheel) for safe towing.",
             },
           ],

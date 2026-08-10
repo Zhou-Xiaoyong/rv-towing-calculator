@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Complete trailer brake controller setup guide for RV owners. Learn proportional vs time-delayed, 4-wire and 7-way wiring, gain adjustment, manual override, and how to test your trailer brakes. Free calculator links included.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/trailer-brake-controller-setup",
+    canonical: "https://www.rvtowingcalc.com/guides/trailer-brake-controller-setup",
   },
   openGraph: {
     title: "Trailer Brake Controller Setup: Installation, Adjustment & Safety",
     description:
       "Step-by-step trailer brake controller installation and adjustment guide. Wiring diagrams, gain settings, proportional vs time-delayed, and how to test trailer brakes before every trip.",
-    url: "https://rvtowingcalc.com/guides/trailer-brake-controller-setup",
+    url: "https://www.rvtowingcalc.com/guides/trailer-brake-controller-setup",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -81,13 +81,13 @@ export default function TrailerBrakeControllerGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/trailer-brake-controller-setup"
+        baseUrl="https://www.rvtowingcalc.com/guides/trailer-brake-controller-setup"
       />
       <HowToJsonLd
         name="How to Install and Adjust a Trailer Brake Controller"
         description="Complete guide to installing, wiring, adjusting gain, and testing a trailer brake controller for safe RV towing."
         totalTime="PT2H"
-        url="https://rvtowingcalc.com/guides/trailer-brake-controller-setup"
+        url="https://www.rvtowingcalc.com/guides/trailer-brake-controller-setup"
         steps={[
           {
             name: "Determine your vehicle's wiring setup",
@@ -114,7 +114,7 @@ export default function TrailerBrakeControllerGuidePage() {
       <ArticleJsonLd
         title="Trailer Brake Controller Setup: Installation, Adjustment & Safety Guide"
         description="Complete guide to installing, wiring, adjusting gain, and testing a trailer brake controller for safe RV towing. Includes proportional vs time-delayed comparison and free calculator links."
-        url="https://rvtowingcalc.com/guides/trailer-brake-controller-setup"
+        url="https://www.rvtowingcalc.com/guides/trailer-brake-controller-setup"
         datePublished="2026-08-02"
       />
 

@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Disclaimer - Informational Use Only",
   description:
     "RV TowCalc is an informational tool, not a substitute for professional advice. Read our full disclaimer regarding calculation accuracy, liability, and limitations.",
-  alternates: { canonical: "https://rvtowingcalc.com/disclaimer" },
+  alternates: { canonical: "https://www.rvtowingcalc.com/disclaimer" },
   openGraph: {
     title: "Disclaimer - RV TowCalc",
     description:
       "Important limitations and liability information for users of RV TowCalc. Always verify with actual weights at a CAT scale.",
-    url: "https://rvtowingcalc.com/disclaimer",
+    url: "https://www.rvtowingcalc.com/disclaimer",
     images: DEFAULT_OG_IMAGES,
   },
 };

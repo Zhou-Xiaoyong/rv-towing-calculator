@@ -55,12 +55,12 @@ export function ArticleJsonLd({
     author: {
       "@type": "Organization",
       name: "RV TowCalc",
-      url: "https://rvtowingcalc.com",
+      url: "https://www.rvtowingcalc.com",
     },
     publisher: {
       "@type": "Organization",
       name: "RV TowCalc",
-      url: "https://rvtowingcalc.com",
+      url: "https://www.rvtowingcalc.com",
     },
   };
 
@@ -154,7 +154,7 @@ export function WebAppJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     name: "RV Towing Calculator",
-    url: "https://rvtowingcalc.com",
+    url: "https://www.rvtowingcalc.com",
     description:
       "The only RV towing calculator that combines real vehicle data with deep safety analysis. SAE J2807 compliant.",
     applicationCategory: "UtilityApplication",
@@ -167,7 +167,7 @@ export function WebAppJsonLd() {
     publisher: {
       "@type": "Organization",
       name: "RV TowCalc",
-      url: "https://rvtowingcalc.com",
+      url: "https://www.rvtowingcalc.com",
     },
   };
 

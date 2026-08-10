@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "How to protect your transmission and select the right gears when towing an RV through mountain grades. Covers temperature limits, tow/haul mode, downshift strategy, and real-world data for safe mountain towing.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/mountain-towing-transmission-gears",
+    canonical: "https://www.rvtowingcalc.com/guides/mountain-towing-transmission-gears",
   },
   openGraph: {
     title: "Towing in Mountains: Transmission Temperature & Gear Selection Guide",
     description:
       "Protect your transmission when towing RVs through mountains. Temperature limits, gear selection, tow/haul mode, and real-world safety data for grade towing.",
-    url: "https://rvtowingcalc.com/guides/mountain-towing-transmission-gears",
+    url: "https://www.rvtowingcalc.com/guides/mountain-towing-transmission-gears",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -105,12 +105,12 @@ export default function MountainTowingGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/mountain-towing-transmission-gears"
+        baseUrl="https://www.rvtowingcalc.com/guides/mountain-towing-transmission-gears"
       />
       <ArticleJsonLd
         title="Towing in Mountains: Transmission Temperature & Gear Selection Guide"
         description="How to protect your transmission and select the right gears when towing an RV through mountain grades. Covers temperature limits, tow/haul mode, downshift strategy, and real-world data."
-        url="https://rvtowingcalc.com/guides/mountain-towing-transmission-gears"
+        url="https://www.rvtowingcalc.com/guides/mountain-towing-transmission-gears"
         datePublished="2026-07-20"
       />
 

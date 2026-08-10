@@ -116,7 +116,7 @@ export default function ChecklistPage() {
 
         <div className="mt-6 pt-4 border-t border-gray-200 print:block hidden">
           <p className="text-xs text-gray-500">
-            For more towing safety resources, visit towsafe.com
+            For more towing safety resources, visit rvtowingcalc.com
           </p>
         </div>
       </div>

@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Trailer sway is the #1 cause of towing accidents. Learn what causes RV sway, how to prevent it with proper loading and tongue weight, and which anti-sway devices actually work. Free calculator links.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/rv-trailer-sway-control",
+    canonical: "https://www.rvtowingcalc.com/guides/rv-trailer-sway-control",
   },
   openGraph: {
     title: "RV Trailer Sway Control: Causes, Prevention & Best Anti-Sway Devices",
     description:
       "Complete guide to trailer sway prevention. Understand sway causes, proper tongue weight, weight distribution, and compare friction bar vs dual-cam vs Equal-i-zer anti-sway systems.",
-    url: "https://rvtowingcalc.com/guides/rv-trailer-sway-control",
+    url: "https://www.rvtowingcalc.com/guides/rv-trailer-sway-control",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -128,12 +128,12 @@ export default function RVSwayControlGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/rv-trailer-sway-control"
+        baseUrl="https://www.rvtowingcalc.com/guides/rv-trailer-sway-control"
       />
       <ArticleJsonLd
         title="RV Trailer Sway Control: Causes, Prevention & Best Anti-Sway Devices"
         description="Complete guide to trailer sway prevention. Understand sway causes, proper tongue weight, weight distribution, and compare friction bar vs dual-cam vs Equal-i-zer anti-sway systems."
-        url="https://rvtowingcalc.com/guides/rv-trailer-sway-control"
+        url="https://www.rvtowingcalc.com/guides/rv-trailer-sway-control"
         datePublished="2026-08-06"
       />
 

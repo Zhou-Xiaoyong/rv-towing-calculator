@@ -5,7 +5,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://rvtowingcalc.com"),
+  metadataBase: new URL("https://www.rvtowingcalc.com"),
   title: {
     default: "RV Towing Calculator | Tow Safe. Tow Smart.",
     template: "%s | RV TowCalc",
@@ -32,14 +32,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://rvtowingcalc.com",
+    url: "https://www.rvtowingcalc.com",
     siteName: "RV TowCalc",
     title: "RV Towing Calculator | Tow Safe. Tow Smart.",
     description:
       "The only RV towing calculator that combines real vehicle data with deep safety analysis. Independent. Accurate. Built for safety.",
     images: [
       {
-        url: "https://rvtowingcalc.com/opengraph-image",
+        url: "https://www.rvtowingcalc.com/opengraph-image",
         width: 1200,
         height: 630,
         alt: "RV Towing Calculator - Tow Safe. Tow Smart.",

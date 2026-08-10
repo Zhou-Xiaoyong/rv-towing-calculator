@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Complete step-by-step guide to setting up a weight distribution hitch (WDH). Learn how to install, adjust, and tune your WDH for safe towing. Includes measurement worksheets, common mistakes, and when a WDH is required.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/weight-distribution-hitch-setup",
+    canonical: "https://www.rvtowingcalc.com/guides/weight-distribution-hitch-setup",
   },
   openGraph: {
     title: "Weight Distribution Hitch Setup: Step-by-Step Guide",
     description:
       "Learn how to install, adjust, and tune your weight distribution hitch. Step-by-step instructions with measurement worksheets and safety checks.",
-    url: "https://rvtowingcalc.com/guides/weight-distribution-hitch-setup",
+    url: "https://www.rvtowingcalc.com/guides/weight-distribution-hitch-setup",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -51,12 +51,12 @@ export default function WeightDistributionHitchGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/weight-distribution-hitch-setup"
+        baseUrl="https://www.rvtowingcalc.com/guides/weight-distribution-hitch-setup"
       />
       <ArticleJsonLd
         title="Weight Distribution Hitch Setup: Step-by-Step Guide"
         description="Complete step-by-step guide to setting up a weight distribution hitch (WDH). Learn how to install, adjust, and tune your WDH for safe towing."
-        url="https://rvtowingcalc.com/guides/weight-distribution-hitch-setup"
+        url="https://www.rvtowingcalc.com/guides/weight-distribution-hitch-setup"
         datePublished="2026-06-22"
       />
 

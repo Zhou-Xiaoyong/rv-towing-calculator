@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Free RV towing capacity calculator. Enter your truck and trailer specs to get a clear safe/warning/danger result across all six safety checks: towing capacity, payload, GVWR, GCWR, tongue weight, and trailer GVWR. SAE J2807 compliant.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/towing-capacity-calculator",
+    canonical: "https://www.rvtowingcalc.com/towing-capacity-calculator",
   },
   openGraph: {
     title: "Towing Capacity Calculator - Can My Truck Tow This Trailer?",
     description:
       "Get a clear yes/no answer with safety margin analysis. Checks towing capacity, payload, GVWR, GCWR, and tongue weight.",
-    url: "https://rvtowingcalc.com/towing-capacity-calculator",
+    url: "https://www.rvtowingcalc.com/towing-capacity-calculator",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -214,7 +214,7 @@ export default function TowingCapacityCalculatorPage() {
             "@context": "https://schema.org",
             "@type": "WebApplication",
             name: "RV Towing Capacity Calculator",
-            url: "https://rvtowingcalc.com/towing-capacity-calculator",
+            url: "https://www.rvtowingcalc.com/towing-capacity-calculator",
             applicationCategory: "AutomotiveApplication",
             operatingSystem: "Web Browser",
             offers: {

@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "GCWR Calculator - Check Your Gross Combined Weight Rating",
   description:
     "Free GCWR calculator for RV towing. Is your combined truck + trailer weight over the Gross Combined Weight Rating? Check your total combined load against the manufacturer's limit.",
-  alternates: { canonical: "https://rvtowingcalc.com/gcwr-calculator" },
+  alternates: { canonical: "https://www.rvtowingcalc.com/gcwr-calculator" },
   openGraph: {
     title: "GCWR Calculator - Is Your Combined Weight Safe?",
     description: "Check if your truck + trailer combined weight exceeds the GCWR. Free, SAE J2807 compliant.",
-    url: "https://rvtowingcalc.com/gcwr-calculator",
+    url: "https://www.rvtowingcalc.com/gcwr-calculator",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -117,7 +117,7 @@ export default function GcwrCalculatorPage() {
               applicationCategory: "UtilityApplication",
               operatingSystem: "Any",
               offers: { "@type": "Offer", "price": "0", priceCurrency: "USD" },
-              url: "https://rvtowingcalc.com/gcwr-calculator",
+              url: "https://www.rvtowingcalc.com/gcwr-calculator",
               description: "Check if your truck + trailer combined weight exceeds the Gross Combined Weight Rating.",
             },
           ],

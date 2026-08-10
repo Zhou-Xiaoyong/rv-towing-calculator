@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Complete guide to towing capacity. Learn what it means, how manufacturers determine it (SAE J2807), why the 80% rule matters, and why towing capacity alone is not enough to tow safely.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/towing-capacity-explained",
+    canonical: "https://www.rvtowingcalc.com/guides/towing-capacity-explained",
   },
   openGraph: {
     title: "Towing Capacity Guide: What It Means & How to Use It Safely",
     description:
       "Understand towing capacity, the SAE J2807 standard, the 80% rule, and why towing capacity alone is not enough.",
-    url: "https://rvtowingcalc.com/guides/towing-capacity-explained",
+    url: "https://www.rvtowingcalc.com/guides/towing-capacity-explained",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -51,12 +51,12 @@ export default function TowingCapacityGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/towing-capacity-explained"
+        baseUrl="https://www.rvtowingcalc.com/guides/towing-capacity-explained"
       />
       <ArticleJsonLd
         title="Towing Capacity Guide: What It Means & How to Use It Safely"
         description="Complete guide to towing capacity, SAE J2807, the 80% rule, and why towing capacity alone is not enough."
-        url="https://rvtowingcalc.com/guides/towing-capacity-explained"
+        url="https://www.rvtowingcalc.com/guides/towing-capacity-explained"
         datePublished="2026-06-20"
       />
 

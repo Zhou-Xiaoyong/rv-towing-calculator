@@ -10,20 +10,20 @@ export const metadata: Metadata = {
     "Complete analysis of whether a Chevrolet Silverado 1500 can safely tow a Grand Design Imagine 2800BH travel trailer. Includes dry weight, tongue weight, payload calculations, and which Silverado 1500 trims work best.",
   alternates: {
     canonical:
-      "https://rvtowingcalc.com/guides/can-chevy-silverado-1500-tow-grand-design-imagine-2800bh",
+      "https://www.rvtowingcalc.com/guides/can-chevy-silverado-1500-tow-grand-design-imagine-2800bh",
   },
   openGraph: {
     title: "Can a Chevy Silverado 1500 Tow a Grand Design Imagine 2800BH?",
     description:
       "Full analysis of Chevy Silverado 1500 towing capacity vs Grand Design Imagine 2800BH specifications. Includes dry weight, tongue weight, payload calculations.",
     url:
-      "https://rvtowingcalc.com/guides/can-chevy-silverado-1500-tow-grand-design-imagine-2800bh",
+      "https://www.rvtowingcalc.com/guides/can-chevy-silverado-1500-tow-grand-design-imagine-2800bh",
     images: DEFAULT_OG_IMAGES,
   },
 };
 
 const PAGE_URL =
-  "https://rvtowingcalc.com/guides/can-chevy-silverado-1500-tow-grand-design-imagine-2800bh";
+  "https://www.rvtowingcalc.com/guides/can-chevy-silverado-1500-tow-grand-design-imagine-2800bh";
 
 const FAQS = [
   {
@@ -60,8 +60,8 @@ export default function ChevySilverado1500Imagine2800BHAnalysisPage() {
       <FaqJsonLd faqs={FAQS} baseUrl={PAGE_URL} />
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://rvtowingcalc.com" },
-          { name: "Guides", url: "https://rvtowingcalc.com/guides" },
+          { name: "Home", url: "https://www.rvtowingcalc.com" },
+          { name: "Guides", url: "https://www.rvtowingcalc.com/guides" },
           { name: "Silverado 1500 vs Imagine 2800BH", url: PAGE_URL },
         ]}
       />

@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Payload capacity is the most overlooked towing spec. Learn what payload is, how tongue weight eats into it, why it fails before towing capacity, and how to calculate your real payload usage.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/payload-capacity",
+    canonical: "https://www.rvtowingcalc.com/guides/payload-capacity",
   },
   openGraph: {
     title: "Payload Capacity Explained: The #1 Towing Blind Spot",
     description:
       "Payload is the #1 blind spot for RV owners. Learn why it matters more than towing capacity and how to calculate it.",
-    url: "https://rvtowingcalc.com/guides/payload-capacity",
+    url: "https://www.rvtowingcalc.com/guides/payload-capacity",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -51,12 +51,12 @@ export default function PayloadCapacityGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/payload-capacity"
+        baseUrl="https://www.rvtowingcalc.com/guides/payload-capacity"
       />
       <ArticleJsonLd
         title="Payload Capacity Explained: The #1 Towing Blind Spot"
         description="Payload is the #1 blind spot for RV owners. Learn why it matters more than towing capacity and how to calculate it."
-        url="https://rvtowingcalc.com/guides/payload-capacity"
+        url="https://www.rvtowingcalc.com/guides/payload-capacity"
         datePublished="2026-06-20"
       />
 

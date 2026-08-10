@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Data Sources & Calculation Methodology",
   description:
     "Transparent documentation of every data source and calculation standard used by RV TowCalc, including SAE J2807, manufacturer towing guides, and safety thresholds.",
-  alternates: { canonical: "https://rvtowingcalc.com/data-sources" },
+  alternates: { canonical: "https://www.rvtowingcalc.com/data-sources" },
   openGraph: {
     title: "Data Sources - RV TowCalc",
     description:
       "Full transparency on where our vehicle data comes from and how our calculations work. SAE J2807 compliant.",
-    url: "https://rvtowingcalc.com/data-sources",
+    url: "https://www.rvtowingcalc.com/data-sources",
     images: DEFAULT_OG_IMAGES,
   },
 };

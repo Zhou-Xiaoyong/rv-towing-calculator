@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "RAM 1500 vs Ford F-150 towing comparison: max tow rating, payload, engine torque, real-world payload math, and which truck is safer for your RV. Independent, data-driven analysis.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/ram-1500-vs-f150-towing",
+    canonical: "https://www.rvtowingcalc.com/guides/ram-1500-vs-f150-towing",
   },
   openGraph: {
     title: "RAM 1500 vs Ford F-150 Towing Capacity Comparison (2025-2026)",
     description:
       "RAM 1500 vs Ford F-150 head-to-head on towing capacity, payload, torque, and real-world RV towing safety. Independent comparison.",
-    url: "https://rvtowingcalc.com/guides/ram-1500-vs-f150-towing",
+    url: "https://www.rvtowingcalc.com/guides/ram-1500-vs-f150-towing",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -120,12 +120,12 @@ export default function RamVsF150TowingGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/ram-1500-vs-f150-towing"
+        baseUrl="https://www.rvtowingcalc.com/guides/ram-1500-vs-f150-towing"
       />
       <ArticleJsonLd
         title="RAM 1500 vs Ford F-150 Towing Capacity Comparison (2025-2026)"
         description="RAM 1500 vs Ford F-150 head-to-head on towing capacity, payload, torque, and real-world RV towing safety. Independent comparison."
-        url="https://rvtowingcalc.com/guides/ram-1500-vs-f150-towing"
+        url="https://www.rvtowingcalc.com/guides/ram-1500-vs-f150-towing"
         datePublished="2026-07-20"
       />
 

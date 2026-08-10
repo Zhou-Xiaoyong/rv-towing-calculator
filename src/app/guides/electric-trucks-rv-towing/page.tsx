@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Can an electric truck really tow an RV? We break down real-world range, payload, charging logistics, and which models work. Includes a side-by-side comparison of Rivian R1T, Tesla Cybertruck, Ford F-150 Lightning, and Chevy Silverado EV.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/electric-trucks-rv-towing",
+    canonical: "https://www.rvtowingcalc.com/guides/electric-trucks-rv-towing",
   },
   openGraph: {
     title: "Electric Trucks for Towing RVs: Rivian, Tesla & More (2026 Guide)",
     description:
       "Real-world towing range and payload for Rivian R1T, Tesla Cybertruck, Ford F-150 Lightning, and Chevy Silverado EV. Honest, independent analysis.",
-    url: "https://rvtowingcalc.com/guides/electric-trucks-rv-towing",
+    url: "https://www.rvtowingcalc.com/guides/electric-trucks-rv-towing",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -147,12 +147,12 @@ export default function ElectricTrucksRvTowingGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/electric-trucks-rv-towing"
+        baseUrl="https://www.rvtowingcalc.com/guides/electric-trucks-rv-towing"
       />
       <ArticleJsonLd
         title="Electric Trucks for Towing RVs: Rivian, Tesla & More (2026 Guide)"
         description="Real-world towing range, payload, and charging logistics for electric pickup trucks towing travel trailers and RVs. Independent analysis."
-        url="https://rvtowingcalc.com/guides/electric-trucks-rv-towing"
+        url="https://www.rvtowingcalc.com/guides/electric-trucks-rv-towing"
         datePublished="2026-07-06"
       />
 

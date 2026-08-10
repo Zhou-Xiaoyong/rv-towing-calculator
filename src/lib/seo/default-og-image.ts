@@ -4,7 +4,7 @@
  */
 export const DEFAULT_OG_IMAGES = [
   {
-    url: "https://rvtowingcalc.com/opengraph-image",
+    url: "https://www.rvtowingcalc.com/opengraph-image",
     width: 1200,
     height: 630,
     alt: "RV Towing Calculator - Tow Safe. Tow Smart.",

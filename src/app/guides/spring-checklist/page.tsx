@@ -26,7 +26,7 @@ export default function SpringChecklistPage() {
       <ArticleJsonLd
         title="Spring Towing Pre-Departure Checklist: Get Ready for RV Season"
         description="Complete spring checklist for your tow vehicle and trailer. Ensure safety and reliability before hitting the road this season."
-        url="https://rvtowingcalc.com/guides/spring-checklist"
+        url="https://www.rvtowingcalc.com/guides/spring-checklist"
         datePublished="2024-03-15"
       />
 

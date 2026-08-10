@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Axle ratio is the hidden number that can change your towing capacity by 4,000+ lbs. Learn what 3.31 vs 3.73 vs 4.10 means, how to find your ratio, and which gear ratio is best for towing your RV.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/axle-ratio-for-towing",
+    canonical: "https://www.rvtowingcalc.com/guides/axle-ratio-for-towing",
   },
   openGraph: {
     title: "Pickup Truck Axle Ratio Explained: Which Gear Ratio Is Best for Towing",
     description:
       "Understand how axle ratio affects towing capacity, fuel economy, and payload. Compare 3.31, 3.55, 3.73, and 4.10 ratios with real truck examples and learn how to find yours.",
-    url: "https://rvtowingcalc.com/guides/axle-ratio-for-towing",
+    url: "https://www.rvtowingcalc.com/guides/axle-ratio-for-towing",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -122,12 +122,12 @@ export default function AxleRatioGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/axle-ratio-for-towing"
+        baseUrl="https://www.rvtowingcalc.com/guides/axle-ratio-for-towing"
       />
       <ArticleJsonLd
         title="Pickup Truck Axle Ratio Explained: Which Gear Ratio Is Best for Towing"
         description="Axle ratio is the hidden number that can change your towing capacity by 4,000+ lbs. Learn what 3.31 vs 3.73 vs 4.10 means, how to find your ratio, and which gear ratio is best for towing your RV."
-        url="https://rvtowingcalc.com/guides/axle-ratio-for-towing"
+        url="https://www.rvtowingcalc.com/guides/axle-ratio-for-towing"
         datePublished="2026-08-06"
       />
 

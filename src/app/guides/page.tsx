@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   description:
     "Expert RV towing guides covering towing capacity, payload, GVWR, tongue weight, CAT scale weighing, weight distribution hitch setup, and more. Independent, safety-focused advice for RV owners.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides",
+    canonical: "https://www.rvtowingcalc.com/guides",
   },
   openGraph: {
     title: "RV Towing Guides & Safety Resources",
     description:
       "Free, independent RV towing guides. Learn about towing capacity, payload, weight distribution, CAT scale weighing, and more.",
-    url: "https://rvtowingcalc.com/guides",
+    url: "https://www.rvtowingcalc.com/guides",
     images: DEFAULT_OG_IMAGES,
   },
 };

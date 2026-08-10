@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   description:
     "Towing mirrors are required by law in most states. Learn which mirror types work best for RV towing, legal requirements by state, how to install and adjust towing mirrors, and top product picks.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/rv-towing-mirrors-guide",
+    canonical: "https://www.rvtowingcalc.com/guides/rv-towing-mirrors-guide",
   },
   openGraph: {
     title:
       "RV Towing Mirrors: Legal Requirements, Types & Best Options for 2025",
     description:
       "Complete guide to RV towing mirrors. State-by-state legal requirements, mirror type comparison (clip-on, slip-on, full replacement), installation, adjustment, and top product recommendations.",
-    url: "https://rvtowingcalc.com/guides/rv-towing-mirrors-guide",
+    url: "https://www.rvtowingcalc.com/guides/rv-towing-mirrors-guide",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -156,12 +156,12 @@ export default function TowingMirrorsGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/rv-towing-mirrors-guide"
+        baseUrl="https://www.rvtowingcalc.com/guides/rv-towing-mirrors-guide"
       />
       <ArticleJsonLd
         title="RV Towing Mirrors: Legal Requirements, Types & Best Options for 2025"
         description="Complete guide to RV towing mirrors. State-by-state legal requirements, mirror type comparison, installation, adjustment, and top product recommendations."
-        url="https://rvtowingcalc.com/guides/rv-towing-mirrors-guide"
+        url="https://www.rvtowingcalc.com/guides/rv-towing-mirrors-guide"
         datePublished="2026-08-09"
       />
 

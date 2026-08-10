@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Learn how to back up a travel trailer with confidence. Step-by-step steering technique, spotter hand signals, common mistakes, and practice drills. Free towing safety guides from RV TowCalc.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/how-to-back-up-travel-trailer",
+    canonical: "https://www.rvtowingcalc.com/guides/how-to-back-up-travel-trailer",
   },
   openGraph: {
     title: "How to Back Up a Travel Trailer: Step-by-Step Guide for Beginners",
     description:
       "Master trailer backing with our complete beginner's guide. Steering technique, spotter signals, jackknifing prevention, and practice drills for RV owners.",
-    url: "https://rvtowingcalc.com/guides/how-to-back-up-travel-trailer",
+    url: "https://www.rvtowingcalc.com/guides/how-to-back-up-travel-trailer",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -117,12 +117,12 @@ export default function HowToBackUpTravelTrailerPage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/how-to-back-up-travel-trailer"
+        baseUrl="https://www.rvtowingcalc.com/guides/how-to-back-up-travel-trailer"
       />
       <ArticleJsonLd
         title="How to Back Up a Travel Trailer: Step-by-Step Guide for Beginners"
         description="Master trailer backing with our complete beginner's guide. Steering technique, spotter signals, jackknifing prevention, and practice drills for RV owners."
-        url="https://rvtowingcalc.com/guides/how-to-back-up-travel-trailer"
+        url="https://www.rvtowingcalc.com/guides/how-to-back-up-travel-trailer"
         datePublished="2026-08-09"
       />
 

@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description:
     "Detailed analysis of whether a RAM 2500 can safely tow a Keystone Montana 3100RL fifth wheel. The tow rating looks fine, but pin weight blows past payload and GVWR. Numbers, trim comparison, and safer alternatives.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/can-ram-2500-tow-keystone-montana",
+    canonical: "https://www.rvtowingcalc.com/guides/can-ram-2500-tow-keystone-montana",
   },
   openGraph: {
     title: "Can a RAM 2500 Tow a Keystone Montana? Payload Reality Check",
     description:
       "RAM 2500 vs Keystone Montana 3100RL fifth wheel. Tow rating is plenty, but pin weight exceeds payload. Full trim comparison and payload math inside.",
-    url: "https://rvtowingcalc.com/guides/can-ram-2500-tow-keystone-montana",
+    url: "https://www.rvtowingcalc.com/guides/can-ram-2500-tow-keystone-montana",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -44,11 +44,11 @@ const FAQS = [
 ];
 
 const BREADCRUMBS = [
-  { name: "Home", url: "https://rvtowingcalc.com/" },
-  { name: "Guides", url: "https://rvtowingcalc.com/guides" },
+  { name: "Home", url: "https://www.rvtowingcalc.com/" },
+  { name: "Guides", url: "https://www.rvtowingcalc.com/guides" },
   {
     name: "RAM 2500 vs Keystone Montana",
-    url: "https://rvtowingcalc.com/guides/can-ram-2500-tow-keystone-montana",
+    url: "https://www.rvtowingcalc.com/guides/can-ram-2500-tow-keystone-montana",
   },
 ];
 
@@ -58,12 +58,12 @@ export default function Ram2500KeystoneMontanaAnalysisPage() {
       <ArticleJsonLd
         title="Can a RAM 2500 Tow a Keystone Montana? Payload Reality Check"
         description="Detailed analysis of whether a RAM 2500 can safely tow a Keystone Montana 3100RL fifth wheel. The tow rating is fine, but pin weight blows past payload and GVWR."
-        url="https://rvtowingcalc.com/guides/can-ram-2500-tow-keystone-montana"
+        url="https://www.rvtowingcalc.com/guides/can-ram-2500-tow-keystone-montana"
         datePublished="2026-07-10"
       />
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/can-ram-2500-tow-keystone-montana"
+        baseUrl="https://www.rvtowingcalc.com/guides/can-ram-2500-tow-keystone-montana"
       />
       <BreadcrumbJsonLd items={BREADCRUMBS} />
 

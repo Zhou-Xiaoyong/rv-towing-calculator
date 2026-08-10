@@ -4,15 +4,15 @@ import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 import { Shield, BookOpen, Award, Users, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About TowSafe - Towing Safety Experts",
+  title: "About RV TowCalc - Towing Safety Experts",
   description:
-    "Learn about TowSafe, founded by Johnathan Davis, an automotive engineer with 15+ years of experience. We provide SAE J2807-compliant towing calculations based on NHTSA safety data.",
-  alternates: { canonical: "https://towsafe.com/about" },
+    "Learn about RV TowCalc, founded by Johnathan Davis, an automotive engineer with 15+ years of experience. We provide SAE J2807-compliant towing calculations based on NHTSA safety data.",
+  alternates: { canonical: "https://www.rvtowingcalc.com/about" },
   openGraph: {
-    title: "About TowSafe",
+    title: "About RV TowCalc",
     description:
-      "Founded by automotive engineer Johnathan Davis with 15+ years of experience in vehicle safety. TowSafe provides SAE J2807-compliant towing calculations based on NHTSA data.",
-    url: "https://towsafe.com/about",
+      "Founded by automotive engineer Johnathan Davis with 15+ years of experience in vehicle safety. RV TowCalc provides SAE J2807-compliant towing calculations based on NHTSA data.",
+    url: "https://www.rvtowingcalc.com/about",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -29,11 +29,11 @@ export default function AboutPage() {
       </nav>
 
       <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">
-        About TowSafe
+        About RV TowCalc
       </h1>
       <p className="mt-4 text-lg text-gray-600">
         Founded by an automotive engineer with 15+ years of experience in vehicle safety, 
-        TowSafe is dedicated to helping RV owners tow with confidence.
+        RV TowCalc is dedicated to helping RV owners tow with confidence.
       </p>
 
       <div className="mt-12 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
@@ -58,7 +58,7 @@ export default function AboutPage() {
               <p className="text-sm text-gray-600">
                 After purchasing his first travel trailer in 2018, Johnathan realized that 
                 most RV owners lacked access to accurate towing safety information. 
-                He created TowSafe to bridge this gap, combining his engineering expertise 
+                He created RV TowCalc to bridge this gap, combining his engineering expertise 
                 with his passion for RVing.
               </p>
               <p className="text-sm text-gray-600">
@@ -88,7 +88,7 @@ export default function AboutPage() {
             with proper towing education and accurate calculations.
           </p>
           <p>
-            TowSafe exists to solve that. We consolidate the key
+            RV TowCalc exists to solve that. We consolidate the key
             specifications&mdash;towing capacity, payload, GVWR, GCWR, and
             tongue weight&mdash;into one place, run the math for you, and give
             you a clear, honest safety assessment.
@@ -183,7 +183,7 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-12">
-        <h2 className="text-2xl font-bold text-gray-900">Why Trust TowSafe?</h2>
+        <h2 className="text-2xl font-bold text-gray-900">Why Trust RV TowCalc?</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           <div className="rounded-xl border border-gray-200 bg-white p-4">
             <div className="flex items-center gap-2">
@@ -236,7 +236,7 @@ export default function AboutPage() {
         <h2 className="text-2xl font-bold text-gray-900">Who We Serve</h2>
         <div className="mt-4 space-y-4 text-gray-600">
           <p>
-            TowSafe is built for anyone who tows a trailer behind a truck or
+            RV TowCalc is built for anyone who tows a trailer behind a truck or
             SUV and wants to know&mdash;with confidence&mdash;that their setup
             is safe. That includes:
           </p>
@@ -268,7 +268,7 @@ export default function AboutPage() {
         <h2 className="text-2xl font-bold text-gray-900">How We Make Money</h2>
         <div className="mt-4 space-y-4 text-gray-600">
           <p>
-            TowSafe is a free tool. We sustain the site through affiliate 
+            RV TowCalc is a free tool. We sustain the site through affiliate 
             partnerships with retailers of towing-related equipment (Amazon Associates). 
             We may earn a small commission when you purchase through our links, 
             at no extra cost to you.
@@ -286,10 +286,10 @@ export default function AboutPage() {
         <div className="mt-4 flex items-center gap-3 text-gray-600">
           <Mail className="h-5 w-5" />
           <a
-            href="mailto:contact@towsafe.com"
+            href="mailto:contact@rvtowingcalc.com"
             className="font-semibold text-brand-600 underline"
           >
-            contact@towsafe.com
+            contact@rvtowingcalc.com
           </a>
         </div>
         <p className="mt-4 text-sm text-gray-600">
@@ -300,7 +300,7 @@ export default function AboutPage() {
 
       <div className="mt-12 rounded-xl border-l-4 border-brand-500 bg-brand-50 p-6">
         <p className="text-sm text-brand-700">
-          <strong>Important:</strong> TowSafe is an informational tool, not
+          <strong>Important:</strong> RV TowCalc is an informational tool, not
           a substitute for professional advice. Always verify your numbers
           against your vehicle&apos;s door jamb sticker and confirm actual
           weights at a CAT scale. See our{" "}

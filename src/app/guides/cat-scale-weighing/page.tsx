@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Complete step-by-step guide to weighing your RV at a CAT Scale. Learn how to get accurate axle weights, calculate tongue weight, verify GVWR and GCWR, and read your weigh ticket. Essential for safe towing.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/cat-scale-weighing",
+    canonical: "https://www.rvtowingcalc.com/guides/cat-scale-weighing",
   },
   openGraph: {
     title: "How to Weigh Your RV at a CAT Scale: Step-by-Step Guide",
     description:
       "Learn how to weigh your RV at a CAT Scale, read your weigh ticket, and calculate tongue weight, GVWR, and GCWR from real axle weights.",
-    url: "https://rvtowingcalc.com/guides/cat-scale-weighing",
+    url: "https://www.rvtowingcalc.com/guides/cat-scale-weighing",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -51,13 +51,13 @@ export default function CatScaleWeighingGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/cat-scale-weighing"
+        baseUrl="https://www.rvtowingcalc.com/guides/cat-scale-weighing"
       />
       <HowToJsonLd
         name="How to Weigh Your RV at a CAT Scale"
         description="Step-by-step guide to weighing your RV at a CAT Scale to get accurate per-axle weights, calculate tongue weight, and verify GVWR and GCWR compliance."
         totalTime="PT30M"
-        url="https://rvtowingcalc.com/guides/cat-scale-weighing"
+        url="https://www.rvtowingcalc.com/guides/cat-scale-weighing"
         steps={[
           {
             name: "Prepare your rig",
@@ -84,7 +84,7 @@ export default function CatScaleWeighingGuidePage() {
       <ArticleJsonLd
         title="How to Weigh Your RV at a CAT Scale: Step-by-Step Guide"
         description="Complete step-by-step guide to weighing your RV at a CAT Scale. Learn how to get accurate axle weights, calculate tongue weight, verify GVWR and GCWR, and read your weigh ticket."
-        url="https://rvtowingcalc.com/guides/cat-scale-weighing"
+        url="https://www.rvtowingcalc.com/guides/cat-scale-weighing"
         datePublished="2026-06-22"
       />
 

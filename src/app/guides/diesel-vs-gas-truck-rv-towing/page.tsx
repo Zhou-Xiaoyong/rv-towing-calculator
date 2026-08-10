@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Diesel vs gas truck for towing RV: compare torque, fuel economy, maintenance costs, payload, real-world mountain performance, and total cost of ownership to pick the right engine for your trailer.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/diesel-vs-gas-truck-rv-towing",
+    canonical: "https://www.rvtowingcalc.com/guides/diesel-vs-gas-truck-rv-towing",
   },
   openGraph: {
     title: "Diesel vs Gas Truck for Towing RV: Which Is Better in 2026?",
     description:
       "Head-to-head comparison of diesel and gas trucks for RV towing. Torque curves, fuel economy, maintenance, payload trade-offs, and which powertrain wins for your trailer weight.",
-    url: "https://rvtowingcalc.com/guides/diesel-vs-gas-truck-rv-towing",
+    url: "https://www.rvtowingcalc.com/guides/diesel-vs-gas-truck-rv-towing",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -135,12 +135,12 @@ export default function DieselVsGasTruckGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/diesel-vs-gas-truck-rv-towing"
+        baseUrl="https://www.rvtowingcalc.com/guides/diesel-vs-gas-truck-rv-towing"
       />
       <ArticleJsonLd
         title="Diesel vs Gas Truck for Towing RV: Which Is Better in 2026?"
         description="Head-to-head comparison of diesel and gas trucks for RV towing. Torque curves, fuel economy, maintenance, payload trade-offs, and which powertrain wins for your trailer weight."
-        url="https://rvtowingcalc.com/guides/diesel-vs-gas-truck-rv-towing"
+        url="https://www.rvtowingcalc.com/guides/diesel-vs-gas-truck-rv-towing"
         datePublished="2026-08-02"
       />
 

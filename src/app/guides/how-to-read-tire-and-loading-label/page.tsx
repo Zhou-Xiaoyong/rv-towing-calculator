@@ -9,14 +9,14 @@ export const metadata: Metadata = {
     "Step-by-step guide to reading the Tire and Loading label on your truck's door jamb. Learn what GVWR, GAWR, payload, and tire pressure numbers mean and how to use them to tow safely.",
   alternates: {
     canonical:
-      "https://rvtowingcalc.com/guides/how-to-read-tire-and-loading-label",
+      "https://www.rvtowingcalc.com/guides/how-to-read-tire-and-loading-label",
   },
   openGraph: {
     title:
       "How to Read Your Truck's Tire and Loading Label (Door Jamb Sticker)",
     description:
       "Decode the yellow door jamb sticker on your truck. Learn what GVWR, GAWR, payload capacity, and tire pressure mean and how to use them for safe towing.",
-    url: "https://rvtowingcalc.com/guides/how-to-read-tire-and-loading-label",
+    url: "https://www.rvtowingcalc.com/guides/how-to-read-tire-and-loading-label",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -53,13 +53,13 @@ export default function TireAndLoadingLabelGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/how-to-read-tire-and-loading-label"
+        baseUrl="https://www.rvtowingcalc.com/guides/how-to-read-tire-and-loading-label"
       />
       <HowToJsonLd
         name="How to Read Your Truck's Tire and Loading Label"
         description="Step-by-step guide to locating and decoding the Tire and Loading label on your truck's door jamb to find GVWR, GAWR, payload capacity, and recommended tire pressure for safe towing."
         totalTime="PT10M"
-        url="https://rvtowingcalc.com/guides/how-to-read-tire-and-loading-label"
+        url="https://www.rvtowingcalc.com/guides/how-to-read-tire-and-loading-label"
         steps={[
           {
             name: "Locate the label",
@@ -90,7 +90,7 @@ export default function TireAndLoadingLabelGuidePage() {
       <ArticleJsonLd
         title="How to Read Your Truck's Tire and Loading Label (Door Jamb Sticker)"
         description="Step-by-step guide to reading the Tire and Loading label on your truck's door jamb. Learn what GVWR, GAWR, payload, and tire pressure numbers mean."
-        url="https://rvtowingcalc.com/guides/how-to-read-tire-and-loading-label"
+        url="https://www.rvtowingcalc.com/guides/how-to-read-tire-and-loading-label"
         datePublished="2026-07-10"
       />
 

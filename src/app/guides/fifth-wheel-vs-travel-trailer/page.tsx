@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "5th wheel vs travel trailer towing: a clear comparison of weight, hitch type, towing stability, payload, fuel economy, and which truck you need. Includes a side-by-side data table and calculator links.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/fifth-wheel-vs-travel-trailer",
+    canonical: "https://www.rvtowingcalc.com/guides/fifth-wheel-vs-travel-trailer",
   },
   openGraph: {
     title: "5th Wheel vs Travel Trailer: Towing Compared (2026 Guide)",
     description:
       "Comparing 5th wheel and travel trailer towing. Hitch types, stability, payload, fuel economy, and which tow vehicle you actually need.",
-    url: "https://rvtowingcalc.com/guides/fifth-wheel-vs-travel-trailer",
+    url: "https://www.rvtowingcalc.com/guides/fifth-wheel-vs-travel-trailer",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -149,12 +149,12 @@ export default function FifthWheelVsTravelTrailerGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/fifth-wheel-vs-travel-trailer"
+        baseUrl="https://www.rvtowingcalc.com/guides/fifth-wheel-vs-travel-trailer"
       />
       <ArticleJsonLd
         title="5th Wheel vs Travel Trailer: Towing Compared (2026 Guide)"
         description="5th wheel vs travel trailer towing comparison. Hitch types, stability, payload, fuel economy, and which truck you actually need."
-        url="https://rvtowingcalc.com/guides/fifth-wheel-vs-travel-trailer"
+        url="https://www.rvtowingcalc.com/guides/fifth-wheel-vs-travel-trailer"
         datePublished="2026-07-06"
       />
 

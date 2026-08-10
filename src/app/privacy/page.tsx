@@ -6,12 +6,12 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "RV TowCalc privacy policy. We do not collect personal data from our calculators. Learn how we handle cookies, analytics, and advertising.",
-  alternates: { canonical: "https://rvtowingcalc.com/privacy" },
+  alternates: { canonical: "https://www.rvtowingcalc.com/privacy" },
   openGraph: {
     title: "Privacy Policy - RV TowCalc",
     description:
       "Your privacy matters. We do not collect personal data through our calculators. Read our full privacy policy.",
-    url: "https://rvtowingcalc.com/privacy",
+    url: "https://www.rvtowingcalc.com/privacy",
     images: DEFAULT_OG_IMAGES,
   },
 };

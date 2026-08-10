@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "GVWR Calculator - Check Your Truck's Gross Vehicle Weight Rating",
   description:
     "Free GVWR calculator for RV towing. Is your loaded truck over its Gross Vehicle Weight Rating? Enter curb weight, passengers, cargo, and tongue weight to check.",
-  alternates: { canonical: "https://rvtowingcalc.com/gvwr-calculator" },
+  alternates: { canonical: "https://www.rvtowingcalc.com/gvwr-calculator" },
   openGraph: {
     title: "GVWR Calculator - Is Your Truck Over Its Weight Rating?",
     description: "Check if your loaded truck weight exceeds the Gross Vehicle Weight Rating. Free, fast, SAE J2807 compliant.",
-    url: "https://rvtowingcalc.com/gvwr-calculator",
+    url: "https://www.rvtowingcalc.com/gvwr-calculator",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -113,7 +113,7 @@ export default function GvwrCalculatorPage() {
               applicationCategory: "UtilityApplication",
               operatingSystem: "Any",
               offers: { "@type": "Offer", "price": "0", priceCurrency: "USD" },
-              url: "https://rvtowingcalc.com/gvwr-calculator",
+              url: "https://www.rvtowingcalc.com/gvwr-calculator",
               description: "Check if your loaded truck weight exceeds the Gross Vehicle Weight Rating. Free, SAE J2807 compliant.",
             },
           ],

@@ -6,8 +6,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: ["/admin/", "/api/admin/"],
       },
     ],
-    sitemap: "https://rvtowingcalc.com/sitemap.xml",
+    sitemap: "https://www.rvtowingcalc.com/sitemap.xml",
   };
 }

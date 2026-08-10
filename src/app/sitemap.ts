@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://rvtowingcalc.com";
+  const baseUrl = "https://www.rvtowingcalc.com";
   const lastModified = new Date();
 
   return [
@@ -90,6 +90,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    // Fundamentals (added — was missing from sitemap)
+    {
+      url: `${baseUrl}/guides/axle-ratio-for-towing`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     {
       url: `${baseUrl}/guides/calculate-tongue-weight-travel-trailer`,
       lastModified,
@@ -105,6 +112,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/guides/exceed-gvwr-dangers`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // Safety / Driving (added — was missing from sitemap)
+    {
+      url: `${baseUrl}/guides/how-to-back-up-travel-trailer`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // Safety / Driving (added — was missing from sitemap)
+    {
+      url: `${baseUrl}/guides/rv-trailer-sway-control`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // Safety / Driving (added — was missing from sitemap)
+    {
+      url: `${baseUrl}/guides/trailer-brake-controller-setup`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
@@ -130,6 +158,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Buying Guides
     {
       url: `${baseUrl}/guides/best-half-ton-trucks-8000-lbs`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // Buying Guides (added — was missing from sitemap)
+    {
+      url: `${baseUrl}/guides/diesel-vs-gas-truck-rv-towing`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // Buying Guides (added — was missing from sitemap)
+    {
+      url: `${baseUrl}/guides/rv-towing-mirrors-guide`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.7,

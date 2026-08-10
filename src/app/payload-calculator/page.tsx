@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Free payload capacity calculator for RV towing. Most RV owners don't know their payload is exceeded. Enter your passengers, cargo, and tongue weight to check if you're within safe limits.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/payload-calculator",
+    canonical: "https://www.rvtowingcalc.com/payload-calculator",
   },
   openGraph: {
     title: "Payload Calculator - Is Your Truck Overloaded?",
     description:
       "Payload is the #1 blind spot for RV owners. Check if passengers, cargo, and tongue weight exceed your truck's payload capacity.",
-    url: "https://rvtowingcalc.com/payload-calculator",
+    url: "https://www.rvtowingcalc.com/payload-calculator",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -146,7 +146,7 @@ export default function PayloadCalculatorPage() {
                 applicationCategory: "UtilityApplication",
                 operatingSystem: "Any",
                 offers: { "@type": "Offer", "price": "0", priceCurrency: "USD" },
-                url: "https://rvtowingcalc.com/payload-calculator",
+                url: "https://www.rvtowingcalc.com/payload-calculator",
                 description: "Calculate your truck's remaining payload capacity for RV towing. Enter passengers, cargo, and tongue weight to check if you're within safe limits.",
               },
             ],

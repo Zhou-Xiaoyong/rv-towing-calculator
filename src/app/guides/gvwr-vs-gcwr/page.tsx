@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "GVWR and GCWR are two different weight ratings that are often confused. Learn what each means, how they are calculated, and why exceeding either is dangerous when towing.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/gvwr-vs-gcwr",
+    canonical: "https://www.rvtowingcalc.com/guides/gvwr-vs-gcwr",
   },
   openGraph: {
     title: "GVWR vs GCWR: What's the Difference & Why It Matters",
     description:
       "Learn the critical difference between GVWR and GCWR, how each is calculated, and why exceeding either is dangerous.",
-    url: "https://rvtowingcalc.com/guides/gvwr-vs-gcwr",
+    url: "https://www.rvtowingcalc.com/guides/gvwr-vs-gcwr",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -51,12 +51,12 @@ export default function GvwrVsGcwrGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/gvwr-vs-gcwr"
+        baseUrl="https://www.rvtowingcalc.com/guides/gvwr-vs-gcwr"
       />
       <ArticleJsonLd
         title="GVWR vs GCWR: What's the Difference & Why It Matters"
         description="Learn the critical difference between GVWR and GCWR, how each is calculated, and why exceeding either is dangerous."
-        url="https://rvtowingcalc.com/guides/gvwr-vs-gcwr"
+        url="https://www.rvtowingcalc.com/guides/gvwr-vs-gcwr"
         datePublished="2026-06-20"
       />
 

@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Complete analysis of whether a Ford F-150 can safely tow a Jayco Jay Flight 28BHS travel trailer. Includes dry weight, tongue weight, payload calculations, and which F-150 trims work best.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/can-ford-f150-tow-jayco-jay-flight-28bhs",
+    canonical: "https://www.rvtowingcalc.com/guides/can-ford-f150-tow-jayco-jay-flight-28bhs",
   },
   openGraph: {
     title: "Can a Ford F-150 Tow a Jayco Jay Flight 28BHS?",
     description:
       "Full analysis of F-150 towing capacity vs Jayco Jay Flight 28BHS specifications. Includes dry weight, tongue weight, payload calculations.",
-    url: "https://rvtowingcalc.com/guides/can-ford-f150-tow-jayco-jay-flight-28bhs",
+    url: "https://www.rvtowingcalc.com/guides/can-ford-f150-tow-jayco-jay-flight-28bhs",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -25,7 +25,7 @@ export default function FordF150JaycoJayFlightAnalysisPage() {
       <ArticleJsonLd
         title="Can a Ford F-150 Tow a Jayco Jay Flight 28BHS? Full Analysis"
         description="Complete analysis of whether a Ford F-150 can safely tow a Jayco Jay Flight 28BHS travel trailer."
-        url="https://rvtowingcalc.com/guides/can-ford-f150-tow-jayco-jay-flight-28bhs"
+        url="https://www.rvtowingcalc.com/guides/can-ford-f150-tow-jayco-jay-flight-28bhs"
         datePublished="2026-07-07"
       />
 

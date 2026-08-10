@@ -26,7 +26,7 @@ export default function WinterStoragePage() {
       <ArticleJsonLd
         title="Winter RV Storage Guide: Prepare Your Trailer for Cold Weather"
         description="Complete winterization checklist for your RV and trailer. Protect your investment during the cold winter months."
-        url="https://rvtowingcalc.com/guides/winter-storage"
+        url="https://www.rvtowingcalc.com/guides/winter-storage"
         datePublished="2024-10-15"
       />
 

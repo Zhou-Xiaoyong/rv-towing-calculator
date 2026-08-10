@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Which half-ton truck can safely tow an 8,000 lb travel trailer? We compare Ford F-150, RAM 1500, Chevy Silverado 1500, GMC Sierra 1500, Toyota Tundra, and Nissan Titan on payload, towing capacity, engine options, and real-world towability.",
   alternates: {
-    canonical: "https://rvtowingcalc.com/guides/best-half-ton-trucks-8000-lbs",
+    canonical: "https://www.rvtowingcalc.com/guides/best-half-ton-trucks-8000-lbs",
   },
   openGraph: {
     title: "Best Half-Ton Trucks for Towing 8,000 lbs: 2025-2026 Comparison",
     description:
       "Compare Ford F-150, RAM 1500, Silverado 1500, Sierra 1500, Tundra, and Titan for towing an 8,000 lb travel trailer. Payload, engine options, and real-world safety analysis.",
-    url: "https://rvtowingcalc.com/guides/best-half-ton-trucks-8000-lbs",
+    url: "https://www.rvtowingcalc.com/guides/best-half-ton-trucks-8000-lbs",
     images: DEFAULT_OG_IMAGES,
   },
 };
@@ -138,12 +138,12 @@ export default function BestHalfTonTrucksGuidePage() {
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8">
       <FaqJsonLd
         faqs={FAQS}
-        baseUrl="https://rvtowingcalc.com/guides/best-half-ton-trucks-8000-lbs"
+        baseUrl="https://www.rvtowingcalc.com/guides/best-half-ton-trucks-8000-lbs"
       />
       <ArticleJsonLd
         title="Best Half-Ton Trucks for Towing 8,000 lbs: 2025-2026 Comparison"
         description="Compare Ford F-150, RAM 1500, Silverado 1500, Sierra 1500, Tundra, and Titan for towing an 8,000 lb travel trailer. Payload, engine options, and real-world safety analysis."
-        url="https://rvtowingcalc.com/guides/best-half-ton-trucks-8000-lbs"
+        url="https://www.rvtowingcalc.com/guides/best-half-ton-trucks-8000-lbs"
         datePublished="2026-06-29"
       />
 
