@@ -143,6 +143,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    // Safety / 5th Wheel + Tire Safety (added — was missing from sitemap)
+    {
+      url: `${baseUrl}/guides/fifth-wheel-pin-weight`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // Safety / Tire Safety (added — was missing from sitemap)
+    {
+      url: `${baseUrl}/guides/travel-trailer-tire-safety`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     {
       url: `${baseUrl}/guides/spring-checklist`,
       lastModified,

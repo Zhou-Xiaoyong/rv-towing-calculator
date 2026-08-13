@@ -194,6 +194,20 @@ const GUIDES = [
       "Towing mirrors are required by law in most states. Learn which mirror types work best, state-by-state legal requirements, installation, adjustment, and top product picks.",
     category: "Equipment",
   },
+  {
+    slug: "/guides/fifth-wheel-pin-weight",
+    title: "5th Wheel Pin Weight: How to Measure It and Stay Within Truck Payload",
+    description:
+      "Pin weight is the #1 hidden failure mode in 5th wheel towing. How to measure pin weight with a CAT scale, the payload math that matters, and how to reduce pin weight if overloaded.",
+    category: "Safety",
+  },
+  {
+    slug: "/guides/travel-trailer-tire-safety",
+    title: "Travel Trailer Tire Safety: Load Range, Cold Pressure & Blowout Prevention",
+    description:
+      "Tire blowouts cause thousands of RV accidents every year. Learn how to choose the right load range, calculate cold pressure, read the DOT date code, and prevent dangerous blowouts.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
