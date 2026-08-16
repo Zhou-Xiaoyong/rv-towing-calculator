@@ -208,6 +208,20 @@ const GUIDES = [
       "Tire blowouts cause thousands of RV accidents every year. Learn how to choose the right load range, calculate cold pressure, read the DOT date code, and prevent dangerous blowouts.",
     category: "Safety",
   },
+  {
+    slug: "/guides/dry-weight-vs-loaded-weight",
+    title: "Travel Trailer Dry Weight vs Loaded Weight: What Dealers Don't Tell You",
+    description:
+      "Dealers quote dry weight, but loaded weight is what matters for safe towing. Learn the real numbers, how to calculate your true travel-ready weight, and why the difference can exceed 2,000 lbs.",
+    category: "Fundamentals",
+  },
+  {
+    slug: "/guides/lifted-truck-towing-capacity",
+    title: "Towing With a Lifted Truck: How Lift Kits Affect Towing Capacity and Safety",
+    description:
+      "Lift kits change hitch geometry, suspension travel, and axle angles. Learn how much towing capacity you lose, what modifications restore safety, and whether a lifted truck can safely tow your RV.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {

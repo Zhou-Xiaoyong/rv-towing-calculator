@@ -157,6 +157,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    // Fundamentals (new — dry weight vs loaded weight)
+    {
+      url: `${baseUrl}/guides/dry-weight-vs-loaded-weight`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // Safety (new — lifted truck towing capacity)
+    {
+      url: `${baseUrl}/guides/lifted-truck-towing-capacity`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     {
       url: `${baseUrl}/guides/spring-checklist`,
       lastModified,

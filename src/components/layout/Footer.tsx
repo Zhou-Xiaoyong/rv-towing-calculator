@@ -190,6 +190,54 @@ export default function Footer() {
                   Can My SUV Tow a Trailer?
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/guides/rv-trailer-sway-control"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Trailer Sway Control
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/trailer-brake-controller-setup"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Brake Controller Setup
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/diesel-vs-gas-truck-rv-towing"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Diesel vs Gas Trucks
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/travel-trailer-tire-safety"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Tire Safety Guide
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/dry-weight-vs-loaded-weight"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Dry vs Loaded Weight
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/lifted-truck-towing-capacity"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Lifted Truck Towing
+                </Link>
+              </li>
             </ul>
           </div>
 
