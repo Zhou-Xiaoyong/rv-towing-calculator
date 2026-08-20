@@ -44,6 +44,8 @@ const GUIDE_LINKS = [
   { href: "/guides/travel-trailer-tire-safety", label: "Tire Safety Guide" },
   { href: "/guides/dry-weight-vs-loaded-weight", label: "Dry vs Loaded Weight" },
   { href: "/guides/lifted-truck-towing-capacity", label: "Lifted Truck Towing" },
+  { href: "/guides/hitch-ball-selection-guide", label: "Hitch Ball Selection" },
+  { href: "/guides/travel-trailer-pre-trip-inspection", label: "Pre-Trip Inspection" },
 ];
 
 export default function Header() {

@@ -238,6 +238,22 @@ export default function Footer() {
                   Lifted Truck Towing
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/guides/hitch-ball-selection-guide"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Hitch Ball Selection
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/travel-trailer-pre-trip-inspection"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Pre-Trip Inspection Checklist
+                </Link>
+              </li>
             </ul>
           </div>
 

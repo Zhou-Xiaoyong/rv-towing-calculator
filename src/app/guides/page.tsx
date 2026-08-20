@@ -222,6 +222,20 @@ const GUIDES = [
       "Lift kits change hitch geometry, suspension travel, and axle angles. Learn how much towing capacity you lose, what modifications restore safety, and whether a lifted truck can safely tow your RV.",
     category: "Safety",
   },
+  {
+    slug: "/guides/hitch-ball-selection-guide",
+    title: "How to Choose the Right Hitch Ball for Towing",
+    description:
+      "Complete hitch ball selection guide: 1-7/8\", 2\", and 2-5/16\" ball diameters, weight ratings by trailer class, drop vs rise calculation, materials, and pre-tow inspection steps.",
+    category: "Equipment",
+  },
+  {
+    slug: "/guides/travel-trailer-pre-trip-inspection",
+    title: "Travel Trailer Pre-Trip Inspection Checklist: 7-Step Walk-Around",
+    description:
+      "Printable 7-step walk-around inspection covering hitch connection, tires, lights, propane, interior cargo, electrical, and final pre-departure walk. Includes seasonal checklists.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
