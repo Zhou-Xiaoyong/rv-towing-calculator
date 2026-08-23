@@ -160,6 +160,13 @@ const GUIDES = [
     category: "Buying Guides",
   },
   {
+    slug: "/guides/midsize-truck-rv-towing",
+    title: "Towing With a Midsize Truck: Colorado, Ranger, Tacoma RV Towing Guide",
+    description:
+      "Can a midsize truck tow a travel trailer? Complete towing guide for Chevy Colorado, Ford Ranger, Toyota Tacoma, Nissan Frontier, and Jeep Gladiator. Real specs, payload limits, and safe trailer matches.",
+    category: "Buying Guides",
+  },
+  {
     slug: "/guides/mountain-towing-transmission-gears",
     title: "Mountain Towing: Transmission Temp & Gear Selection",
     description:
@@ -213,6 +220,13 @@ const GUIDES = [
     title: "Travel Trailer Dry Weight vs Loaded Weight: What Dealers Don't Tell You",
     description:
       "Dealers quote dry weight, but loaded weight is what matters for safe towing. Learn the real numbers, how to calculate your true travel-ready weight, and why the difference can exceed 2,000 lbs.",
+    category: "Fundamentals",
+  },
+  {
+    slug: "/guides/gawr-explained",
+    title: "GAWR Explained: Gross Axle Weight Rating for RV Towing",
+    description:
+      "What is GAWR and why it matters for RV towing. Learn how Gross Axle Weight Rating works, how tongue weight loads your rear axle, and how to stay within safe axle limits.",
     category: "Fundamentals",
   },
   {
