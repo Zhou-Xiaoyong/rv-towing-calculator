@@ -254,6 +254,22 @@ export default function Footer() {
                   Pre-Trip Inspection Checklist
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/guides/rv-towing-speed-limits"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Towing Speed Limits by State
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/guides/cdl-requirements-rv-towing"
+                  className="text-sm text-gray-600 hover:text-brand-600"
+                >
+                  Do You Need a CDL to Tow?
+                </Link>
+              </li>
             </ul>
           </div>
 

@@ -37,15 +37,16 @@ const GUIDE_LINKS = [
   { href: "/guides/rv-towing-mirrors-guide", label: "Towing Mirrors Guide" },
   { href: "/guides/diesel-vs-gas-truck-rv-towing", label: "Diesel vs Gas Trucks" },
   { href: "/guides/trailer-brake-controller-setup", label: "Brake Controller Setup" },
-  { href: "/guides/rv-trailer-sway-control", label: "Trailer Sway Control" },
-  { href: "/guides/axle-ratio-for-towing", label: "Axle Ratio for Towing" },
-  { href: "/guides/how-to-back-up-travel-trailer", label: "How to Back Up a Trailer" },
   { href: "/guides/fifth-wheel-pin-weight", label: "5th Wheel Pin Weight" },
   { href: "/guides/travel-trailer-tire-safety", label: "Tire Safety Guide" },
   { href: "/guides/dry-weight-vs-loaded-weight", label: "Dry vs Loaded Weight" },
   { href: "/guides/lifted-truck-towing-capacity", label: "Lifted Truck Towing" },
   { href: "/guides/hitch-ball-selection-guide", label: "Hitch Ball Selection" },
   { href: "/guides/travel-trailer-pre-trip-inspection", label: "Pre-Trip Inspection" },
+  { href: "/guides/gawr-explained", label: "GAWR Explained" },
+  { href: "/guides/midsize-truck-rv-towing", label: "Midsize Truck Towing" },
+  { href: "/guides/rv-towing-speed-limits", label: "Towing Speed Limits" },
+  { href: "/guides/cdl-requirements-rv-towing", label: "CDL & License Rules" },
 ];
 
 export default function Header() {

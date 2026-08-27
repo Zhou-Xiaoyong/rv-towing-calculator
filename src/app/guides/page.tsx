@@ -250,6 +250,20 @@ const GUIDES = [
       "Printable 7-step walk-around inspection covering hitch connection, tires, lights, propane, interior cargo, electrical, and final pre-departure walk. Includes seasonal checklists.",
     category: "Safety",
   },
+  {
+    slug: "/guides/rv-towing-speed-limits",
+    title: "How Fast Can You Tow a Travel Trailer? Towing Speed Limits by State",
+    description:
+      "Most states follow the posted limit, but your ST trailer tires cap out at 65 mph. State reduced-limit laws, tire speed ratings, stopping distance math, and the safe towing speed.",
+    category: "Safety",
+  },
+  {
+    slug: "/guides/cdl-requirements-rv-towing",
+    title: "Do You Need a CDL to Tow an RV? License Requirements by State",
+    description:
+      "The 26,001 lb GCWR threshold explained, which states require a non-commercial license upgrade, which rigs actually cross the line, and how to verify your own setup.",
+    category: "Fundamentals",
+  },
 ];
 
 export default function GuidesPage() {
