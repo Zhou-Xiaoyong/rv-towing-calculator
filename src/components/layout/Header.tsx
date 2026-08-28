@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const CALCULATOR_LINKS = [
   { href: "/towing-capacity-calculator", label: "Towing Capacity" },
@@ -11,47 +12,47 @@ const CALCULATOR_LINKS = [
   { href: "/gcwr-calculator", label: "GCWR" },
 ];
 
-const GUIDE_LINKS = [
+// Curated featured guides only. The full, ever-growing guide list lives on
+// /guides (categorized hub page). New guides no longer require a Header change.
+const FEATURED_GUIDES = [
   { href: "/guides/towing-capacity-explained", label: "Towing Capacity Guide" },
   { href: "/guides/gvwr-vs-gcwr", label: "GVWR vs GCWR" },
   { href: "/guides/payload-capacity", label: "Payload Explained" },
   { href: "/guides/tongue-weight", label: "Tongue Weight Guide" },
-  { href: "/guides/trailer-loading-position", label: "Trailer Loading Guide" },
-  { href: "/guides/cat-scale-weighing", label: "CAT Scale Weighing" },
   { href: "/guides/weight-distribution-hitch-setup", label: "WDH Setup Guide" },
-  { href: "/guides/exceed-gvwr-dangers", label: "Exceed GVWR Dangers" },
-  { href: "/guides/best-half-ton-trucks-8000-lbs", label: "Best Half-Ton Trucks" },
-  { href: "/guides/fifth-wheel-vs-travel-trailer", label: "5th Wheel vs TT" },
-  { href: "/guides/electric-trucks-rv-towing", label: "EV Trucks for Towing" },
-  { href: "/guides/can-ford-f150-tow-jayco-jay-flight-28bhs", label: "Case: F-150 & Jay Flight" },
-  { href: "/guides/spring-checklist", label: "Spring Pre-Departure" },
-  { href: "/guides/winter-storage", label: "Winter Storage Guide" },
-  { href: "/checklist", label: "Safety Checklist PDF" },
-  { href: "/guides/ram-1500-vs-f150-towing", label: "RAM vs F-150 Towing" },
-  { href: "/guides/mountain-towing-transmission-gears", label: "Mountain Towing" },
-  { href: "/guides/calculate-tongue-weight-travel-trailer", label: "Calculate Tongue Weight" },
-  { href: "/guides/can-suv-tow-small-travel-trailer", label: "Can My SUV Tow a Trailer?" },
-  { href: "/guides/rv-trailer-sway-control", label: "Trailer Sway Control" },
-  { href: "/guides/axle-ratio-for-towing", label: "Axle Ratio for Towing" },
-  { href: "/guides/how-to-back-up-travel-trailer", label: "How to Back Up a Trailer" },
-  { href: "/guides/rv-towing-mirrors-guide", label: "Towing Mirrors Guide" },
-  { href: "/guides/diesel-vs-gas-truck-rv-towing", label: "Diesel vs Gas Trucks" },
-  { href: "/guides/trailer-brake-controller-setup", label: "Brake Controller Setup" },
+  { href: "/guides/cat-scale-weighing", label: "CAT Scale Weighing" },
   { href: "/guides/fifth-wheel-pin-weight", label: "5th Wheel Pin Weight" },
-  { href: "/guides/travel-trailer-tire-safety", label: "Tire Safety Guide" },
-  { href: "/guides/dry-weight-vs-loaded-weight", label: "Dry vs Loaded Weight" },
-  { href: "/guides/lifted-truck-towing-capacity", label: "Lifted Truck Towing" },
-  { href: "/guides/hitch-ball-selection-guide", label: "Hitch Ball Selection" },
-  { href: "/guides/travel-trailer-pre-trip-inspection", label: "Pre-Trip Inspection" },
-  { href: "/guides/gawr-explained", label: "GAWR Explained" },
-  { href: "/guides/midsize-truck-rv-towing", label: "Midsize Truck Towing" },
-  { href: "/guides/rv-towing-speed-limits", label: "Towing Speed Limits" },
-  { href: "/guides/cdl-requirements-rv-towing", label: "CDL & License Rules" },
 ];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [guidesOpen, setGuidesOpen] = useState(false);
+
+  // Mobile UX: lock background scroll while the menu is open and allow
+  // closing it with the Escape key (both standard mobile menu behaviors).
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMobileMenuOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = prevOverflow;
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [mobileMenuOpen]);
+
+  // Close the mobile menu on route change so users never land on a new page
+  // with a stale menu covering the content.
+  const pathname = usePathname();
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
@@ -100,7 +101,7 @@ export default function Header() {
             {guidesOpen && (
               <div className="absolute left-0 top-full w-56 pt-1">
                 <div className="rounded-lg border border-gray-200 bg-white py-2 shadow-lg">
-                  {GUIDE_LINKS.map((link) => (
+                  {FEATURED_GUIDES.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
@@ -109,6 +110,32 @@ export default function Header() {
                       {link.label}
                     </Link>
                   ))}
+                  <Link
+                    href="/checklist"
+                    className="block px-4 py-2 text-sm text-gray-600 hover:bg-brand-50 hover:text-brand-600"
+                  >
+                    Safety Checklist PDF
+                  </Link>
+                  <div className="my-2 border-t border-gray-100" />
+                  <Link
+                    href="/guides"
+                    className="flex items-center justify-between px-4 py-2 text-sm font-semibold text-brand-600 hover:bg-brand-50"
+                  >
+                    View All Guides
+                    <svg
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
                 </div>
               </div>
             )}
@@ -136,7 +163,11 @@ export default function Header() {
 
       {/* Mobile nav */}
       {mobileMenuOpen && (
-        <nav className="border-t border-gray-200 bg-white px-4 py-4 md:hidden">
+        <nav
+          className="border-t border-gray-200 bg-white px-4 py-4 md:hidden"
+          aria-label="Mobile navigation"
+        >
+          <div className="max-h-[calc(100vh-8rem)] overflow-y-auto overscroll-contain">
           <div className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
             Calculators
           </div>
@@ -156,7 +187,7 @@ export default function Header() {
             Guides
           </div>
           <div className="grid grid-cols-1 gap-1">
-            {GUIDE_LINKS.map((link) => (
+            {FEATURED_GUIDES.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -166,6 +197,21 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/checklist"
+              className="block rounded-lg px-4 py-3 text-base font-medium text-gray-700 transition-colors hover:bg-brand-50 hover:text-brand-600 active:bg-brand-100"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Safety Checklist PDF
+            </Link>
+            <Link
+              href="/guides"
+              className="mt-2 block rounded-lg border border-brand-200 bg-brand-50 px-4 py-3 text-base font-semibold text-brand-700 transition-colors hover:bg-brand-100 active:bg-brand-100"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              View All Guides
+            </Link>
+          </div>
           </div>
         </nav>
       )}

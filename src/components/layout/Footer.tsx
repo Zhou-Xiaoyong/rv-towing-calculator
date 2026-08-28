@@ -24,7 +24,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/towing-capacity-calculator"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   Towing Capacity
                 </Link>
@@ -32,7 +32,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/payload-calculator"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   Payload Calculator
                 </Link>
@@ -40,7 +40,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/gvwr-calculator"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   GVWR Calculator
                 </Link>
@@ -48,7 +48,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/tongue-weight-calculator"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   Tongue Weight Calculator
                 </Link>
@@ -56,7 +56,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/gcwr-calculator"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   GCWR Calculator
                 </Link>
@@ -72,8 +72,16 @@ export default function Footer() {
             <ul className="mt-3 space-y-2">
               <li>
                 <Link
+                  href="/guides"
+                  className="text-sm font-semibold text-gray-900 hover:text-brand-600"
+                >
+                  All Guides
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/guides/towing-capacity-explained"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   Towing Capacity Guide
                 </Link>
@@ -81,7 +89,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/guides/gvwr-vs-gcwr"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   GVWR vs GCWR
                 </Link>
@@ -89,7 +97,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/guides/payload-capacity"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   Payload Explained
                 </Link>
@@ -97,177 +105,41 @@ export default function Footer() {
               <li>
                 <Link
                   href="/guides/tongue-weight"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   Tongue Weight Guide
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/guides/trailer-loading-position"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Trailer Loading Guide
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/cat-scale-weighing"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  CAT Scale Weighing
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/guides/weight-distribution-hitch-setup"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   WDH Setup Guide
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/guides/exceed-gvwr-dangers"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  href="/guides/cat-scale-weighing"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
-                  Exceed GVWR Dangers
+                  CAT Scale Weighing
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/guides/best-half-ton-trucks-8000-lbs"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  href="/guides/fifth-wheel-pin-weight"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
-                  Best Half-Ton Trucks
+                  5th Wheel Pin Weight
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/guides/fifth-wheel-vs-travel-trailer"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  href="/checklist"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
-                  5th Wheel vs Travel Trailer
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/electric-trucks-rv-towing"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  EV Trucks for Towing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/ram-1500-vs-f150-towing"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  RAM vs F-150 Towing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/mountain-towing-transmission-gears"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Mountain Towing Safety
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/calculate-tongue-weight-travel-trailer"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Calculate Tongue Weight
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/can-suv-tow-small-travel-trailer"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Can My SUV Tow a Trailer?
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/rv-trailer-sway-control"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Trailer Sway Control
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/trailer-brake-controller-setup"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Brake Controller Setup
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/diesel-vs-gas-truck-rv-towing"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Diesel vs Gas Trucks
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/travel-trailer-tire-safety"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Tire Safety Guide
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/dry-weight-vs-loaded-weight"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Dry vs Loaded Weight
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/lifted-truck-towing-capacity"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Lifted Truck Towing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/hitch-ball-selection-guide"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Hitch Ball Selection
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/travel-trailer-pre-trip-inspection"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Pre-Trip Inspection Checklist
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/rv-towing-speed-limits"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Towing Speed Limits by State
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/guides/cdl-requirements-rv-towing"
-                  className="text-sm text-gray-600 hover:text-brand-600"
-                >
-                  Do You Need a CDL to Tow?
+                  Safety Checklist PDF
                 </Link>
               </li>
             </ul>
@@ -282,7 +154,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/about"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   About Us
                 </Link>
@@ -290,7 +162,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/data-sources"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   Data Sources
                 </Link>
@@ -298,7 +170,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/disclaimer"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   Disclaimer
                 </Link>
@@ -306,7 +178,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/privacy"
-                  className="text-sm text-gray-600 hover:text-brand-600"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
                 >
                   Privacy Policy
                 </Link>

@@ -25,21 +25,20 @@ body {
   }
 }
 
-/* Improve touch targets on mobile */
+/* Improve touch targets on mobile.
+   NOTE: only buttons and explicit interactive elements get the 44px minimum.
+   A blanket `a { min-height: 44px; display: inline-flex; }` rule was removed
+   on 2026-08-28 because it also inflated every inline text link inside guide
+   article paragraphs, wrecking mobile line-height/readability. Nav and footer
+   links handle their own tap-target sizing at the component level. */
 @media (hover: none) and (pointer: coarse) {
-  button, 
+  button,
   [role="button"],
   input[type="button"],
   input[type="submit"],
   input[type="reset"] {
     min-height: 44px;
     min-width: 44px;
-  }
-  
-  a {
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
   }
 }
 
