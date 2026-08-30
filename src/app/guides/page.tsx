@@ -167,6 +167,13 @@ const GUIDES = [
     category: "Buying Guides",
   },
   {
+    slug: "/guides/three-quarter-ton-truck-towing",
+    title: "3/4 Ton Truck Towing Capacity: F-250 vs RAM 2500 vs Silverado 2500 Compared",
+    description:
+      "Compare 3/4 ton truck towing capacity for Ford F-250, RAM 2500, and Chevy Silverado 2500HD. Real gas vs diesel tow ratings, payload penalties, and which HD truck fits your fifth wheel.",
+    category: "Buying Guides",
+  },
+  {
     slug: "/guides/mountain-towing-transmission-gears",
     title: "Mountain Towing: Transmission Temp & Gear Selection",
     description:
@@ -262,6 +269,13 @@ const GUIDES = [
     title: "Do You Need a CDL to Tow an RV? License Requirements by State",
     description:
       "The 26,001 lb GCWR threshold explained, which states require a non-commercial license upgrade, which rigs actually cross the line, and how to verify your own setup.",
+    category: "Fundamentals",
+  },
+  {
+    slug: "/guides/what-size-trailer-can-my-truck-tow",
+    title: "What Size Travel Trailer Can My Truck Tow? A Right-Sizing Guide",
+    description:
+      "A step-by-step worksheet to size your travel trailer to your truck's real payload and tongue weight. Apply the 80% rule, read the door-jamb label, and never overload.",
     category: "Fundamentals",
   },
 ];
