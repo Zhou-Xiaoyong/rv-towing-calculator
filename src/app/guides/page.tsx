@@ -272,6 +272,20 @@ const GUIDES = [
     category: "Safety",
   },
   {
+    slug: "/guides/spring-checklist",
+    title: "Spring Towing Pre-Departure Checklist",
+    description:
+      "Complete spring checklist for your tow vehicle and trailer. Ensure safety and reliability before hitting the road this RV season.",
+    category: "Safety",
+  },
+  {
+    slug: "/guides/winter-storage",
+    title: "Winter RV Storage Guide",
+    description:
+      "Complete winterization checklist for your RV and trailer. Protect your investment during the cold winter months.",
+    category: "Safety",
+  },
+  {
     slug: "/guides/rv-towing-speed-limits",
     title: "How Fast Can You Tow a Travel Trailer? Towing Speed Limits by State",
     description:
