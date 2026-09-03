@@ -41,6 +41,13 @@ const GUIDES = [
     category: "Fundamentals",
   },
   {
+    slug: "/guides/cargo-carrying-capacity-ccc",
+    title: "Travel Trailer Cargo Carrying Capacity (CCC) Explained",
+    description:
+      "How much gear can you actually pack? The RVIA CCC formula, real cargo budgets by trailer size, water and propane weight, and how to stay under GVWR.",
+    category: "Fundamentals",
+  },
+  {
     slug: "/guides/tongue-weight",
     title: "Tongue Weight Guide",
     description:
@@ -248,6 +255,13 @@ const GUIDES = [
     title: "How to Choose the Right Hitch Ball for Towing",
     description:
       "Complete hitch ball selection guide: 1-7/8\", 2\", and 2-5/16\" ball diameters, weight ratings by trailer class, drop vs rise calculation, materials, and pre-tow inspection steps.",
+    category: "Equipment",
+  },
+  {
+    slug: "/guides/trailer-hitch-classes-explained",
+    title: "Trailer Hitch Classes Explained (Class I–V)",
+    description:
+      "Class I through V hitch ratings, receiver tube sizes, weight distribution limits, and the weakest-link rule that decides which receiver your RV actually needs.",
     category: "Equipment",
   },
   {
