@@ -21,8 +21,8 @@ const ROBOTS = path.join(ROOT, ".next", "server", "app", "robots.txt.body");
 const APP = path.join(ROOT, "src", "app");
 
 const NEW_SLUGS = [
-  "/guides/cargo-carrying-capacity-ccc",
-  "/guides/trailer-hitch-classes-explained",
+  "/guides/tow-haul-mode-explained",
+  "/guides/gooseneck-vs-fifth-wheel",
 ];
 
 const results = [];

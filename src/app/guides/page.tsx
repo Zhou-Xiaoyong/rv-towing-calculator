@@ -306,6 +306,20 @@ const GUIDES = [
       "A step-by-step worksheet to size your travel trailer to your truck's real payload and tongue weight. Apply the 80% rule, read the door-jamb label, and never overload.",
     category: "Fundamentals",
   },
+  {
+    slug: "/guides/tow-haul-mode-explained",
+    title: "Tow/Haul Mode Explained: What It Does, When to Use It",
+    description:
+      "What tow/haul mode actually changes in your transmission, when to engage it (and when not to), how it reduces transmission heat, and how it stacks with manual mode and L gear on long grades.",
+    category: "Equipment",
+  },
+  {
+    slug: "/guides/gooseneck-vs-fifth-wheel",
+    title: "Gooseneck vs 5th Wheel Hitch: Which Is Better for Towing?",
+    description:
+      "Head-to-head comparison of gooseneck and 5th wheel hitches. Tow ratings, bed space, install cost, short-bed compatibility, and which setup fits your truck and trailer.",
+    category: "Buying Guides",
+  },
 ];
 
 export default function GuidesPage() {
