@@ -25,6 +25,14 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+# Sandbox-runner log files (git/build wrapper scripts). Safe to ignore — these
+# are debug output only, regenerated on each `node scripts/push.mjs` or
+# `node scripts/run-build.mjs` invocation. Do not git-ignore the wrapper
+# scripts in `scripts/` themselves.
+build-out.log
+push-out.log
+
+# local env files
 .env*.local
 .env
 
