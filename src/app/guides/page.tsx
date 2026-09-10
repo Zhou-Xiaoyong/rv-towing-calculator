@@ -97,6 +97,13 @@ const GUIDES = [
     category: "Safety",
   },
   {
+    slug: "/guides/trailer-brake-laws-by-state",
+    title: "Trailer Brake Laws by State: When Are Trailer Brakes Required?",
+    description:
+      "State-by-state trailer brake requirements at a glance. The weight thresholds from 1,000 to 15,000 lbs, electric vs surge brakes, breakaway systems, and how to stay legal across state lines.",
+    category: "Safety",
+  },
+  {
     slug: "/guides/exceed-gvwr-dangers",
     title: "What Happens If You Exceed GVWR",
     description:
@@ -192,6 +199,13 @@ const GUIDES = [
     title: "RV Trailer Sway Control: Causes, Prevention & Anti-Sway Devices",
     description:
       "What causes trailer sway, how to prevent it with proper loading and tongue weight, and which anti-sway devices actually work. Includes emergency sway response and device comparison.",
+    category: "Safety",
+  },
+  {
+    slug: "/guides/trailer-length-vs-wheelbase-rule",
+    title: "Trailer Length vs Wheelbase: The 110/20 Rule for Safe Towing",
+    description:
+      "How long a trailer can your truck safely tow? The 110/20 wheelbase rule, rear overhang ratio, and a trailer length chart by wheelbase to prevent dangerous trailer sway.",
     category: "Safety",
   },
   {
