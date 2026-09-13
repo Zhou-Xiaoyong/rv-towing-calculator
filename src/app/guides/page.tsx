@@ -188,6 +188,13 @@ const GUIDES = [
     category: "Buying Guides",
   },
   {
+    slug: "/guides/half-ton-truck-fifth-wheel-towing",
+    title: "Can a Half-Ton Truck Tow a Fifth Wheel? The Payload Math",
+    description:
+      "Why the advertised 13,000 lb fifth wheel tow rating is the wrong number. How to work out your real pin weight budget, the payload worksheet, and which lightweight fifth wheels actually fit a half-ton.",
+    category: "Buying Guides",
+  },
+  {
     slug: "/guides/mountain-towing-transmission-gears",
     title: "Mountain Towing: Transmission Temp & Gear Selection",
     description:
@@ -206,6 +213,13 @@ const GUIDES = [
     title: "Trailer Length vs Wheelbase: The 110/20 Rule for Safe Towing",
     description:
       "How long a trailer can your truck safely tow? The 110/20 wheelbase rule, rear overhang ratio, and a trailer length chart by wheelbase to prevent dangerous trailer sway.",
+    category: "Safety",
+  },
+  {
+    slug: "/guides/toy-hauler-towing-guide",
+    title: "Toy Hauler Towing Guide: Garage Weight and Tongue Weight Explained",
+    description:
+      "How garage cargo behind the axles acts like a seesaw and lifts tongue weight, the 10-15% rule, garage floor limits, hidden water and fuel weight, and a safe loading sequence.",
     category: "Safety",
   },
   {
