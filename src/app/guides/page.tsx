@@ -348,6 +348,20 @@ const GUIDES = [
       "Head-to-head comparison of gooseneck and 5th wheel hitches. Tow ratings, bed space, install cost, short-bed compatibility, and which setup fits your truck and trailer.",
     category: "Buying Guides",
   },
+  {
+    slug: "/guides/fifth-wheel-hitch-height-bed-clearance",
+    title: "5th Wheel Hitch Height and Bed Clearance: The Setup Guide",
+    description:
+      "How to measure kingpin and bed rail height, calculate the correct 5th wheel hitch height, hold the 5.5 to 6 inch bed rail clearance rule, and when to adjust the pin box instead.",
+    category: "Equipment",
+  },
+  {
+    slug: "/guides/trailer-wheel-bearing-maintenance",
+    title: "Trailer Wheel Bearing Maintenance: How Often to Repack Bearings",
+    description:
+      "The 12 month or 12,000 mile repack interval, the four warning signs that catch a bearing before it seizes, hub temperature checks, spindle nut torque, and real DIY versus shop costs.",
+    category: "Maintenance",
+  },
 ];
 
 export default function GuidesPage() {

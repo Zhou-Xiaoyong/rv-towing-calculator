@@ -58,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Guides 列表页 — 每次新增文章列表内容会变，用最近一次新增文章的日期
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date("2026-09-13"),
+      lastModified: new Date("2026-09-17"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -318,6 +318,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/guides/fifth-wheel-hitch-height-bed-clearance`,
+      lastModified: new Date("2026-09-17"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/guides/midsize-truck-rv-towing`,
       lastModified: new Date("2026-08-23"),
       changeFrequency: "monthly",
@@ -332,6 +338,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/guides/half-ton-truck-fifth-wheel-towing`,
       lastModified: new Date("2026-09-13"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    // ── Maintenance ──
+    {
+      url: `${baseUrl}/guides/trailer-wheel-bearing-maintenance`,
+      lastModified: new Date("2026-09-17"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
