@@ -58,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Guides 列表页 — 每次新增文章列表内容会变，用最近一次新增文章的日期
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date("2026-09-17"),
+      lastModified: new Date("2026-09-20"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -233,6 +233,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/guides/how-to-hitch-up-a-travel-trailer`,
+      lastModified: new Date("2026-09-20"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/guides/spring-checklist`,
       lastModified: new Date("2026-07-07"),
       changeFrequency: "yearly",
@@ -345,6 +351,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/guides/trailer-wheel-bearing-maintenance`,
       lastModified: new Date("2026-09-17"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/trailer-suspension-leaf-spring-inspection`,
+      lastModified: new Date("2026-09-20"),
       changeFrequency: "monthly",
       priority: 0.7,
     },

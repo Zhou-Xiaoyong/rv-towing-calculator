@@ -362,6 +362,20 @@ const GUIDES = [
       "The 12 month or 12,000 mile repack interval, the four warning signs that catch a bearing before it seizes, hub temperature checks, spindle nut torque, and real DIY versus shop costs.",
     category: "Maintenance",
   },
+  {
+    slug: "/guides/how-to-hitch-up-a-travel-trailer",
+    title: "How to Hitch Up a Travel Trailer: Step-by-Step Safe Procedure",
+    description:
+      "The nine-step hitching procedure: ball match and torque, the latch test that catches a coupler that never engaged, safety chains crossed under the tongue, breakaway cable attachment, and the four-circuit light test.",
+    category: "Safety",
+  },
+  {
+    slug: "/guides/trailer-suspension-leaf-spring-inspection",
+    title: "Trailer Suspension and Leaf Spring Inspection: When to Replace",
+    description:
+      "The 12 month / 12,000 mile suspension inspection: measuring ride height and sag limits, the seven failure signs from cracked leaves to worn shackles, wet bolt upgrades, and real replacement costs.",
+    category: "Maintenance",
+  },
 ];
 
 export default function GuidesPage() {
