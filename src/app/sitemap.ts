@@ -58,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Guides 列表页 — 每次新增文章列表内容会变，用最近一次新增文章的日期
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date("2026-09-20"),
+      lastModified: new Date("2026-09-24"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -312,6 +312,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/guides/equalizer-hitch-vs-weight-distribution-hitch`,
+      lastModified: new Date("2026-09-24"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/guides/tow-haul-mode-explained`,
       lastModified: new Date("2026-09-06"),
       changeFrequency: "monthly",
@@ -357,6 +363,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/guides/trailer-suspension-leaf-spring-inspection`,
       lastModified: new Date("2026-09-20"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/trailer-brake-inspection-replacement`,
+      lastModified: new Date("2026-09-24"),
       changeFrequency: "monthly",
       priority: 0.7,
     },

@@ -376,6 +376,20 @@ const GUIDES = [
       "The 12 month / 12,000 mile suspension inspection: measuring ride height and sag limits, the seven failure signs from cracked leaves to worn shackles, wet bolt upgrades, and real replacement costs.",
     category: "Maintenance",
   },
+  {
+    slug: "/guides/trailer-brake-inspection-replacement",
+    title: "How Long Do Trailer Brakes Last? Inspection and Replacement",
+    description:
+      "Realistic brake shoe, magnet and drum service life by use pattern, the wear limits that trigger replacement, a nine-step inspection procedure, and what an axle brake rebuild costs.",
+    category: "Maintenance",
+  },
+  {
+    slug: "/guides/equalizer-hitch-vs-weight-distribution-hitch",
+    title: "Equalizer Hitch vs Weight Distribution Hitch: Which to Buy",
+    description:
+      "How integrated 4-point sway control differs from a chain-style WDH and a bolt-on friction bar, which trailer weights justify the upgrade, bar sizing, costs, and the setup mistakes that cause sway.",
+    category: "Equipment",
+  },
 ];
 
 export default function GuidesPage() {
