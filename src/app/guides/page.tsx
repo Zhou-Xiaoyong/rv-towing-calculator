@@ -390,6 +390,20 @@ const GUIDES = [
       "How integrated 4-point sway control differs from a chain-style WDH and a bolt-on friction bar, which trailer weights justify the upgrade, bar sizing, costs, and the setup mistakes that cause sway.",
     category: "Equipment",
   },
+  {
+    slug: "/guides/trailer-axle-alignment-and-tire-wear",
+    title: "Trailer Axle Alignment and Tire Wear: How to Diagnose It",
+    description:
+      "How to read trailer tire wear patterns to separate toe, camber, bearing, overload and brake problems, check axle alignment with a tape measure and a string line, and what alignment and axle repair cost.",
+    category: "Maintenance",
+  },
+  {
+    slug: "/guides/can-jeep-wrangler-tow-travel-trailer",
+    title: "Can a Jeep Wrangler Tow a Travel Trailer? The Real Limits",
+    description:
+      "Wrangler tow ratings by body style and powertrain, the payload and tongue weight worksheet that gives the real answer, which trailers fit and which do not, and the equipment you have to add.",
+    category: "Matchups",
+  },
 ];
 
 export default function GuidesPage() {
