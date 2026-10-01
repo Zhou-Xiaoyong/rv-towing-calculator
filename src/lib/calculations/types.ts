@@ -43,6 +43,10 @@ export interface VehicleSpec {
   payloadCapacity: number;
   /** Hitch receiver max tongue weight rating (lbs) */
   hitchRating: number;
+  /** Front Gross Axle Weight Rating (lbs) - from door jamb sticker */
+  fawr: number;
+  /** Rear Gross Axle Weight Rating (lbs) - from door jamb sticker */
+  rawr: number;
 }
 
 /** Trailer specification input */
@@ -139,6 +143,10 @@ export interface TowingResult {
   combinedWeight: number;
   /** Tongue weight percentage of loaded trailer weight */
   tongueWeightPercent: number;
+  /** Estimated front axle weight (lbs) - simplified model */
+  frontAxleWeight?: number;
+  /** Estimated rear axle weight (lbs) - simplified model */
+  rearAxleWeight?: number;
   /** The trailer type used */
   trailerType: TrailerType;
 }
@@ -177,6 +185,10 @@ export interface VehicleDatabaseEntry {
   towRating: number;
   payloadCapacity: number;
   hitchRating: number;
+  /** Front Gross Axle Weight Rating (lbs) - optional, estimated from GVWR if not provided */
+  fawr?: number;
+  /** Rear Gross Axle Weight Rating (lbs) - optional, estimated from GVWR if not provided */
+  rawr?: number;
   dataSource: string;
   lastUpdated: string;
 }

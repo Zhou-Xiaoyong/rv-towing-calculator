@@ -88,6 +88,8 @@ export default function TowingCalculator() {
     towRating: 0,
     payloadCapacity: 0,
     hitchRating: 0,
+    fawr: 0,
+    rawr: 0,
   });
 
   // Trailer specs
@@ -375,6 +377,18 @@ export default function TowingCalculator() {
                 value={vehicle.hitchRating}
                 onChange={(v) => setVehicle({ ...vehicle, hitchRating: v })}
               />
+              <NumberInput
+                label="Front GAWR (lbs)"
+                value={vehicle.fawr}
+                onChange={(v) => setVehicle({ ...vehicle, fawr: v })}
+                hint="From door jamb sticker"
+              />
+              <NumberInput
+                label="Rear GAWR (lbs)"
+                value={vehicle.rawr}
+                onChange={(v) => setVehicle({ ...vehicle, rawr: v })}
+                hint="From door jamb sticker"
+              />
             </div>
           )}
 
@@ -387,7 +401,23 @@ export default function TowingCalculator() {
               <SpecChip label="Tow Rating" value={vehicle.towRating} />
               <SpecChip label="Payload" value={vehicle.payloadCapacity} />
               <SpecChip label="Hitch Rating" value={vehicle.hitchRating} />
+              <SpecChip label="Front GAWR" value={vehicle.fawr} />
+              <SpecChip label="Rear GAWR" value={vehicle.rawr} />
             </div>
+          )}
+          {inputMode === "database" && selectedTrim && (
+            <p className="mt-2 text-xs text-gray-500">
+              ⚠️ Front/Rear GAWR values are estimates based on GVWR. For accurate results,
+              enter your actual FGAWR/RGAWR from the door jamb sticker using{" "}
+              <button
+                type="button"
+                onClick={() => setInputMode("manual")}
+                className="font-medium text-brand-600 underline"
+              >
+                Manual Input
+              </button>
+              .
+            </p>
           )}
         </div>
 
@@ -748,6 +778,43 @@ export default function TowingCalculator() {
               color="text-gray-700"
             />
           </div>
+
+          {/* Estimated axle weights (only if GAWR checks were performed) */}
+          {result.frontAxleWeight && result.rearAxleWeight && (
+            <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
+              <h4 className="mb-2 flex items-center gap-2 text-sm font-bold text-blue-800">
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Estimated Axle Weights
+              </h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="rounded-lg bg-white p-3">
+                  <div className="text-xs text-gray-500">Front Axle (est.)</div>
+                  <div className="text-lg font-bold text-blue-700">
+                    {Math.round(result.frontAxleWeight).toLocaleString("en-US")} lbs
+                  </div>
+                  <div className="text-xs text-gray-400">
+                    FGAWR: {vehicle.fawr.toLocaleString("en-US")} lbs
+                  </div>
+                </div>
+                <div className="rounded-lg bg-white p-3">
+                  <div className="text-xs text-gray-500">Rear Axle (est.)</div>
+                  <div className="text-lg font-bold text-blue-700">
+                    {Math.round(result.rearAxleWeight).toLocaleString("en-US")} lbs
+                  </div>
+                  <div className="text-xs text-gray-400">
+                    RGAWR: {vehicle.rawr.toLocaleString("en-US")} lbs
+                  </div>
+                </div>
+              </div>
+              <p className="mt-2 text-xs text-blue-600">
+                Axle weights are estimates based on a simplified weight distribution model.
+                For accurate results, weigh at a CAT scale and enter your actual FGAWR/RGAWR
+                from the door jamb sticker.
+              </p>
+            </div>
+          )}
 
           {/* Individual checks */}
           <div>

@@ -17,6 +17,7 @@ import {
   DEFAULT_TONGUE_PERCENT,
   WATER_WEIGHT_PER_GALLON,
   WDH_RECOMMENDATION_THRESHOLD,
+  AXLE_DISTRIBUTION,
   getPropaneWeight,
   getStatusByUtilization,
   getWorstStatus,
@@ -94,6 +95,15 @@ export function analyzeTowing(input: TowingInput): TowingResult {
   const trailerAxleWeight = loadedTrailerWeight - tongueWeight;
   const combinedWeight = loadedTruckWeight + trailerAxleWeight;
 
+  // Estimate front/rear axle weights (for GAWR check)
+  const { frontAxle: frontAxleWeight, rearAxle: rearAxleWeight } =
+    estimateAxleWeights(
+      input.vehicle.curbWeight,
+      input.vehicleLoad.passengerWeight,
+      input.vehicleLoad.cargoWeight,
+      tongueWeight,
+    );
+
   // -------------------------------------------------------
   // Step 2: Run five safety checks
   // -------------------------------------------------------
@@ -146,6 +156,12 @@ export function analyzeTowing(input: TowingInput): TowingResult {
     );
   }
 
+  // Check 7 & 8: Front & Rear GAWR (only if FGAWR and RGAWR are provided)
+  if (input.vehicle.fawr > 0 && input.vehicle.rawr > 0) {
+    checks.push(checkFrontGawr(frontAxleWeight, input.vehicle.fawr));
+    checks.push(checkRearGawr(rearAxleWeight, input.vehicle.rawr));
+  }
+
   // -------------------------------------------------------
   // Step 3: Determine overall status, verdict, and recommendations
   // -------------------------------------------------------
@@ -186,6 +202,8 @@ export function analyzeTowing(input: TowingInput): TowingResult {
     trailerAxleWeight,
     combinedWeight,
     tongueWeightPercent,
+    frontAxleWeight,
+    rearAxleWeight,
     trailerType: input.trailer.trailerType,
   };
 }
@@ -450,6 +468,113 @@ function checkTongueWeight(
 }
 
 // ============================================================
+// GAWR (Axle Weight) Estimation & Checks
+// ============================================================
+
+/**
+ * Estimate front and rear axle weights using a simplified distribution model.
+ *
+ * IMPORTANT: This is an ESTIMATE. Actual axle weights depend on wheelbase,
+ * hitch position, cargo placement, and suspension. The only way to know real
+ * axle weights is to weigh at a scale (e.g., CAT Scale).
+ *
+ * Model:
+ *  - Front axle = front portion of curb weight - 10% of tongue weight + 45% of passengers
+ *  - Rear axle  = rear portion of curb weight + 90% of tongue weight + 55% of passengers + truck cargo
+ */
+export function estimateAxleWeights(
+  curbWeight: number,
+  passengerWeight: number,
+  truckCargoWeight: number,
+  tongueWeight: number,
+): { frontAxle: number; rearAxle: number } {
+  const frontAxle =
+    curbWeight * AXLE_DISTRIBUTION.curbFrontRatio -
+    tongueWeight * AXLE_DISTRIBUTION.tongueOffFront +
+    passengerWeight * AXLE_DISTRIBUTION.passengerFrontRatio;
+
+  const rearAxle =
+    curbWeight * AXLE_DISTRIBUTION.curbRearRatio +
+    tongueWeight * AXLE_DISTRIBUTION.tongueToRear +
+    passengerWeight * (1 - AXLE_DISTRIBUTION.passengerFrontRatio) +
+    truckCargoWeight;
+
+  return {
+    frontAxle: Math.max(0, frontAxle),
+    rearAxle: Math.max(0, rearAxle),
+  };
+}
+
+/**
+ * Check Front Axle GAWR (FGAWR).
+ */
+function checkFrontGawr(
+  frontAxleWeight: number,
+  fawr: number,
+): SafetyCheck {
+  const utilizationPercent = (frontAxleWeight / fawr) * 100;
+  const status = getStatusByUtilization(
+    utilizationPercent,
+    SAFETY_THRESHOLDS.gawr.safe,
+    SAFETY_THRESHOLDS.gawr.warning,
+  );
+  const marginLbs = fawr - frontAxleWeight;
+
+  return {
+    id: "front-gawr",
+    name: "Front Axle (FGAWR)",
+    actualValue: frontAxleWeight,
+    limitValue: fawr,
+    utilizationPercent,
+    status,
+    marginLbs,
+    marginPercent: (marginLbs / fawr) * 100,
+    explanation: `Estimated front axle weight is ${formatLbs(frontAxleWeight)} (estimate). Your Front GAWR is ${formatLbs(fawr)}.`,
+    recommendation:
+      status === "danger"
+        ? `Front axle is overloaded by ${formatLbs(Math.abs(marginLbs))}. This can cause tire failure and steering issues. Reduce trailer tongue weight or shift trailer cargo rearward.`
+        : status === "warning"
+          ? `Front axle is close to its GAWR. ${formatLbs(marginLbs)} remaining.`
+          : `Front axle is within limits with ${formatLbs(marginLbs)} to spare.`,
+  };
+}
+
+/**
+ * Check Rear Axle GAWR (RGAWR).
+ * This is the axle most likely to be overloaded when towing.
+ */
+function checkRearGawr(
+  rearAxleWeight: number,
+  rawr: number,
+): SafetyCheck {
+  const utilizationPercent = (rearAxleWeight / rawr) * 100;
+  const status = getStatusByUtilization(
+    utilizationPercent,
+    SAFETY_THRESHOLDS.gawr.safe,
+    SAFETY_THRESHOLDS.gawr.warning,
+  );
+  const marginLbs = rawr - rearAxleWeight;
+
+  return {
+    id: "rear-gawr",
+    name: "Rear Axle (RGAWR)",
+    actualValue: rearAxleWeight,
+    limitValue: rawr,
+    utilizationPercent,
+    status,
+    marginLbs,
+    marginPercent: (marginLbs / rawr) * 100,
+    explanation: `Estimated rear axle weight is ${formatLbs(rearAxleWeight)} (estimate). Your Rear GAWR is ${formatLbs(rawr)}. The rear axle carries most of the tongue/pin weight and is the most commonly overloaded axle when towing.`,
+    recommendation:
+      status === "danger"
+        ? `Rear axle is overloaded by ${formatLbs(Math.abs(marginLbs))}! This is the most common axle overload when towing. Reduce tongue weight (lighter trailer or shift cargo rearward in trailer) or upgrade to a higher-rated axle/truck.`
+        : status === "warning"
+          ? `Rear axle is close to its GAWR. ${formatLbs(marginLbs)} remaining. Consider reducing tongue weight or truck bed cargo.`
+          : `Rear axle is within limits with ${formatLbs(marginLbs)} to spare.`,
+  };
+}
+
+// ============================================================
 // Helper Functions
 // ============================================================
 
@@ -473,7 +598,7 @@ function generateVerdict(
     return `CAUTION - You can tow but with warnings. ${warningChecks.length} check(s) need attention: ${warningChecks.map((c) => c.name).join(", ")}. Review the recommendations below.`;
   }
 
-  return `SAFE TO TOW - Your ${trailerLabel} setup passes all safety checks. You're within recommended margins for towing capacity, payload, GVWR, GCWR, and tongue weight. Have a safe trip!`;
+  return `SAFE TO TOW - Your ${trailerLabel} setup passes all safety checks. You're within recommended margins for towing capacity, payload, GVWR, GCWR, tongue weight, and (when provided) front/rear axle weights. Have a safe trip!`;
 }
 
 /**
