@@ -404,6 +404,20 @@ const GUIDES = [
       "Wrangler tow ratings by body style and powertrain, the payload and tongue weight worksheet that gives the real answer, which trailers fit and which do not, and the equipment you have to add.",
     category: "Matchups",
   },
+  {
+    slug: "/guides/can-toyota-tacoma-tow-travel-trailer",
+    title: "Can a Toyota Tacoma Tow a Travel Trailer? The Real Limits",
+    description:
+      "Tacoma tow ratings from 3,500 lb in the SR to 6,500 lb in an SR5 XtraCab, why the 640 lb tongue weight ceiling decides it, a payload worksheet across five setups, and which trailers genuinely fit.",
+    category: "Matchups",
+  },
+  {
+    slug: "/guides/trailer-coupler-types-and-replacement",
+    title: "Trailer Coupler Types and How to Replace a Worn Coupler",
+    description:
+      "A-frame, straight, adjustable and cushioned coupler types, matching 2 inch and 2-5/16 inch balls, the wear limits that condemn a coupler, and a step-by-step replacement with Grade 8 hardware and torque specs.",
+    category: "Maintenance",
+  },
 ];
 
 export default function GuidesPage() {
