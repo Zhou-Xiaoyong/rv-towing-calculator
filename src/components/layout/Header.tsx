@@ -10,6 +10,9 @@ const CALCULATOR_LINKS = [
   { href: "/gvwr-calculator", label: "GVWR" },
   { href: "/tongue-weight-calculator", label: "Tongue Weight" },
   { href: "/gcwr-calculator", label: "GCWR" },
+  { href: "/ccc-calculator", label: "CCC" },
+  { href: "/water-weight-calculator", label: "Water Weight" },
+  { href: "/fuel-cost-calculator", label: "Fuel Cost" },
 ];
 
 // Curated featured guides only. The full, ever-growing guide list lives on

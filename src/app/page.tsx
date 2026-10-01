@@ -47,6 +47,33 @@ const CALCULATORS = [
     badge: null,
     badgeColor: "",
   },
+  {
+    href: "/ccc-calculator",
+    title: "CCC Calculator",
+    description:
+      "Cargo carrying capacity: how much gear can you actually pack? See exactly how water and propane eat into your trailer's CCC.",
+    icon: "M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4",
+    badge: "High Demand",
+    badgeColor: "bg-amber-100 text-amber-700",
+  },
+  {
+    href: "/water-weight-calculator",
+    title: "Water Weight Calculator",
+    description:
+      "Water is the heaviest thing most RVers carry. Convert gallons to pounds and see how much your tank costs you in payload.",
+    icon: "M12 2.69l5.66 5.66a8 8 0 11-11.31 0z",
+    badge: null,
+    badgeColor: "",
+  },
+  {
+    href: "/fuel-cost-calculator",
+    title: "Fuel Cost Calculator",
+    description:
+      "Towing cuts your MPG by 25-50%. Budget your trip correctly by comparing fuel cost with and without your trailer attached.",
+    icon: "M13 10V3L4 14h7v7l9-11h-7z",
+    badge: null,
+    badgeColor: "",
+  },
 ];
 
 const DIFFERENTIATORS = [

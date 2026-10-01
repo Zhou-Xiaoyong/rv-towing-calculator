@@ -38,6 +38,10 @@ export const SAFETY_THRESHOLDS = {
     safe: 90, // <= 90% of trailer's own GVWR
     warning: 100, // 90-100% = warning, > 100% = danger
   },
+  gawr: {
+    safe: 90, // <= 90% of axle rating (hard limit, same as GVWR)
+    warning: 100, // 90-100% = warning, > 100% = danger
+  },
   tongueWeight: {
     // Travel trailer: optimal 10-15%, acceptable 10-17%
     travelTrailer: {
@@ -120,7 +124,9 @@ export const PROPANE_WEIGHT_PER_TANK = {
 
 /**
  * Get propane weight for a given tank size.
- * Falls back to 37 lbs (standard 20lb tank) if size not found.
+ * Falls back to 20 lbs (propane content of a standard 20lb tank) if size not found.
+ * Note: we add only the propane CONTENT weight, not the tank shell, because the
+ * trailer's dry weight (UVW) already includes the empty tank shell.
  */
 export function getPropaneWeight(
   tankCount: number,
@@ -128,7 +134,7 @@ export function getPropaneWeight(
 ): number {
   const weightPerTank =
     PROPANE_WEIGHT_PER_TANK[tankSize as keyof typeof PROPANE_WEIGHT_PER_TANK] ??
-    37;
+    20;
   return tankCount * weightPerTank;
 }
 
@@ -138,3 +144,27 @@ export function getPropaneWeight(
  * Source: etrailer.com, Equalizer Hitch, Reese towing guidelines
  */
 export const WDH_RECOMMENDATION_THRESHOLD = 5000;
+
+/**
+ * Simplified axle weight distribution model for GAWR estimation.
+ *
+ * NOTE: This is an ESTIMATE. Actual axle weights can only be determined by
+ * weighing at a scale (e.g., CAT Scale). These ratios are typical for
+ * full-size pickup trucks with a loaded bed and trailer attached.
+ *
+ * - curbFrontRatio: ~58% of curb weight sits on the front axle when empty
+ * - curbRearRatio: ~42% sits on the rear axle when empty
+ * - tongueToRear: ~90% of tongue/pin weight transfers to the rear axle
+ * - tongueOffFront: ~10% of tongue weight is levered OFF the front axle
+ * - passengerFrontRatio: ~45% of passenger weight sits on the front axle
+ *   (cab is between the axles; passengers straddle the front/rear split)
+ * - cargoFrontRatio: ~0% (truck bed cargo sits over/behind the rear axle)
+ */
+export const AXLE_DISTRIBUTION = {
+  curbFrontRatio: 0.58,
+  curbRearRatio: 0.42,
+  tongueToRear: 0.9,
+  tongueOffFront: 0.1,
+  passengerFrontRatio: 0.45,
+  cargoFrontRatio: 0.0,
+} as const;

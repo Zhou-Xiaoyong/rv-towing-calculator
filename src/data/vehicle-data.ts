@@ -2218,8 +2218,33 @@ export function getVehicleById(id: string): VehicleDatabaseEntry | undefined {
   return VEHICLE_DATABASE.find((v) => v.id === id);
 }
 
-/** Convert a database entry to a VehicleSpec for calculation */
+/**
+ * Estimate FGAWR and RGAWR from GVWR when not explicitly provided.
+ *
+ * Typical axle rating ratios for light-duty trucks and SUVs:
+ * - Front axle GAWR ≈ 55% of GVWR (front carries slightly less than half)
+ * - Rear axle GAWR ≈ 62% of GVWR (rear is higher-rated for cargo/towing)
+ *
+ * NOTE: These are estimates. Actual FGAWR/RGAWR are printed on the door jamb
+ * sticker (Tire and Loading Information label) and may differ significantly.
+ * Users should verify and override with the values from their own vehicle.
+ */
+export function estimateAxleRatingsFromGvwr(gvwr: number): {
+  fawr: number;
+  rawr: number;
+} {
+  return {
+    fawr: Math.round(gvwr * 0.55),
+    rawr: Math.round(gvwr * 0.62),
+  };
+}
+
 export function dbEntryToVehicleSpec(entry: VehicleDatabaseEntry) {
+  const { fawr, rawr } =
+    entry.fawr && entry.rawr
+      ? { fawr: entry.fawr, rawr: entry.rawr }
+      : estimateAxleRatingsFromGvwr(entry.gvwr);
+
   return {
     year: entry.year,
     make: entry.make,
@@ -2232,5 +2257,7 @@ export function dbEntryToVehicleSpec(entry: VehicleDatabaseEntry) {
     towRating: entry.towRating,
     payloadCapacity: entry.payloadCapacity,
     hitchRating: entry.hitchRating,
+    fawr,
+    rawr,
   };
 }

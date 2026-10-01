@@ -324,8 +324,8 @@ export default function RVSwayControlGuidePage() {
             </div>
             <p className="mt-3 text-sm text-gray-600">
               For a 6,500 lb loaded trailer, that means 650-975 lbs of tongue
-              weight. For fifth wheels, the range is 15-25% due to the
-              over-axle hitch position.
+              weight. For fifth wheels, the optimal range is 20-25% (18-27%
+              acceptable) due to the over-axle hitch position.
             </p>
           </div>
           <p>
