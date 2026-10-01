@@ -55,6 +55,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/ccc-calculator`,
+      lastModified: new Date("2026-10-01"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/water-weight-calculator`,
+      lastModified: new Date("2026-10-01"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/fuel-cost-calculator`,
+      lastModified: new Date("2026-10-01"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     // Guides 列表页 — 每次新增文章列表内容会变，用最近一次新增文章的日期
     {
       url: `${baseUrl}/guides`,

@@ -61,6 +61,30 @@ export default function Footer() {
                   GCWR Calculator
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/ccc-calculator"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
+                >
+                  CCC Calculator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/water-weight-calculator"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
+                >
+                  Water Weight Calculator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/fuel-cost-calculator"
+                  className="inline-flex min-h-[44px] items-center text-sm text-gray-600 hover:text-brand-600 md:min-h-0"
+                >
+                  Fuel Cost Calculator
+                </Link>
+              </li>
             </ul>
           </div>
 
