@@ -114,10 +114,10 @@ export default function TongueWeightCalculator() {
     if (checkStatus === "danger") {
       setVerdict(
         exceedsHitch
-          ? `STOP - Your ${typeLabel.toLowerCase()} (${Math.round(tongueWeight).toLocaleString("en-US")} lbs) exceeds your hitch receiver rating. This is extremely dangerous and can cause hitch failure.`
+          ? `Your ${typeLabel.toLowerCase()} (${Math.round(tongueWeight).toLocaleString("en-US")} lbs) exceeds your hitch receiver rating. This is extremely dangerous and can cause hitch failure.`
           : isActual
-            ? `CAUTION - Your ${typeLabel.toLowerCase()} is ${tonguePercent.toFixed(1)}% of trailer weight, which is outside the acceptable range (${thresholds.minAcceptable}-${thresholds.maxAcceptable}%). Adjust your cargo distribution.`
-            : `CAUTION - Estimated ${typeLabel.toLowerCase()} percentage is outside the acceptable range. This is an estimate — weigh your trailer and enter the actual tongue weight for a precise check.`,
+            ? `Your ${typeLabel.toLowerCase()} is ${tonguePercent.toFixed(1)}% of trailer weight, which is outside the acceptable range (${thresholds.minAcceptable}-${thresholds.maxAcceptable}%). Adjust your cargo distribution before towing.`
+            : `Estimated ${typeLabel.toLowerCase()} percentage is outside the acceptable range. This is an estimate — weigh your trailer and enter the actual tongue weight for a precise check.`,
       );
     } else if (checkStatus === "warning") {
       setVerdict(
