@@ -2529,7 +2529,7 @@ export function estimateTongueWeight(
 
 /**
  * Calculate estimated pin weight for a fifth wheel
- * Industry standard: 15-25% of loaded weight for fifth wheels
+ * Industry standard: 20-25% of loaded weight for fifth wheels (18-27% acceptable)
  */
 export function estimatePinWeight(
   trailer: TrailerDatabaseEntry,

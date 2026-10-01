@@ -42,7 +42,7 @@ const FAQS = [
   },
   {
     q: "Can a gas truck tow a fifth wheel?",
-    a: "Yes, many gas HD trucks can tow fifth wheels within certain weight ranges. A RAM 2500 with the 6.4L Hemi can tow up to 17,540 lbs conventionally, and gas-powered F-250 and Silverado 2500HD models handle fifth wheels up to 15,000-16,000 lbs. The limitation is usually payload, not pulling power. Fifth wheel pin weight (15-25% of trailer weight) consumes a large portion of payload, so the gas engine's lighter weight actually gives you more fifth wheel pin weight capacity. However, if your fifth wheel exceeds 15,000 lbs loaded or you tow in the mountains regularly, the diesel's exhaust brake and low-RPM torque become significant safety advantages.",
+    a: "Yes, many gas HD trucks can tow fifth wheels within certain weight ranges. A RAM 2500 with the 6.4L Hemi can tow up to 17,540 lbs conventionally, and gas-powered F-250 and Silverado 2500HD models handle fifth wheels up to 15,000-16,000 lbs. The limitation is usually payload, not pulling power. Fifth wheel pin weight (20-25% of trailer weight, 18-27% acceptable) consumes a large portion of payload, so the gas engine's lighter weight actually gives you more fifth wheel pin weight capacity. However, if your fifth wheel exceeds 15,000 lbs loaded or you tow in the mountains regularly, the diesel's exhaust brake and low-RPM torque become significant safety advantages.",
   },
 ];
 

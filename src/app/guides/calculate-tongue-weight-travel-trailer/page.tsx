@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "What should tongue weight be for a travel trailer?",
-    a: "For bumper-pull travel trailers, tongue weight should be 10-15% of the trailer's loaded weight. Most experienced RVers aim for 12-14% for the best balance of stability and steering control. Below 10%, the trailer is prone to dangerous sway. Above 15%, you may overload your tow vehicle's payload or rear axle rating. Fifth wheels use a different rule of thumb: 15-25% pin weight.",
+    a: "For bumper-pull travel trailers, tongue weight should be 10-15% of the trailer's loaded weight. Most experienced RVers aim for 12-14% for the best balance of stability and steering control. Below 10%, the trailer is prone to dangerous sway. Above 15%, you may overload your tow vehicle's payload or rear axle rating. Fifth wheels use a different rule of thumb: 20-25% pin weight is optimal (18-27% acceptable).",
   },
   {
     q: "Can I calculate tongue weight without a scale?",

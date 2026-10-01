@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const FAQS = [
   {
     q: "What is a good pin weight for a 5th wheel?",
-    a: "Pin weight should be 15-25% of the loaded 5th wheel's gross weight. For a 12,000 lb loaded fifth wheel, expect 1,800-3,000 lbs of pin weight, with most landing in the 2,000-2,400 lb range. Lightweight fifth wheels (under 10,000 lbs loaded) tend to run 18-22% pin weight. Heavy luxury models with basement storage and residential furniture can run 22-25%. Pin weight below 15% risks dangerous trailer sway because the king pin no longer carries enough vertical load. Pin weight above 25% can overload your truck's payload and rear axle.",
+    a: "Pin weight should be 20-25% of the loaded 5th wheel's gross weight (the optimal range). The acceptable range is 18-27%. For a 12,000 lb loaded fifth wheel, expect 2,160-3,240 lbs of pin weight, with most landing in the 2,400-3,000 lb range. Lightweight fifth wheels (under 10,000 lbs loaded) tend to run 18-22% pin weight. Heavy luxury models with basement storage and residential furniture can run 22-25%. Pin weight below 18% risks dangerous trailer sway because the king pin no longer carries enough vertical load. Pin weight above 27% can overload your truck's payload and rear axle.",
   },
   {
     q: "How do I weigh 5th wheel pin weight at home?",
@@ -51,7 +51,7 @@ const PIN_WEIGHT_RANGES = [
   {
     fifthWheelType: "Lightweight 5th Wheel",
     loadedWeight: "7,500 - 10,000 lbs",
-    typicalPinWeight: "1,200 - 1,900 lbs (16 - 19%)",
+    typicalPinWeight: "1,350 - 2,200 lbs (18 - 22%)",
     truckClass: "Half-ton possible (1500)",
     notes: "Examples: Winnebago Micro Minnie, Grand Design Imagine, Coachmen Apex",
   },

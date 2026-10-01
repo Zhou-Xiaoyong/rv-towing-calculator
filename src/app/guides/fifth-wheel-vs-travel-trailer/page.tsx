@@ -26,7 +26,7 @@ const FAQS = [
   },
   {
     q: "Do 5th wheels have less tongue weight than travel trailers?",
-    a: "Yes, dramatically. 5th wheel pin weight is typically 15-25% of total trailer weight, while travel trailer tongue weight is 10-15%. However, because the pin sits over the truck's rear axle (not behind it), 5th wheel pin weight reduces payload less severely than travel trailer tongue weight. A 12,000 lb 5th wheel puts roughly 2,400 lbs into the bed, but that weight sits in front of the rear axle, which is structurally supported. The same 12,000 lb travel trailer would put 1,560 lbs of tongue weight on a bumper hitch, which generates a long lever arm and rear sag.",
+    a: "Yes, dramatically. 5th wheel pin weight is typically 20-25% of total trailer weight (18-27% acceptable), while travel trailer tongue weight is 10-15%. However, because the pin sits over the truck's rear axle (not behind it), 5th wheel pin weight reduces payload less severely than travel trailer tongue weight. A 12,000 lb 5th wheel puts roughly 2,400 lbs into the bed, but that weight sits in front of the rear axle, which is structurally supported. The same 12,000 lb travel trailer would put 1,560 lbs of tongue weight on a bumper hitch, which generates a long lever arm and rear sag.",
   },
   {
     q: "Do I need a one-ton truck to tow a 5th wheel?",
@@ -59,7 +59,7 @@ const COMPARISON = [
   },
   {
     feature: "Pin / tongue weight %",
-    fifthWheel: "15-25% of trailer weight",
+    fifthWheel: "20-25% of trailer weight (18-27% acceptable)",
     travelTrailer: "10-15% of trailer weight",
   },
   {
@@ -300,7 +300,7 @@ export default function FifthWheelVsTravelTrailerGuidePage() {
             Tongue Weight Guide
           </Link>{" "}
           and our CAT Scale Weighing guide explain how to load a travel trailer
-          to minimize sway. For 5th wheels, the heavier pin weight (15-25% of
+          to minimize sway. For 5th wheels, the heavier pin weight (20-25% of
           trailer weight) makes sway control easier to dial in, but you still
           need to load the trailer with heavier items forward of the axles.
         </p>

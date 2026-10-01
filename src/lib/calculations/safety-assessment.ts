@@ -120,7 +120,9 @@ export const PROPANE_WEIGHT_PER_TANK = {
 
 /**
  * Get propane weight for a given tank size.
- * Falls back to 37 lbs (standard 20lb tank) if size not found.
+ * Falls back to 20 lbs (propane content of a standard 20lb tank) if size not found.
+ * Note: we add only the propane CONTENT weight, not the tank shell, because the
+ * trailer's dry weight (UVW) already includes the empty tank shell.
  */
 export function getPropaneWeight(
   tankCount: number,
@@ -128,7 +130,7 @@ export function getPropaneWeight(
 ): number {
   const weightPerTank =
     PROPANE_WEIGHT_PER_TANK[tankSize as keyof typeof PROPANE_WEIGHT_PER_TANK] ??
-    37;
+    20;
   return tankCount * weightPerTank;
 }
 
