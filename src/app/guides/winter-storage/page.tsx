@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ArticleJsonLd } from "@/components/seo/JsonLd";
 import { Snowflake, ThermometerSnowflake, Lock, Droplets, Shield, Clock } from "lucide-react";
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 
 export const metadata: Metadata = {
   title: "Winter RV Storage Guide: Prepare Your Trailer for Cold Weather",
@@ -192,6 +193,8 @@ export default function WinterStoragePage() {
           Spring Preparation Guide
         </a>
       </div>
+
+      <AmazonAffiliate categories={["tpms", "trailer-lights"]} />
     </div>
   );
 }

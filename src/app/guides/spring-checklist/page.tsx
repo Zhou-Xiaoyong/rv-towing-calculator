@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ArticleJsonLd } from "@/components/seo/JsonLd";
 import { ThermometerSun, Car, Battery, Droplets, Leaf, Clock } from "lucide-react";
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 
 export const metadata: Metadata = {
   title: "Spring Towing Pre-Departure Checklist: Get Ready for RV Season",
@@ -156,6 +157,8 @@ export default function SpringChecklistPage() {
           Calculate Your Towing Capacity
         </a>
       </div>
+
+      <AmazonAffiliate categories={["trailer-lights", "tpms"]} />
     </div>
   );
 }

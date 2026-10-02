@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "RAM 1500 vs Ford F-150 Towing Capacity Comparison (2025-2026)",
   description:
@@ -842,6 +843,8 @@ export default function RamVsF150TowingGuidePage() {
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Electric Trucks for Towing RVs: Rivian, Tesla & More (2026 Guide)",
   description:
@@ -576,6 +577,8 @@ export default function ElectricTrucksRvTowingGuidePage() {
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate />
     </div>
   );
 }

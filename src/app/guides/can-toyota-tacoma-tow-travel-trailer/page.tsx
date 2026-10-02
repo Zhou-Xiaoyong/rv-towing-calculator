@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Can a Toyota Tacoma Tow a Travel Trailer? Real Limits",
   description:
@@ -762,6 +763,8 @@ export default function CanToyotaTacomaTowTravelTrailerPage() {
           ))}
         </div>
       </section>
+
+      <AmazonAffiliate />
 
       <h2 className="mt-10 text-2xl font-bold text-gray-900">
         Sources &amp; References

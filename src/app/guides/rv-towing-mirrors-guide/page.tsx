@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title:
     "RV Towing Mirrors: Legal Requirements, Types & Best Options for 2025",
@@ -814,6 +815,8 @@ export default function TowingMirrorsGuidePage() {
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate />
     </div>
   );
 }

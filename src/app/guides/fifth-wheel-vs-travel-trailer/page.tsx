@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "5th Wheel vs Travel Trailer: Towing Compared (2026 Guide)",
   description:
@@ -553,6 +554,8 @@ export default function FifthWheelVsTravelTrailerGuidePage() {
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate categories={["weight-distribution", "sway-control"]} />
     </div>
   );
 }

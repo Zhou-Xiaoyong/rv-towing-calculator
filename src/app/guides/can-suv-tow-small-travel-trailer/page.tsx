@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Can My SUV Tow a Small Travel Trailer? Safety Check & SUV Guide",
   description:
@@ -734,6 +735,8 @@ export default function CanSuvTowSmallTravelTrailerPage() {
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate />
     </div>
   );
 }

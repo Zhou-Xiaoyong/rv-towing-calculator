@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd, HowToJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Trailer Suspension and Leaf Spring Inspection: When to Replace",
   description:
@@ -879,6 +880,8 @@ export default function TrailerSuspensionLeafSpringInspectionPage() {
           ))}
         </div>
       </section>
+
+      <AmazonAffiliate />
 
       <h2 className="mt-10 text-2xl font-bold text-gray-900">
         Sources &amp; References

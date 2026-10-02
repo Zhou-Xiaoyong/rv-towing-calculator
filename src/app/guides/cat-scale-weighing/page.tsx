@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd, HowToJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "How to Weigh Your RV at a CAT Scale: Step-by-Step Guide",
   description:
@@ -776,6 +777,8 @@ Gross:        6,060 lbs   (Total truck weight)`}
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate />
     </div>
   );
 }

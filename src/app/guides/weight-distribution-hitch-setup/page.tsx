@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Weight Distribution Hitch Setup: Step-by-Step Guide",
   description:
@@ -929,6 +930,8 @@ All bolts torqued to spec:                Yes / No`}
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate categories={["weight-distribution", "tongue-scale"]} />
     </div>
   );
 }

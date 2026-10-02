@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd, HowToJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Trailer Coupler Types and How to Replace a Worn Coupler",
   description:
@@ -653,6 +654,8 @@ export default function TrailerCouplerTypesAndReplacementPage() {
           ))}
         </div>
       </section>
+
+      <AmazonAffiliate />
 
       <h2 className="mt-10 text-2xl font-bold text-gray-900">
         Sources &amp; References

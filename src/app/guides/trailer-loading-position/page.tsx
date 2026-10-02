@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Trailer Loading Position: Where to Place Cargo for Safe Towing",
   description:
@@ -457,6 +458,8 @@ export default function TrailerLoadingPositionGuidePage() {
           </Link>
         </div>
       </section>
+
+      <AmazonAffiliate />
     </div>
   );
 }

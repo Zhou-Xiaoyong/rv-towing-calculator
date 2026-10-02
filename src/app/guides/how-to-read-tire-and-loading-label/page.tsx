@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd, HowToJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "How to Read Your Truck's Tire and Loading Label (Door Jamb Sticker)",
   description:
@@ -637,6 +638,8 @@ export default function TireAndLoadingLabelGuidePage() {
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate categories={["tpms"]} />
     </div>
   );
 }

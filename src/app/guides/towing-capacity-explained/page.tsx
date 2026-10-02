@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Towing Capacity Guide: What It Means & How to Use It Safely",
   description:
@@ -408,6 +409,8 @@ export default function TowingCapacityGuidePage() {
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "RV Trailer Sway Control: Causes, Prevention & Best Anti-Sway Devices",
   description:
@@ -825,6 +826,8 @@ export default function RVSwayControlGuidePage() {
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate categories={["sway-control"]} />
     </div>
   );
 }

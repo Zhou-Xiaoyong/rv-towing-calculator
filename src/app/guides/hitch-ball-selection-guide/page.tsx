@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "How to Choose the Right Hitch Ball for Towing: Sizes, Ratings & Drop",
   description:
@@ -824,6 +825,8 @@ export default function HitchBallSelectionGuidePage() {
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate categories={["weight-distribution", "sway-control"]} />
     </div>
   );
 }

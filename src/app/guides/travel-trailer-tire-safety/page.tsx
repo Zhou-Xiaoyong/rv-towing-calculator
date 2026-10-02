@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title:
     "Travel Trailer Tire Safety: Load Range, Cold Pressure & Blowout Prevention",
@@ -855,6 +856,8 @@ export default function TravelTrailerTireSafetyPage() {
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate categories={["tpms"]} />
     </div>
   );
 }

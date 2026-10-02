@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Tongue Weight Guide: Optimal Ranges & Sway Prevention",
   description:
@@ -505,6 +506,8 @@ Tongue Weight must be <= Hitch Receiver Rating`}
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate categories={["weight-distribution", "tongue-scale"]} />
     </div>
   );
 }

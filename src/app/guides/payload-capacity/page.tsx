@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Payload Capacity Explained: The #1 Towing Blind Spot",
   description:
@@ -468,6 +469,8 @@ OVER PAYLOAD BY:             129 lbs`}</pre>
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate categories={["weight-distribution", "tongue-scale"]} />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd, HowToJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Trailer Axle Alignment and Tire Wear: How to Diagnose It",
   description:
@@ -842,6 +843,8 @@ export default function TrailerAxleAlignmentAndTireWearPage() {
           ))}
         </div>
       </section>
+
+      <AmazonAffiliate categories={["tpms"]} />
 
       <h2 className="mt-10 text-2xl font-bold text-gray-900">
         Sources &amp; References

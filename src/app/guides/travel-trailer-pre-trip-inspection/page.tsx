@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd, HowToJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Travel Trailer Pre-Trip Inspection Checklist: 7-Step Walk-Around Guide",
   description:
@@ -812,6 +813,8 @@ Notes: _________________________________
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate />
     </div>
   );
 }

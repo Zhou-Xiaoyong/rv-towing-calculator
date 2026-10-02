@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Do You Need a CDL to Tow an RV? License Requirements by State",
   description:
@@ -655,6 +656,8 @@ export default function CdlRequirementsRvTowingPage() {
           ))}
         </div>
       </section>
+
+      <AmazonAffiliate />
 
       <div className="mt-10 rounded-xl border border-gray-200 bg-gray-50 p-6">
         <h3 className="font-bold text-gray-900">Related Guides</h3>

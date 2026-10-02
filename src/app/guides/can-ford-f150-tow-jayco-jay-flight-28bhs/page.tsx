@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Can a Ford F-150 Tow a Jayco Jay Flight 28BHS? Full Analysis",
   description:
@@ -521,6 +522,8 @@ export default function FordF150JaycoJayFlightAnalysisPage() {
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate categories={["trailer-lights"]} />
     </div>
   );
 }

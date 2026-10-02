@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title:
     "3/4 Ton Truck Towing Capacity: Ford F-250 vs RAM 2500 vs Silverado 2500 Compared",
@@ -479,6 +480,8 @@ export default function ThreeQuarterTonTruckTowingPage() {
           ))}
         </div>
       </section>
+
+      <AmazonAffiliate />
 
       <div className="mt-10 rounded-xl border border-gray-200 bg-gray-50 p-6">
         <h3 className="font-bold text-gray-900">Related Guides</h3>

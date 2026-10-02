@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title:
     "Trailer Brake Laws by State: When Are Trailer Brakes Required?",
@@ -518,6 +519,8 @@ export default function TrailerBrakeLawsPage() {
           ))}
         </div>
       </section>
+
+      <AmazonAffiliate categories={["brake-controller"]} />
 
       <div className="mt-10 rounded-xl border border-gray-200 bg-gray-50 p-6">
         <h3 className="font-bold text-gray-900">Related Guides</h3>

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd, HowToJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Equalizer Hitch vs Weight Distribution Hitch: Which to Buy",
   description:
@@ -806,6 +807,8 @@ export default function EqualizerHitchVsWeightDistributionHitchPage() {
           ))}
         </div>
       </section>
+
+      <AmazonAffiliate categories={["weight-distribution", "tongue-scale"]} />
 
       <h2 className="mt-10 text-2xl font-bold text-gray-900">
         Sources &amp; References

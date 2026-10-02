@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaqJsonLd, ArticleJsonLd } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "What Happens If You Exceed GVWR: Safety Risks & Real Consequences",
   description:
@@ -973,6 +974,8 @@ Your loaded vehicle weight must be <= GVWR`}
           </li>
         </ul>
       </section>
+
+      <AmazonAffiliate categories={["weight-distribution", "tongue-scale"]} />
     </div>
   );
 }

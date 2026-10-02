@@ -13,8 +13,6 @@ interface AmazonProduct {
   iconBg: string;
   iconColor: string;
   amazonUrl: string;
-  priceRange?: string;
-  rating?: string;
 }
 
 function buildAmazonSearchUrl(keywords: string): string {
@@ -32,8 +30,6 @@ const PRODUCTS: AmazonProduct[] = [
     iconBg: "bg-blue-100",
     iconColor: "text-blue-600",
     amazonUrl: buildAmazonSearchUrl("weight distribution hitch sway control"),
-    priceRange: "$300 - $700",
-    rating: "4.5+",
   },
   {
     id: "brake-controller",
@@ -44,8 +40,6 @@ const PRODUCTS: AmazonProduct[] = [
     iconBg: "bg-red-100",
     iconColor: "text-red-600",
     amazonUrl: buildAmazonSearchUrl("proportional trailer brake controller"),
-    priceRange: "$80 - $200",
-    rating: "4.7+",
   },
   {
     id: "tongue-scale",
@@ -56,8 +50,6 @@ const PRODUCTS: AmazonProduct[] = [
     iconBg: "bg-green-100",
     iconColor: "text-green-600",
     amazonUrl: buildAmazonSearchUrl("trailer tongue weight scale"),
-    priceRange: "$40 - $150",
-    rating: "4.6+",
   },
   {
     id: "sway-control",
@@ -68,8 +60,6 @@ const PRODUCTS: AmazonProduct[] = [
     iconBg: "bg-cyan-100",
     iconColor: "text-cyan-600",
     amazonUrl: buildAmazonSearchUrl("trailer sway control"),
-    priceRange: "$100 - $300",
-    rating: "4.4+",
   },
   {
     id: "trailer-lights",
@@ -80,8 +70,6 @@ const PRODUCTS: AmazonProduct[] = [
     iconBg: "bg-yellow-100",
     iconColor: "text-yellow-600",
     amazonUrl: buildAmazonSearchUrl("LED trailer light kit waterproof"),
-    priceRange: "$30 - $80",
-    rating: "4.3+",
   },
   {
     id: "tire-pressure",
@@ -92,8 +80,6 @@ const PRODUCTS: AmazonProduct[] = [
     iconBg: "bg-purple-100",
     iconColor: "text-purple-600",
     amazonUrl: buildAmazonSearchUrl("trailer tire pressure monitoring system tpms"),
-    priceRange: "$150 - $400",
-    rating: "4.5+",
   },
 ];
 
@@ -193,23 +179,10 @@ export default function AmazonAffiliate({ categories, showAll = false }: AmazonA
                 </p>
               </div>
             </div>
-            <div className="mt-3 flex items-center justify-between">
-              <span className="text-xs font-semibold text-amber-600">
-                {product.priceRange}
+            <div className="mt-3 flex items-center justify-end">
+              <span className="text-xs font-semibold text-amber-700 group-hover:underline">
+                Check price on Amazon &rarr;
               </span>
-              <div className="flex items-center gap-2">
-                {product.rating && (
-                  <span className="flex items-center gap-0.5 text-xs text-gray-500">
-                    <svg className="h-3 w-3 fill-current text-amber-400" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                    </svg>
-                    {product.rating}
-                  </span>
-                )}
-                <span className="text-xs font-medium text-amber-600 group-hover:underline">
-                  View on Amazon →
-                </span>
-              </div>
             </div>
           </a>
         ))}
@@ -238,7 +211,7 @@ export default function AmazonAffiliate({ categories, showAll = false }: AmazonA
 
       <div className="mt-4 rounded-lg bg-amber-100 p-3">
         <p className="text-xs text-amber-800 text-center leading-relaxed">
-          <span className="font-semibold">Disclosure:</span> We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites. Products shown are categories of recommended gear; actual product availability and pricing may vary.
+          <span className="font-semibold">Disclosure:</span> We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites. All links go to Amazon search results, so current prices and availability are shown by Amazon at the time of viewing and may change.
         </p>
       </div>
     </div>

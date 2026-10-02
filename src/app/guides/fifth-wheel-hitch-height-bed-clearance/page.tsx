@@ -7,6 +7,7 @@ import {
 } from "@/components/seo/JsonLd";
 import { DEFAULT_OG_IMAGES } from "@/lib/seo/default-og-image";
 
+import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "5th Wheel Hitch Height and Bed Clearance: The Setup Guide",
   description:
@@ -929,6 +930,8 @@ export default function FifthWheelHitchHeightBedClearancePage() {
           ))}
         </div>
       </section>
+
+      <AmazonAffiliate categories={["weight-distribution", "sway-control"]} />
 
       <h2 className="mt-10 text-2xl font-bold text-gray-900">
         Sources &amp; References
