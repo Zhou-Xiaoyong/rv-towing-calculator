@@ -418,6 +418,20 @@ const GUIDES = [
       "A-frame, straight, adjustable and cushioned coupler types, matching 2 inch and 2-5/16 inch balls, the wear limits that condemn a coupler, and a step-by-step replacement with Grade 8 hardware and torque specs.",
     category: "Maintenance",
   },
+  {
+    slug: "/guides/can-honda-ridgeline-tow-travel-trailer",
+    title: "Can a Honda Ridgeline Tow a Travel Trailer? The Real Ceiling",
+    description:
+      "Ridgeline tow ratings by generation and drivetrain, the 500 lb tongue weight limit that decides the real answer, the payload and GCWR worksheet, and which travel trailers genuinely fit.",
+    category: "Matchups",
+  },
+  {
+    slug: "/guides/rv-roof-sealant-inspection-and-resealing",
+    title: "RV Roof Sealant Inspection and Resealing",
+    description:
+      "Membrane and sealant compatibility, self-leveling vs non-sag lap sealant, the ten inspection points where leaks start, and a step-by-step resealing procedure that lasts.",
+    category: "Maintenance",
+  },
 ];
 
 export default function GuidesPage() {

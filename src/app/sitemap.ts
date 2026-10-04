@@ -76,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Guides 列表页 — 每次新增文章列表内容会变，用最近一次新增文章的日期
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date("2026-10-01"),
+      lastModified: new Date("2026-10-04"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -402,6 +402,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/guides/rv-roof-sealant-inspection-and-resealing`,
+      lastModified: new Date("2026-10-04"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     // ── Matchups ──
     {
       url: `${baseUrl}/guides/can-ford-f150-tow-jayco-jay-flight-28bhs`,
@@ -430,6 +436,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/guides/can-toyota-tacoma-tow-travel-trailer`,
       lastModified: new Date("2026-10-01"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/can-honda-ridgeline-tow-travel-trailer`,
+      lastModified: new Date("2026-10-04"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
