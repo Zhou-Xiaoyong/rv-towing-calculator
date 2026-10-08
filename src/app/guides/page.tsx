@@ -432,6 +432,20 @@ const GUIDES = [
       "Membrane and sealant compatibility, self-leveling vs non-sag lap sealant, the ten inspection points where leaks start, and a step-by-step resealing procedure that lasts.",
     category: "Maintenance",
   },
+  {
+    slug: "/guides/hitch-ball-mount-rise-drop-guide",
+    title: "Hitch Ball Mount Rise and Drop: How to Choose the Right One",
+    description:
+      "Measure receiver and coupler height, pick the drop or rise that keeps a trailer level, account for suspension sag, and read the rating stamps and ball torque specs that cap the setup.",
+    category: "Equipment",
+  },
+  {
+    slug: "/guides/can-nissan-frontier-tow-travel-trailer",
+    title: "Can a Nissan Frontier Tow a Travel Trailer? The Real Limits",
+    description:
+      "Frontier tow ratings by cab, bed and drivetrain, the 500 lb dead weight tongue limit that decides real capacity, a five-setup payload worksheet, and which travel trailers genuinely fit.",
+    category: "Matchups",
+  },
 ];
 
 export default function GuidesPage() {
