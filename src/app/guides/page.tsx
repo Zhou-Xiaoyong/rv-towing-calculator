@@ -446,6 +446,20 @@ const GUIDES = [
       "Frontier tow ratings by cab, bed and drivetrain, the 500 lb dead weight tongue limit that decides real capacity, a five-setup payload worksheet, and which travel trailers genuinely fit.",
     category: "Matchups",
   },
+  {
+    slug: "/guides/trailer-wiring-harness-7-pin-troubleshooting",
+    title: "7-Pin Trailer Wiring Diagram & Troubleshooting Guide",
+    description:
+      "The 7-pin trailer connector pinout with expected voltage at every pin, the diagnostic order that finds faults fastest, and why a bad ground causes most trailer wiring problems.",
+    category: "Equipment",
+  },
+  {
+    slug: "/guides/electric-trailer-tongue-jack-troubleshooting",
+    title: "Electric Trailer Tongue Jack Not Working? Troubleshooting Guide",
+    description:
+      "Diagnose an electric tongue jack in the right order, from battery voltage through the fuse, ground, switch and motor, plus jack load limits and the maintenance that prevents failures.",
+    category: "Maintenance",
+  },
 ];
 
 export default function GuidesPage() {

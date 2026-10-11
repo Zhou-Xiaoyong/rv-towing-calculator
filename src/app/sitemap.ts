@@ -76,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Guides 列表页 — 每次新增文章列表内容会变，用最近一次新增文章的日期
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date("2026-10-08"),
+      lastModified: new Date("2026-10-11"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -377,6 +377,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/guides/trailer-wiring-harness-7-pin-troubleshooting`,
+      lastModified: new Date("2026-10-11"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     // ── Maintenance ──
     {
       url: `${baseUrl}/guides/trailer-wheel-bearing-maintenance`,
@@ -411,6 +417,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/guides/rv-roof-sealant-inspection-and-resealing`,
       lastModified: new Date("2026-10-04"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/electric-trailer-tongue-jack-troubleshooting`,
+      lastModified: new Date("2026-10-11"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
