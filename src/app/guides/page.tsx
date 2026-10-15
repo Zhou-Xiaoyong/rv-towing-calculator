@@ -460,6 +460,20 @@ const GUIDES = [
       "Diagnose an electric tongue jack in the right order, from battery voltage through the fuse, ground, switch and motor, plus jack load limits and the maintenance that prevents failures.",
     category: "Maintenance",
   },
+  {
+    slug: "/guides/rv-tpms-buying-and-setup",
+    title: "RV TPMS: How to Choose and Set Up Trailer Tire Monitoring",
+    description:
+      "Cap versus flow-through versus internal sensors, the specification floor by rig size, alert thresholds in PSI and degrees Fahrenheit, metal valve stems, and the installation mistakes that cause signal dropouts.",
+    category: "Equipment",
+  },
+  {
+    slug: "/guides/can-honda-pilot-tow-travel-trailer",
+    title: "Can a Honda Pilot Tow a Travel Trailer? The 500 lb Limit",
+    description:
+      "Pilot tow ratings by generation and drivetrain, the four pieces of hardware that unlock 5,000 lb, the 500 lb tongue limit that caps real trailer size, and a payload worksheet for a seven-seat SUV.",
+    category: "Matchups",
+  },
 ];
 
 export default function GuidesPage() {
