@@ -76,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Guides 列表页 — 每次新增文章列表内容会变，用最近一次新增文章的日期
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date("2026-10-15"),
+      lastModified: new Date("2026-10-18"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -478,6 +478,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/guides/can-honda-pilot-tow-travel-trailer`,
       lastModified: new Date("2026-10-15"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/trailer-battery-maintenance-and-charging`,
+      lastModified: new Date("2026-10-18"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/rv-slide-out-maintenance-and-seal-replacement`,
+      lastModified: new Date("2026-10-18"),
       changeFrequency: "monthly",
       priority: 0.7,
     },

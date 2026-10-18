@@ -81,6 +81,46 @@ const PRODUCTS: AmazonProduct[] = [
     iconColor: "text-purple-600",
     amazonUrl: buildAmazonSearchUrl("trailer tire pressure monitoring system tpms"),
   },
+  {
+    id: "deep-cycle-battery",
+    title: "Deep Cycle RV Battery",
+    description: "House battery for trailer 12V power. Confirm the usable capacity and the charger profile before you buy, not after.",
+    category: "battery",
+    icon: "battery",
+    iconBg: "bg-emerald-100",
+    iconColor: "text-emerald-600",
+    amazonUrl: buildAmazonSearchUrl("deep cycle rv battery group 27"),
+  },
+  {
+    id: "battery-maintainer",
+    title: "Smart Battery Maintainer",
+    description: "Float charger for winter storage. Holds a stored battery above 12.4 V without boiling a flooded cell dry.",
+    category: "battery",
+    icon: "battery",
+    iconBg: "bg-emerald-100",
+    iconColor: "text-emerald-600",
+    amazonUrl: buildAmazonSearchUrl("rv battery maintainer trickle charger"),
+  },
+  {
+    id: "slide-seal-kit",
+    title: "RV Slide Out Seal Kit",
+    description: "Replacement wiper and bulb seal profiles. Measure the old profile first: track-mounted and screw-fixed types are not interchangeable.",
+    category: "slide-seal",
+    icon: "seal",
+    iconBg: "bg-sky-100",
+    iconColor: "text-sky-600",
+    amazonUrl: buildAmazonSearchUrl("rv slide out seal replacement kit"),
+  },
+  {
+    id: "seal-lubricant",
+    title: "Silicone Seal Lubricant",
+    description: "Silicone spray for slide out seals and window gaskets. Restores flexibility without swelling the rubber the way petroleum products do.",
+    category: "slide-seal",
+    icon: "seal",
+    iconBg: "bg-sky-100",
+    iconColor: "text-sky-600",
+    amazonUrl: buildAmazonSearchUrl("silicone spray lubricant rubber seals rv"),
+  },
 ];
 
 function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: string; textColor: string }) {
@@ -116,6 +156,18 @@ function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: stri
         <circle cx="12" cy="12" r="10" />
         <circle cx="12" cy="12" r="6" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+      </svg>
+    ),
+    battery: (
+      <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <rect x="2" y="7" width="17" height="10" rx="2" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M22 11v2M6 12h3M7.5 10.5v3M13 12h3.5" />
+      </svg>
+    ),
+    seal: (
+      <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <rect x="3" y="3" width="18" height="18" rx="4" />
+        <rect x="8" y="8" width="8" height="8" rx="2" />
       </svg>
     ),
   };

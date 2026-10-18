@@ -474,6 +474,20 @@ const GUIDES = [
       "Pilot tow ratings by generation and drivetrain, the four pieces of hardware that unlock 5,000 lb, the 500 lb tongue limit that caps real trailer size, and a payload worksheet for a seven-seat SUV.",
     category: "Matchups",
   },
+  {
+    slug: "/guides/trailer-battery-maintenance-and-charging",
+    title: "Trailer Battery Maintenance and Charging: A 12V Owner's Guide",
+    description:
+      "Resting voltage state of charge chart, converter versus 7-pin versus solar amps, watering flooded cells, freezing points by state of charge, and the weight a battery bank adds to the tongue.",
+    category: "Maintenance",
+  },
+  {
+    slug: "/guides/rv-slide-out-maintenance-and-seal-replacement",
+    title: "RV Slide Out Maintenance and Seal Replacement Guide",
+    description:
+      "Which slide out seal actually leaks, the five seal profiles, a ten minute inspection schedule, the right lubricant for each mechanism, and a step-by-step wiper seal replacement.",
+    category: "Maintenance",
+  },
 ];
 
 export default function GuidesPage() {
