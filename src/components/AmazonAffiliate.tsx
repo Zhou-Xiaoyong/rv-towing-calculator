@@ -121,6 +121,26 @@ const PRODUCTS: AmazonProduct[] = [
     iconColor: "text-sky-600",
     amazonUrl: buildAmazonSearchUrl("silicone spray lubricant rubber seals rv"),
   },
+  {
+    id: "moisture-meter",
+    title: "Pin-Type Moisture Meter",
+    description: "Reads moisture inside plywood through a seam or corner. A pinless meter cannot see past vinyl and gets fooled by the aluminum framing underneath.",
+    category: "tools",
+    icon: "meter",
+    iconBg: "bg-indigo-100",
+    iconColor: "text-indigo-600",
+    amazonUrl: buildAmazonSearchUrl("pin type moisture meter wood"),
+  },
+  {
+    id: "inspection-camera",
+    title: "USB Inspection Camera",
+    description: "Borescope for looking inside a wall cavity or above the underbelly without cutting a large hole. A 5 mm head fits a 3/8 inch access hole.",
+    category: "tools",
+    icon: "camera",
+    iconBg: "bg-indigo-100",
+    iconColor: "text-indigo-600",
+    amazonUrl: buildAmazonSearchUrl("usb borescope inspection camera 5mm"),
+  },
 ];
 
 function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: string; textColor: string }) {
@@ -168,6 +188,19 @@ function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: stri
       <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <rect x="3" y="3" width="18" height="18" rx="4" />
         <rect x="8" y="8" width="8" height="8" rx="2" />
+      </svg>
+    ),
+    meter: (
+      <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 18a8 8 0 1116 0" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18l4-5" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 18h16" />
+      </svg>
+    ),
+    camera: (
+      <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8a2 2 0 012-2h2.5l1.2-1.6h6.6L16.5 6H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
+        <circle cx="12" cy="12.5" r="3" />
       </svg>
     ),
   };

@@ -488,6 +488,13 @@ const GUIDES = [
       "Which slide out seal actually leaks, the five seal profiles, a ten minute inspection schedule, the right lubricant for each mechanism, and a step-by-step wiper seal replacement.",
     category: "Maintenance",
   },
+  {
+    slug: "/guides/trailer-frame-and-floor-inspection",
+    title: "Travel Trailer Frame and Floor Inspection",
+    description:
+      "Where a trailer frame actually cracks, what rust looks like next to a hairline weld crack, how water reaches the floor, and pin meter readings that tell you when to repair.",
+    category: "Maintenance",
+  },
 ];
 
 export default function GuidesPage() {
