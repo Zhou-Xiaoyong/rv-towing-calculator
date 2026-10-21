@@ -141,6 +141,26 @@ const PRODUCTS: AmazonProduct[] = [
     iconColor: "text-indigo-600",
     amazonUrl: buildAmazonSearchUrl("usb borescope inspection camera 5mm"),
   },
+  {
+    id: "camper-tie-downs",
+    title: "Frame-Mounted Truck Camper Tie-Downs",
+    description: "Bolts to the truck frame rather than the bed floor. Bed-mounted brackets pull against sheet metal that was never rated for a 3,000 lb camper.",
+    category: "camper",
+    icon: "camper",
+    iconBg: "bg-indigo-100",
+    iconColor: "text-indigo-600",
+    amazonUrl: buildAmazonSearchUrl("frame mounted truck camper tie downs"),
+  },
+  {
+    id: "camper-turnbuckles",
+    title: "Spring-Loaded Camper Turnbuckles",
+    description: "Holds the camper down without rigid-loading the tie-downs. Springs absorb the flex between a steel frame and an aluminum camper body.",
+    category: "camper",
+    icon: "camper",
+    iconBg: "bg-indigo-100",
+    iconColor: "text-indigo-600",
+    amazonUrl: buildAmazonSearchUrl("spring loaded truck camper turnbuckles"),
+  },
 ];
 
 function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: string; textColor: string }) {
@@ -201,6 +221,14 @@ function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: stri
       <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 8a2 2 0 012-2h2.5l1.2-1.6h6.6L16.5 6H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
         <circle cx="12" cy="12.5" r="3" />
+      </svg>
+    ),
+    camper: (
+      <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 16h18M4 16V9l2-3h9l2 3h3v7" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 16v-4h4v4" />
+        <circle cx="7" cy="18.5" r="1.5" />
+        <circle cx="17" cy="18.5" r="1.5" />
       </svg>
     ),
   };

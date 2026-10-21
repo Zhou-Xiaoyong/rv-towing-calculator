@@ -495,6 +495,13 @@ const GUIDES = [
       "Where a trailer frame actually cracks, what rust looks like next to a hairline weld crack, how water reaches the floor, and pin meter readings that tell you when to repair.",
     category: "Maintenance",
   },
+  {
+    slug: "/guides/truck-camper-payload",
+    title: "Truck Camper Payload: The Rear Axle Math",
+    description:
+      "Why a slide-in camper puts more weight on the rear axle than the camper weighs, the moment formula behind it, and the three scale passes that settle the number.",
+    category: "Fundamentals",
+  },
 ];
 
 export default function GuidesPage() {
