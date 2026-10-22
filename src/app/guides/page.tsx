@@ -502,6 +502,13 @@ const GUIDES = [
       "Why a slide-in camper puts more weight on the rear axle than the camper weighs, the moment formula behind it, and the three scale passes that settle the number.",
     category: "Fundamentals",
   },
+  {
+    slug: "/guides/can-subaru-ascent-tow-travel-trailer",
+    title: "Can a Subaru Ascent Tow a Travel Trailer?",
+    description:
+      "Why the Ascent's tow rating is split by CVT code instead of trim, what the 500 lb tongue cap leaves for trailer size, and why Subaru's hitch rules out weight distribution.",
+    category: "Matchups",
+  },
 ];
 
 export default function GuidesPage() {

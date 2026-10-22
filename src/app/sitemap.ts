@@ -76,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Guides 列表页 — 每次新增文章列表内容会变，用最近一次新增文章的日期
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date("2026-10-21"),
+      lastModified: new Date("2026-10-22"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -502,6 +502,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/guides/truck-camper-payload`,
       lastModified: new Date("2026-10-21"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/can-subaru-ascent-tow-travel-trailer`,
+      lastModified: new Date("2026-10-22"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
