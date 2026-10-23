@@ -161,6 +161,26 @@ const PRODUCTS: AmazonProduct[] = [
     iconColor: "text-indigo-600",
     amazonUrl: buildAmazonSearchUrl("spring loaded truck camper turnbuckles"),
   },
+  {
+    id: "rv-antifreeze",
+    title: "RV Antifreeze, -50°F",
+    description: "Propylene glycol, not ethylene glycol. The -50 rating is burst protection, so the jug will look slushy at 0°F and still protect the fittings.",
+    category: "water-system",
+    icon: "droplet",
+    iconBg: "bg-pink-100",
+    iconColor: "text-pink-600",
+    amazonUrl: buildAmazonSearchUrl("rv antifreeze -50 propylene glycol"),
+  },
+  {
+    id: "water-heater-bypass-kit",
+    title: "RV Water Heater Bypass Kit",
+    description: "Saves a six-gallon tank of antifreeze every season. Fit it once and the heater stays dry while the rest of the system gets filled.",
+    category: "water-system",
+    icon: "droplet",
+    iconBg: "bg-pink-100",
+    iconColor: "text-pink-600",
+    amazonUrl: buildAmazonSearchUrl("rv water heater bypass kit"),
+  },
 ];
 
 function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: string; textColor: string }) {
@@ -229,6 +249,12 @@ function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: stri
         <path strokeLinecap="round" strokeLinejoin="round" d="M7 16v-4h4v4" />
         <circle cx="7" cy="18.5" r="1.5" />
         <circle cx="17" cy="18.5" r="1.5" />
+      </svg>
+    ),
+    droplet: (
+      <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3s5 5.4 5 9a5 5 0 11-10 0c0-3.6 5-9 5-9z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10 14a2.2 2.2 0 002 2.2" />
       </svg>
     ),
   };

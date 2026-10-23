@@ -509,6 +509,13 @@ const GUIDES = [
       "Why the Ascent's tow rating is split by CVT code instead of trim, what the 500 lb tongue cap leaves for trailer size, and why Subaru's hitch rules out weight distribution.",
     category: "Matchups",
   },
+  {
+    slug: "/guides/how-to-winterize-a-travel-trailer",
+    title: "How to Winterize a Travel Trailer",
+    description:
+      "The five-step water system procedure, the heater bypass that saves six gallons of antifreeze, the fittings that crack first, and the fresh water weight on your tongue.",
+    category: "Maintenance",
+  },
 ];
 
 export default function GuidesPage() {
