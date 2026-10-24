@@ -516,6 +516,13 @@ const GUIDES = [
       "The five-step water system procedure, the heater bypass that saves six gallons of antifreeze, the fittings that crack first, and the fresh water weight on your tongue.",
     category: "Maintenance",
   },
+  {
+    slug: "/guides/used-travel-trailer-buying-guide",
+    title: "Used Travel Trailer Buying Guide: Weigh It Before You Pay",
+    description:
+      "How to read the certification and cargo labels on a used trailer, derive the as-built weight, catch post-factory additions, and screen it at a CAT scale before you buy.",
+    category: "Buying Guides",
+  },
 ];
 
 export default function GuidesPage() {
