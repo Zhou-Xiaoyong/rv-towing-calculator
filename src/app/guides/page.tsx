@@ -523,6 +523,13 @@ const GUIDES = [
       "How to read the certification and cargo labels on a used trailer, derive the as-built weight, catch post-factory additions, and screen it at a CAT scale before you buy.",
     category: "Buying Guides",
   },
+  {
+    slug: "/guides/truck-tow-package-whats-included",
+    title: "What Does a Tow Package Include?",
+    description:
+      "What Ford 53B, 53A, and 53C actually contain, why a receiver is not a package, how to verify the parts on your own truck, and the payload the hardware costs.",
+    category: "Buying Guides",
+  },
 ];
 
 export default function GuidesPage() {
