@@ -530,6 +530,13 @@ const GUIDES = [
       "What Ford 53B, 53A, and 53C actually contain, why a receiver is not a package, how to verify the parts on your own truck, and the payload the hardware costs.",
     category: "Buying Guides",
   },
+  {
+    slug: "/guides/can-ford-maverick-tow-travel-trailer",
+    title: "Can a Ford Maverick Tow a Travel Trailer?",
+    description:
+      "Why Ford's 40 sq ft frontal area cap rules out full-height trailers, what the 400 lb tongue limit leaves, and the GCWR math behind the 4,000 lb rating.",
+    category: "Matchups",
+  },
 ];
 
 export default function GuidesPage() {
