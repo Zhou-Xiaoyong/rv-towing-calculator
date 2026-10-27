@@ -537,6 +537,13 @@ const GUIDES = [
       "Why Ford's 40 sq ft frontal area cap rules out full-height trailers, what the 400 lb tongue limit leaves, and the GCWR math behind the 4,000 lb rating.",
     category: "Matchups",
   },
+  {
+    slug: "/guides/can-ram-1500-tow-travel-trailer",
+    title: "Can a Ram 1500 Tow a Travel Trailer?",
+    description:
+      "Why the 3.92 axle is worth 3,100 lb over the 3.21, how trim payload falls from 1,930 to 1,390, and what the 1,100 lb receiver cap really allows.",
+    category: "Matchups",
+  },
 ];
 
 export default function GuidesPage() {
