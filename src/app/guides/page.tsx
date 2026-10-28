@@ -544,6 +544,13 @@ const GUIDES = [
       "Why the 3.92 axle is worth 3,100 lb over the 3.21, how trim payload falls from 1,930 to 1,390, and what the 1,100 lb receiver cap really allows.",
     category: "Matchups",
   },
+  {
+    slug: "/guides/can-subaru-outback-tow-travel-trailer",
+    title: "Can a Subaru Outback Tow a Travel Trailer?",
+    description:
+      "Why Subaru's 350 and 270 lb tongue caps run out before the tow rating does, what its 8 to 11 percent band means, and the brake controller it does not sell.",
+    category: "Matchups",
+  },
 ];
 
 export default function GuidesPage() {
