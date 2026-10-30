@@ -181,6 +181,26 @@ const PRODUCTS: AmazonProduct[] = [
     iconColor: "text-pink-600",
     amazonUrl: buildAmazonSearchUrl("rv water heater bypass kit"),
   },
+  {
+    id: "twist-on-valve",
+    title: "Twist-On Waste Valve, 3 Inch",
+    description: "A second gate that clamps onto the outlet lugs. Holds a seeping blade back without cutting the underbelly or draining the tank.",
+    category: "sewer",
+    icon: "valve",
+    iconBg: "bg-teal-100",
+    iconColor: "text-teal-600",
+    amazonUrl: buildAmazonSearchUrl("valterra twist on waste valve 3 inch"),
+  },
+  {
+    id: "sewer-hose-kit",
+    title: "RV Sewer Hose Kit with Clear Elbow",
+    description: "The clear elbow is the useful half. You can see the tank run clean before you close the valve, instead of guessing from the sound.",
+    category: "sewer",
+    icon: "valve",
+    iconBg: "bg-teal-100",
+    iconColor: "text-teal-600",
+    amazonUrl: buildAmazonSearchUrl("rv sewer hose kit clear elbow 15 foot"),
+  },
 ];
 
 function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: string; textColor: string }) {
@@ -255,6 +275,13 @@ function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: stri
       <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 3s5 5.4 5 9a5 5 0 11-10 0c0-3.6 5-9 5-9z" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M10 14a2.2 2.2 0 002 2.2" />
+      </svg>
+    ),
+    valve: (
+      <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 12h5m8 0h5M8 8v8m8-8v8" />
+        <rect x="8" y="6" width="8" height="12" rx="1.5" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6V3m-2 0h4" />
       </svg>
     ),
   };

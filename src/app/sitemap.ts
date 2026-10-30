@@ -553,6 +553,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/guides/rv-black-tank-valve-replacement`,
+      lastModified: new Date("2026-10-30"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     // ── Utility pages ──
     {
       url: `${baseUrl}/about`,

@@ -558,6 +558,13 @@ const GUIDES = [
       "Why bags level the truck but leave every pound on the axle, how bars move load to the steer and trailer axles, and the order to set both up.",
     category: "Equipment",
   },
+  {
+    slug: "/guides/rv-black-tank-valve-replacement",
+    title: "RV Black Tank Valve Replacement",
+    description:
+      "Why a gate valve leaks when the rubber looks new, the twist-on valve that buys a season for $25, and the tongue weight a full tank moves.",
+    category: "Maintenance",
+  },
 ];
 
 export default function GuidesPage() {
