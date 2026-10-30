@@ -551,6 +551,13 @@ const GUIDES = [
       "Why Subaru's 350 and 270 lb tongue caps run out before the tow rating does, what its 8 to 11 percent band means, and the brake controller it does not sell.",
     category: "Matchups",
   },
+  {
+    slug: "/guides/air-bags-vs-weight-distribution-hitch",
+    title: "Air Bags vs a Weight Distribution Hitch",
+    description:
+      "Why bags level the truck but leave every pound on the axle, how bars move load to the steer and trailer axles, and the order to set both up.",
+    category: "Equipment",
+  },
 ];
 
 export default function GuidesPage() {
