@@ -201,6 +201,26 @@ const PRODUCTS: AmazonProduct[] = [
     iconColor: "text-teal-600",
     amazonUrl: buildAmazonSearchUrl("rv sewer hose kit clear elbow 15 foot"),
   },
+  {
+    id: "gas-leak-detector",
+    title: "Combustible Gas Leak Detector",
+    description: "Finds propane at a joint you cannot see or reach, behind the fridge or at a furnace flare. It locates the leak; it cannot prove the system holds pressure.",
+    category: "propane",
+    icon: "flame",
+    iconBg: "bg-orange-100",
+    iconColor: "text-orange-600",
+    amazonUrl: buildAmazonSearchUrl("combustible gas leak detector propane"),
+  },
+  {
+    id: "propane-manometer",
+    title: "Propane Manometer Test Kit",
+    description: "Reads in inches of water column, the only scale the drop test is written in. A 0 to 15 in. w.c. gauge with a stove manifold test spud is the whole kit.",
+    category: "propane",
+    icon: "flame",
+    iconBg: "bg-orange-100",
+    iconColor: "text-orange-600",
+    amazonUrl: buildAmazonSearchUrl("propane manometer test kit water column"),
+  },
 ];
 
 function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: string; textColor: string }) {
@@ -282,6 +302,12 @@ function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: stri
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 12h5m8 0h5M8 8v8m8-8v8" />
         <rect x="8" y="6" width="8" height="12" rx="1.5" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6V3m-2 0h4" />
+      </svg>
+    ),
+    flame: (
+      <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c3 4 6 6 6 10a6 6 0 11-12 0c0-4 3-6 6-10z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 12c1.5 2 2 2.5 2 4a2 2 0 11-4 0c0-1.5.5-2 2-4z" />
       </svg>
     ),
   };

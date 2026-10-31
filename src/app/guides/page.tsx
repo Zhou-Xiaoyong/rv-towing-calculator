@@ -565,6 +565,13 @@ const GUIDES = [
       "Why a gate valve leaks when the rubber looks new, the twist-on valve that buys a season for $25, and the tongue weight a full tank moves.",
     category: "Maintenance",
   },
+  {
+    slug: "/guides/rv-propane-leak-test",
+    title: "RV Propane Leak Test",
+    description:
+      "Why soap bubbles only reach six fittings, the 8 inch drop test that covers the whole run, the NFPA 1192 limits, and 74 lb of cylinders on the tongue.",
+    category: "Fundamentals",
+  },
 ];
 
 export default function GuidesPage() {
