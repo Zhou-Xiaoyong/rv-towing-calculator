@@ -579,6 +579,13 @@ const GUIDES = [
       "A 3,500 lb single axle puts 1,540 lb on each tire and a 7,000 lb tandem puts the same on four. The reserve math, blowout behavior, and tongue shift.",
     category: "Buying Guides",
   },
+  {
+    slug: "/guides/towing-a-travel-trailer-in-winter",
+    title: "Towing a Travel Trailer in Winter",
+    description:
+      "Cold air takes 2 percent of your tire pressure per 10°F and about three quarters of your propane output. What to reset before the first cold mile.",
+    category: "Equipment",
+  },
 ];
 
 export default function GuidesPage() {

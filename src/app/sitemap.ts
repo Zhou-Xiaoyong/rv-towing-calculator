@@ -571,6 +571,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/guides/towing-a-travel-trailer-in-winter`,
+      lastModified: new Date("2026-11-03"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     // ── Utility pages ──
     {
       url: `${baseUrl}/about`,
