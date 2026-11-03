@@ -572,6 +572,13 @@ const GUIDES = [
       "Why soap bubbles only reach six fittings, the 8 inch drop test that covers the whole run, the NFPA 1192 limits, and 74 lb of cylinders on the tongue.",
     category: "Fundamentals",
   },
+  {
+    slug: "/guides/single-axle-vs-tandem-axle-travel-trailer",
+    title: "Single Axle vs Tandem Axle Travel Trailer",
+    description:
+      "A 3,500 lb single axle puts 1,540 lb on each tire and a 7,000 lb tandem puts the same on four. The reserve math, blowout behavior, and tongue shift.",
+    category: "Buying Guides",
+  },
 ];
 
 export default function GuidesPage() {
