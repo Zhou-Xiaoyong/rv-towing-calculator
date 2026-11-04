@@ -8,7 +8,7 @@ import AmazonAffiliate from "@/components/AmazonAffiliate";
 export const metadata: Metadata = {
   title: "Dually vs Single Rear Wheel: What the Second Pair Actually Buys",
   description:
-    "Dually vs single rear wheel on the same one-ton: the second pair adds 2,670 lb of rear axle rating, not trailer rating. Where the extra payload goes.",
+    "Dually vs single rear wheel on the same one-ton: the second pair adds 2,670 lb of rear axle rating, not trailer rating. Where the extra payload actually goes.",
   keywords: [
     "dually vs single rear wheel",
     "srw vs drw towing",
