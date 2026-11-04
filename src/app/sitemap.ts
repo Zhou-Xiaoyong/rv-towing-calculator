@@ -577,6 +577,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: `${baseUrl}/guides/dually-vs-single-rear-wheel-towing`,
+      lastModified: new Date("2026-11-04"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
     // ── Utility pages ──
     {
       url: `${baseUrl}/about`,

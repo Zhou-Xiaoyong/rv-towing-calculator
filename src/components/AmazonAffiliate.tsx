@@ -221,6 +221,26 @@ const PRODUCTS: AmazonProduct[] = [
     iconColor: "text-orange-600",
     amazonUrl: buildAmazonSearchUrl("propane manometer test kit water column"),
   },
+  {
+    id: "dual-foot-chuck",
+    title: "Dual Foot Air Chuck with Gauge",
+    description: "The only chuck that reaches an inner dual without removing the outer wheel. Reads while it inflates, so both tires on an axle can be matched in one stop.",
+    category: "tire-care",
+    icon: "gauge",
+    iconBg: "bg-slate-100",
+    iconColor: "text-slate-600",
+    amazonUrl: buildAmazonSearchUrl("dual foot air chuck with gauge inner dual tire"),
+  },
+  {
+    id: "valve-stem-extensions",
+    title: "Braided Valve Stem Extensions, 6 Inch",
+    description: "Brings an inner dual valve stem out where a gauge fits. Stainless braid with a stabilizing clip, because a flopping extension rubs through on the first long trip.",
+    category: "tire-care",
+    icon: "gauge",
+    iconBg: "bg-slate-100",
+    iconColor: "text-slate-600",
+    amazonUrl: buildAmazonSearchUrl("braided valve stem extension kit dual wheels"),
+  },
 ];
 
 function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: string; textColor: string }) {
@@ -308,6 +328,14 @@ function ProductIcon({ icon, bgColor, textColor }: { icon: string; bgColor: stri
       <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c3 4 6 6 6 10a6 6 0 11-12 0c0-4 3-6 6-10z" />
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 12c1.5 2 2 2.5 2 4a2 2 0 11-4 0c0-1.5.5-2 2-4z" />
+      </svg>
+    ),
+    gauge: (
+      <svg className={`h-6 w-6 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <circle cx="12" cy="12" r="9" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 12l4-4" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2M4.2 7.5l1.7 1M3 12h2M19.8 7.5l-1.7 1M21 12h-2" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 20l1.5-2M16 20l-1.5-2" />
       </svg>
     ),
   };

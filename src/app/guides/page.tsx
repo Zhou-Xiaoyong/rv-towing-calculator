@@ -586,6 +586,13 @@ const GUIDES = [
       "Cold air takes 2 percent of your tire pressure per 10°F and about three quarters of your propane output. What to reset before the first cold mile.",
     category: "Equipment",
   },
+  {
+    slug: "/guides/dually-vs-single-rear-wheel-towing",
+    title: "Dually vs Single Rear Wheel for Towing",
+    description:
+      "Same engine, same GCWR, 2,670 lb more rear axle rating. What the second pair of rear tires buys, what it costs, and when the pin weight says dually.",
+    category: "Buying Guides",
+  },
 ];
 
 export default function GuidesPage() {
