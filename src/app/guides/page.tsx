@@ -593,6 +593,13 @@ const GUIDES = [
       "Same engine, same GCWR, 2,670 lb more rear axle rating. What the second pair of rear tires buys, what it costs, and when the pin weight says dually.",
     category: "Buying Guides",
   },
+  {
+    slug: "/guides/thanksgiving-rv-trip-weight-and-fuel-budget",
+    title: "Thanksgiving Towing Check: Payload and Fuel",
+    description:
+      "Two extra adults break a half-ton's payload before the cooler is loaded. The Thanksgiving math, where holiday cargo belongs, and what 780 miles costs.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
