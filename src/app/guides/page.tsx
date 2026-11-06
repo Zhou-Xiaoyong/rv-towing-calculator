@@ -600,6 +600,13 @@ const GUIDES = [
       "Two extra adults break a half-ton's payload before the cooler is loaded. The Thanksgiving math, where holiday cargo belongs, and what 780 miles costs.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-rv-rental-towing-check",
+    title: "Thanksgiving RV Rental: Is Your Truck Rated for It?",
+    description:
+      "A rental listing's hitch weight is measured with empty cylinders. What 165 lb of propane and battery does to a 500 lb receiver limit, and the yard walkaround.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {

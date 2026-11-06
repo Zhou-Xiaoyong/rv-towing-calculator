@@ -601,7 +601,7 @@ export default function ThanksgivingTowingPage() {
         </div>
       </section>
 
-      <AmazonAffiliate categories={["tongue-scale", "weight-distribution", "tire-care"]} />
+      <AmazonAffiliate categories={["tongue-scale", "wdh", "tire-pressure"]} />
 
       <h2 className="mt-10 text-2xl font-bold text-gray-900">
         Sources &amp; References
