@@ -522,7 +522,7 @@ export default function ThanksgivingRentalTowingPage() {
       </section>
 
       <AmazonAffiliate
-        categories={["tongue-scale", "wdh", "brake-controller"]}
+        categories={["tongue-scale", "weight-distribution", "brake-controller"]}
       />
 
       <h2 className="mt-10 text-2xl font-bold text-gray-900">
