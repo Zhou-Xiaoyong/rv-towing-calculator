@@ -607,6 +607,13 @@ const GUIDES = [
       "A rental listing's hitch weight is measured with empty cylinders. What 165 lb of propane and battery does to a 500 lb receiver limit, and the yard walkaround.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-truck-bed-payload",
+    title: "Thanksgiving Towing: Firewood in the Truck Bed",
+    description:
+      "A long bed of seasoned oak is 1,700 lb at 30 lb per cubic foot, and 895 of a half-ton's payload is already on the ball. The three-way fire ledger.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
