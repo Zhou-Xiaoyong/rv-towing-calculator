@@ -614,6 +614,13 @@ const GUIDES = [
       "A long bed of seasoned oak is 1,700 lb at 30 lb per cubic foot, and 895 of a half-ton's payload is already on the ball. The three-way fire ledger.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-return-trip-tongue-weight",
+    title: "Thanksgiving Towing: The Drive Home Drops Tongue Weight",
+    description:
+      "600 lb of gifts behind the axle turns 12.5 percent tongue weight into 8.2 percent on the same trailer. The return-leg math, and where to put the boxes.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
