@@ -621,6 +621,13 @@ const GUIDES = [
       "600 lb of gifts behind the axle turns 12.5 percent tongue weight into 8.2 percent on the same trailer. The return-leg math, and where to put the boxes.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-trailer-roof-snow-load",
+    title: "Thanksgiving Towing: Snow on the Roof Is 649 lb of Cargo",
+    description:
+      "Three inches of wet snow on a 26 ft roof is 649 lb and leaves 17 lb of a 7,600 lb trailer, while four cold tires are already 316 lb over.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
