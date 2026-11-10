@@ -115,6 +115,28 @@ export default function WaterWeightCalculatorPage() {
         </div>
       </section>
 
+      <div className="mt-10 rounded-xl border border-gray-200 bg-gray-50 p-6">
+        <h3 className="font-bold text-gray-900">Related Reading</h3>
+        <ul className="mt-3 space-y-2">
+          <li>
+            <Link
+              href="/guides/thanksgiving-full-water-tank-towing-weight"
+              className="text-brand-600 hover:underline"
+            >
+              Thanksgiving Towing: Is a Full Water Tank Worth 384 lb?
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/guides/how-to-winterize-a-travel-trailer"
+              className="text-brand-600 hover:underline"
+            >
+              How to Winterize a Travel Trailer
+            </Link>
+          </li>
+        </ul>
+      </div>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

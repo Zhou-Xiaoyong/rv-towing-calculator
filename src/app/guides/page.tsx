@@ -628,6 +628,13 @@ const GUIDES = [
       "Three inches of wet snow on a 26 ft roof is 649 lb and leaves 17 lb of a 7,600 lb trailer, while four cold tires are already 316 lb over.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-full-water-tank-towing-weight",
+    title: "Thanksgiving Towing: Is a Full Water Tank Worth 384 lb?",
+    description:
+      "A 46-gallon tank is 384 lb and the heater adds 50, which is 29 percent of a 1,520 lb cargo rating. Where the tank sits decides who pays, and the freeze decides the fill level.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
