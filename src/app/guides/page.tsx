@@ -635,6 +635,13 @@ const GUIDES = [
       "A 46-gallon tank is 384 lb and the heater adds 50, which is 29 percent of a 1,520 lb cargo rating. Where the tank sits decides who pays, and the freeze decides the fill level.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-driveway-dry-camping-propane-weight",
+    title: "Thanksgiving Dry Camping: 47 lb of Propane in Four Cold Nights",
+    description:
+      "Four nights at 30 degrees burns 11 gallons, which is 47 lb off the A-frame and 41 lb off the coupler. Cylinder sizes, duty cycles and the battery that ends the trip early.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {

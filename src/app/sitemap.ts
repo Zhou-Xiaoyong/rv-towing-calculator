@@ -76,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Guides 列表页 — 每次新增文章列表内容会变，用最近一次新增文章的日期
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date("2026-11-10"),
+      lastModified: new Date("2026-11-12"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -616,6 +616,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/guides/thanksgiving-full-water-tank-towing-weight`,
       lastModified: new Date("2026-11-10"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/thanksgiving-driveway-dry-camping-propane-weight`,
+      lastModified: new Date("2026-11-12"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
