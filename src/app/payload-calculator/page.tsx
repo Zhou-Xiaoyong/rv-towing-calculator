@@ -126,6 +126,28 @@ export default function PayloadCalculatorPage() {
         </div>
       </section>
 
+      <div className="mt-10 rounded-xl border border-gray-200 bg-gray-50 p-6">
+        <h3 className="font-bold text-gray-900">Related Reading</h3>
+        <ul className="mt-3 space-y-2">
+          <li>
+            <Link
+              href="/guides/thanksgiving-driveway-dry-camping-propane-weight"
+              className="text-brand-600 hover:underline"
+            >
+              Thanksgiving Dry Camping: 47 lb of Propane in Four Cold Nights
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/guides/thanksgiving-truck-bed-payload"
+              className="text-brand-600 hover:underline"
+            >
+              Thanksgiving Towing: Firewood in the Truck Bed Is Payload
+            </Link>
+          </li>
+        </ul>
+      </div>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
