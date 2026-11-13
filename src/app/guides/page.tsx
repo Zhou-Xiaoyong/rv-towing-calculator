@@ -642,6 +642,13 @@ const GUIDES = [
       "Four nights at 30 degrees burns 11 gallons, which is 47 lb off the A-frame and 41 lb off the coupler. Cylinder sizes, duty cycles and the battery that ends the trip early.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-steep-driveway-trailer-grade",
+    title: "Thanksgiving Arrival: A 9% Driveway and a 7,600 lb Trailer",
+    description:
+      "Nine percent is 5.1 degrees, 1,470 lb of pull and 8 inches of tail drop at the gutter. Grade resistance, front axle unload and the refrigerator level limit on the last 40 feet.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {

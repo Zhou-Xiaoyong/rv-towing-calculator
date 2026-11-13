@@ -145,6 +145,14 @@ export default function PayloadCalculatorPage() {
               Thanksgiving Towing: Firewood in the Truck Bed Is Payload
             </Link>
           </li>
+          <li>
+            <Link
+              href="/guides/thanksgiving-steep-driveway-trailer-grade"
+              className="text-brand-600 hover:underline"
+            >
+              Thanksgiving Arrival: A 9% Driveway and a 7,600 lb Trailer
+            </Link>
+          </li>
         </ul>
       </div>
 
