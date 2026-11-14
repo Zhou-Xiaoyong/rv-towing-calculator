@@ -76,7 +76,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Guides 列表页 — 每次新增文章列表内容会变，用最近一次新增文章的日期
     {
       url: `${baseUrl}/guides`,
-      lastModified: new Date("2026-11-13"),
+      lastModified: new Date("2026-11-14"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
@@ -628,6 +628,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/guides/thanksgiving-steep-driveway-trailer-grade`,
       lastModified: new Date("2026-11-13"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/guides/thanksgiving-altitude-towing-power-loss`,
+      lastModified: new Date("2026-11-14"),
       changeFrequency: "monthly",
       priority: 0.7,
     },

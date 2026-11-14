@@ -100,6 +100,28 @@ export default function GcwrCalculatorPage() {
         </div>
       </section>
 
+      <div className="mt-10 rounded-xl border border-gray-200 bg-gray-50 p-6">
+        <h3 className="font-bold text-gray-900">Related Reading</h3>
+        <ul className="mt-3 space-y-2">
+          <li>
+            <Link
+              href="/guides/thanksgiving-altitude-towing-power-loss"
+              className="text-brand-600 hover:underline"
+            >
+              Thanksgiving at 11,158 Feet: Does Your Tow Rating Drop With the Air?
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/guides/thanksgiving-rv-trip-weight-and-fuel-budget"
+              className="text-brand-600 hover:underline"
+            >
+              Thanksgiving Trip: Weight and Fuel Budget for 900 Miles
+            </Link>
+          </li>
+        </ul>
+      </div>
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           "@context": "https://schema.org",

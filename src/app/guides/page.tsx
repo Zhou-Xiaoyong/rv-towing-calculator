@@ -649,6 +649,13 @@ const GUIDES = [
       "Nine percent is 5.1 degrees, 1,470 lb of pull and 8 inches of tail drop at the gutter. Grade resistance, front axle unload and the refrigerator level limit on the last 40 feet.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-altitude-towing-power-loss",
+    title: "Thanksgiving at 11,158 Feet: Does Your Tow Rating Drop With the Air?",
+    description:
+      "Air density, engine power, gauge error and furnace derate by elevation. Why the weight sticker holds at 11,000 feet and what 29 percent less air does to a 375 hp V8.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
