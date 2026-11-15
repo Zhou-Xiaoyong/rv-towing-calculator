@@ -657,11 +657,11 @@ const GUIDES = [
     category: "Safety",
   },
   {
-    slug: "/guides/thanksgiving-cold-snap-tire-pressure",
-    title: "Thanksgiving Cold Snap: 9 PSI of Trailer Tire Pressure, Gone",
+    slug: "/guides/black-friday-rv-towing-gear-priority",
+    title: "Black Friday RV Gear: Buy Against the Number That Fails First",
     description:
-      "A 50-degree overnight drop removes 8.9 psi from an 80 psi trailer tire with no leak. What that costs in load rating on a tandem versus a single axle, and the 25 percent warning that never fires.",
-    category: "Safety",
+      "Payload with 180 lb left and tires with 5,110 lb of spare capacity. How to rank RV towing accessories by which limit your rig actually runs out of, and what each one moves.",
+    category: "Buying Guides",
   },
 ];
 
