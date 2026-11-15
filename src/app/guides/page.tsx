@@ -656,6 +656,13 @@ const GUIDES = [
       "Air density, engine power, gauge error and furnace derate by elevation. Why the weight sticker holds at 11,000 feet and what 29 percent less air does to a 375 hp V8.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-cold-snap-tire-pressure",
+    title: "Thanksgiving Cold Snap: 9 PSI of Trailer Tire Pressure, Gone",
+    description:
+      "A 50-degree overnight drop removes 8.9 psi from an 80 psi trailer tire with no leak. What that costs in load rating on a tandem versus a single axle, and the 25 percent warning that never fires.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
