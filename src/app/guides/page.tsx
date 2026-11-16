@@ -663,6 +663,13 @@ const GUIDES = [
       "Payload with 180 lb left and tires with 5,110 lb of spare capacity. How to rank RV towing accessories by which limit your rig actually runs out of, and what each one moves.",
     category: "Buying Guides",
   },
+  {
+    slug: "/guides/thanksgiving-trailer-sway-tail-heavy-load",
+    title: "Thanksgiving Trailer Sway: 400 lb in the Wrong Place",
+    description:
+      "400 lb of family gear 6.5 ft behind the axle costs 158 lb of tongue weight and drops a balanced trailer to 9.8 percent. The lever math, two scale passes, and the fix.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
