@@ -78,3 +78,6 @@ REBUILD_GUIDE.md
 # Git 备份目录（不应提交）
 .git.backup/
 .gitignore.backup
+
+# local build/validation logs
+*.log
