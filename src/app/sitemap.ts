@@ -644,7 +644,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/guides/thanksgiving-trailer-sway-tail-heavy-load`,
+      url: `${baseUrl}/guides/thanksgiving-rain-truck-hydroplanes-first`,
       lastModified: new Date("2026-11-16"),
       changeFrequency: "monthly",
       priority: 0.7,

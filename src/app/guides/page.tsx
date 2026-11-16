@@ -664,10 +664,10 @@ const GUIDES = [
     category: "Buying Guides",
   },
   {
-    slug: "/guides/thanksgiving-trailer-sway-tail-heavy-load",
-    title: "Thanksgiving Trailer Sway: 400 lb in the Wrong Place",
+    slug: "/guides/thanksgiving-rain-truck-hydroplanes-first",
+    title: "Thanksgiving Rain: Your Truck Hydroplanes First",
     description:
-      "400 lb of family gear 6.5 ft behind the axle costs 158 lb of tongue weight and drops a balanced trailer to 9.8 percent. The lever math, two scale passes, and the fix.",
+      "A 35 psi steer tire floats at 61 mph and a 50 psi trailer tire at 73, so the axle that steers goes first. The pressure math and the six settings before a wet drive.",
     category: "Safety",
   },
 ];
