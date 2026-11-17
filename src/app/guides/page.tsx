@@ -670,6 +670,13 @@ const GUIDES = [
       "A 35 psi steer tire floats at 61 mph and a 50 psi trailer tire at 73, so the axle that steers goes first. The pressure math and the six settings before a wet drive.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-night-towing-deer",
+    title: "Thanksgiving Drive Home: Towing After Dark When the Deer Move",
+    description:
+      "Low beams reach 160 ft and a 14,000-lb rig needs 292 ft to stop from 45 mph. The headlight reach, stopping math and tongue-weight pitch behind the drive home.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {

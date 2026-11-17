@@ -96,6 +96,28 @@ export default function TongueWeightCalculatorPage() {
         </div>
       </section>
 
+      <div className="mt-10 rounded-xl border border-gray-200 bg-gray-50 p-6">
+        <h3 className="font-bold text-gray-900">Related Reading</h3>
+        <ul className="mt-3 space-y-2">
+          <li>
+            <Link
+              href="/guides/thanksgiving-night-towing-deer"
+              className="text-brand-600 hover:underline"
+            >
+              Thanksgiving Drive Home: Towing After Dark When the Deer Move
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/guides/thanksgiving-rain-truck-hydroplanes-first"
+              className="text-brand-600 hover:underline"
+            >
+              Thanksgiving Rain: Your Truck Hydroplanes First
+            </Link>
+          </li>
+        </ul>
+      </div>
+
       <script type="application/ld+json" dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           "@context": "https://schema.org",
