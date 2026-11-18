@@ -677,6 +677,13 @@ const GUIDES = [
       "Low beams reach 160 ft and a 14,000-lb rig needs 292 ft to stop from 45 mph. The headlight reach, stopping math and tongue-weight pitch behind the drive home.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-crosswind-trailer-side-force",
+    title: "Thanksgiving Crosswind: What 30 mph Does to a 7,600 lb Trailer",
+    description:
+      "A 28-foot trailer is 252 sq ft of wall, and 30 mph of crosswind puts 700 lb on it. The side force, roll moment and tire load math before a windy holiday drive.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
