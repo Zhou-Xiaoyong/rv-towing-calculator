@@ -684,6 +684,13 @@ const GUIDES = [
       "A 28-foot trailer is 252 sq ft of wall, and 30 mph of crosswind puts 700 lb on it. The side force, roll moment and tire load math before a windy holiday drive.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-traffic-brake-heat",
+    title: "Thanksgiving Traffic: What Stop-and-Go Does to Trailer Brakes",
+    description:
+      "One 65 mph stop puts 2,905 BTU into eight brakes and pushes the trailer drums up 103°F. The stop-and-go heat math and the 25-minute exit rule.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
