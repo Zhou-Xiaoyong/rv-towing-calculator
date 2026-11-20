@@ -691,6 +691,13 @@ const GUIDES = [
       "One 65 mph stop puts 2,905 BTU into eight brakes and pushes the trailer drums up 103°F. The stop-and-go heat math and the 25-minute exit rule.",
     category: "Safety",
   },
+  {
+    slug: "/guides/thanksgiving-backing-into-relative-driveway",
+    title: "Backing a Travel Trailer Into a Relative's Driveway",
+    description:
+      "A 12 ft service drop, 7 inches of tail swing per degree, and 158 psi under the jack foot. The three measurements that decide whether you back in or park at the curb.",
+    category: "Safety",
+  },
 ];
 
 export default function GuidesPage() {
